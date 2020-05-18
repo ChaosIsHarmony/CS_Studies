@@ -1,0 +1,9 @@
+Compilation notes
+
+// JAVA
+$ javac <Filename>.java
+$ java <Filename>
+
+// C++
+$ g++ <Filename>.cpp -o <OutputBinary>
+$ ./<OutputBinary>

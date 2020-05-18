@@ -1,0 +1,30 @@
+Useful Command Line Commands
+
+$ ping www.google.com 		// check internet connection
+$ ip route | grep default	// find ip address for router
+
+$ systeminfo 						// gets computer info
+$ systeminfo > '/root/data.txt' 	// saves command's output to a text file
+$ systeminfo >> '/root/data.txt'	// appends command's output to pre-existing text file
+
+$ mkdir dirName 	// makes a directory
+$ rmdir dirName 	// deletes a directory (must be empty before removing)
+$ rm -r dirName 	// deletes a directory and all sub directories (even if not empty)
+$ cp file dir 		// copies file from current directory into destination directory
+$ cp * dir 			// copies all files from current dir into destination dir
+$ cp *.txt dir 		// copies all files of given extension from curr dir into dest dir
+$ mv file dir 		// moves file into dir
+$ du -sh dirName 	// see disk usage of given directory (how much space it takes up on disk)
+
+$ nano file		// opens text editor and creates file
+$ touch file 	// creates new file
+
+$ tree 								// shows all subdirectories
+$ grep "keywords" file1 file2 file3	// searches for keywords in file (case sensitive)
+$ grep -i "keywords" file 			// searches for keywords in file (case insensitive)
+$ grep -R "keywords" dir 			// searches for keywords in all files of dir (case insensitive)
+$ grep -c "keywords" file 			// searches and displays # of times keywords in file
+
+$ prog < file	// prog will take file as input
+$ prog > file	// prog will save output to file
+$ prog1 | prog2	// prog2 will take prog1's output as input

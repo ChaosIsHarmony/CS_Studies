@@ -1,0 +1,29 @@
+// get status of current repo [including commits and whether or not it's up to date]
+git status
+
+// add these to the list to commit
+git add <filename> || . || --all || *
+
+// commit files with the message
+git commit -m "Message"
+
+// push to master branch
+git push origin master
+
+// pull from master branch
+git pull origin master
+
+// branch repo from master
+git checkout <branch>
+
+// merge checked out branch to master
+git merge <branch>
+
+// 
+git remote set-url origin https://Chaos_is_Harmony@bitbucket.org/Chaos_is_Harmony/<reponame>.git
+
+// see list of commits
+git log
+
+// download current repo
+git clone <URL>
