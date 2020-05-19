@@ -1,7 +1,7 @@
 // get status of current repo [including commits and whether or not it's up to date]
 git status
 
-// add these to the list to commit
+// stages these to the list to commit
 git add <filename> || . || --all || *
 
 // commit files with the message
@@ -27,3 +27,8 @@ git log
 
 // download current repo
 git clone <URL>
+
+// shows the changes made to file after different commits
+git diff (<commit hash> (<commit hash>)) <filename>
+
+// alter .gitignore file to tell git what to ignore e.g., *.o

@@ -37,7 +37,7 @@ OS
 ML
 1.) |0%|	Abu-Mostafa - Learning From Data
 2.) |0%|	Russell - Artificial Intelligence A Modern Approach
-3.)	|10%|	Kinsely - Neural Networks from Scratch
+3.)	|30%|	Kinsely - Neural Networks from Scratch
 
 MATH
 1.)	|10%|	Strang - Calculus V. I
