@@ -6,7 +6,7 @@ Stanford
 3.) |60%| 		CS107 - Programming Paradigms [https://see.stanford.edu/Course/CS107]
 
 Princeton
-1.) |65%|	CS: Programming with a Purpose [https://www.coursera.org/learn/cs-programming-java]
+1.) |COMPLETE|	CS: Programming with a Purpose [https://www.coursera.org/learn/cs-programming-java]
 2.) |0%|	CS: Algorithms, Theory, and Machines [https://www.coursera.org/learn/cs-algorithms-theory-machines]
 3.) |60%|	Algorithms, Part I [https://www.coursera.org/learn/algorithms-part1]
 4.) |0%|	Algorithms, Part II [https://www.coursera.org/learn/algorithms-part2]
