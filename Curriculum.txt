@@ -7,7 +7,7 @@ Stanford
 
 Princeton
 1.) |COMPLETE|	CS: Programming with a Purpose [https://www.coursera.org/learn/cs-programming-java]
-2.) |0%|	CS: Algorithms, Theory, and Machines [https://www.coursera.org/learn/cs-algorithms-theory-machines]
+2.) |10%|	CS: Algorithms, Theory, and Machines [https://www.coursera.org/learn/cs-algorithms-theory-machines]
 3.) |60%|	Algorithms, Part I [https://www.coursera.org/learn/algorithms-part1]
 4.) |0%|	Algorithms, Part II [https://www.coursera.org/learn/algorithms-part2]
 
@@ -44,7 +44,7 @@ MATH
 2.)	|0%|	Strang - Calculus V. II
 3.)	|0%|	Strang - Calculus V. III
 4.)	|10%|	Hammack - The Book of Proof
-5.)	|0%|	Hefferon - Linear Algebra
+5.)	|10%|	Hefferon - Linear Algebra
 
 Misc
 1.) |0%|	Chacon - Pro Git
