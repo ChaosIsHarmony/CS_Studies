@@ -88,6 +88,9 @@
 		1-3:20	2-4:180	3-5:0
 		1-4:0	2-5:0
 		1-5:0
+		
+	Lessons Learned:
+	- Sometimes brute force [O(N!) in this case] is better, given a very small N
  */
 #include <iostream>
 
@@ -182,6 +185,26 @@ int main()
 	i_arr_order[0] = (o_p_poss_hi_1->main == o_p_poss_hi_2->main || o_p_poss_hi_1->main == o_p_poss_hi_2->sub) ? o_p_poss_hi_1->main: o_p_poss_hi_1->sub;
 
 	// 2nd & 3rd
+	/*
+	Makes incorrect decision for this input:
+	
+	0 70 10  0  0
+	70  0 50 90  0
+	10 50  0 80  0
+	 0 90 80  0 100
+	 0  0  0 100 0
+		1-1:0	2-2:0	3-3:0	4-4:0	5-5:0
+		1-2:140	2-3:100	3-4:160	4-5:200
+		1-3:20	2-4:180	3-5:0
+		1-4:0	2-5:0
+		1-5:0
+	[chosen optimal order: 31245] [actual optimal order: 12345]
+	 
+	This is because 2-4 connection is higher than 3-4 (i.e., 180>160)
+	But it's wrong because 1-2 & 2-3 combo is much higher than 3-1 & 1-2 combo (240>160)
+	This buries the meager difference from selecting the seemingly inferior 3-4 connection
+	*/
+	
 	bool b_poss_1_hi = o_p_poss_hi_1->hap_ind > o_p_poss_hi_2->hap_ind;
 	
 	if (b_poss_1_hi)
@@ -229,17 +252,11 @@ int main()
 		}
 	}
 	
-	int i_missing_num = i_arr_order[0]+i_arr_order[1]+i_arr_order[2]+i_arr_order[3];
-
 	// final
+	int i_missing_num = i_arr_order[0]+i_arr_order[1]+i_arr_order[2]+i_arr_order[3];
 	i_arr_order[4] = 15-i_missing_num;
 	
-	Log(i_arr_order[0]);
-	Log(i_arr_order[1]);
-	Log(i_arr_order[2]);
-	Log(i_arr_order[3]);
-	Log(i_arr_order[4]);
-	
+	// calculate total happiness based on order
 	int result = 0;
 	for (int i = 0; i < I_LEN_PAIRS; i++)
 		if ((o_arr_hp_pairs[i].main == i_arr_order[1] && o_arr_hp_pairs[i].sub == i_arr_order[0]) 

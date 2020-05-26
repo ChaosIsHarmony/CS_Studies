@@ -1,5 +1,5 @@
 #--------------------
-# #--------------------
+# Modified NNFS_2.py#--------------------
 import numpy as np
 
 #Each neuron has inputs (prev layer's outputs)

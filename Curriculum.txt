@@ -7,7 +7,7 @@ Stanford
 
 Princeton
 1.) |COMPLETE|	CS: Programming with a Purpose [https://www.coursera.org/learn/cs-programming-java]
-2.) |10%|	CS: Algorithms, Theory, and Machines [https://www.coursera.org/learn/cs-algorithms-theory-machines]
+2.) |20%|	CS: Algorithms, Theory, and Machines [https://www.coursera.org/learn/cs-algorithms-theory-machines]
 3.) |60%|	Algorithms, Part I [https://www.coursera.org/learn/algorithms-part1]
 4.) |0%|	Algorithms, Part II [https://www.coursera.org/learn/algorithms-part2]
 
@@ -25,8 +25,8 @@ _________________________________________________________
 _________________________________________________________
 TEXTBOOKS
 Intro
-1.) |70%|	Sedgewick - Computer Science An Interdisciplinary Approach [Java]
-2.) |60%|	Roberts - Programming Abstractions [C++]
+1.) |80%|	Sedgewick - Computer Science An Interdisciplinary Approach [Java]
+2.) |70%|	Roberts - Programming Abstractions [C++]
 
 Algorithms
 1.) |60%|	Sedgewick - Algorithms
