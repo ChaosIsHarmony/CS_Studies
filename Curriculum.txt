@@ -7,7 +7,7 @@ Stanford
 
 Princeton
 1.) |COMPLETE|	CS: Programming with a Purpose [https://www.coursera.org/learn/cs-programming-java]
-2.) |20%|	CS: Algorithms, Theory, and Machines [https://www.coursera.org/learn/cs-algorithms-theory-machines]
+2.) |40%|	CS: Algorithms, Theory, and Machines [https://www.coursera.org/learn/cs-algorithms-theory-machines]
 3.) |60%|	Algorithms, Part I [https://www.coursera.org/learn/algorithms-part1]
 4.) |0%|	Algorithms, Part II [https://www.coursera.org/learn/algorithms-part2]
 
@@ -18,7 +18,7 @@ MIT
 					[https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-spring-2015/index.htm]
 
 Khan Academy
-1.) |70%|	Calculus BC
+1.) |80%|	Calculus BC
 2.) |10%|	Statistics & Probability
 _________________________________________________________
 
@@ -38,6 +38,7 @@ ML
 1.) |0%|	Abu-Mostafa - Learning From Data
 2.) |0%|	Russell - Artificial Intelligence A Modern Approach
 3.)	|30%|	Kinsely - Neural Networks from Scratch
+4.) |50%|	Kaggle - Intro to Machine Learning
 
 MATH
 1.)	|10%|	Strang - Calculus V. I
