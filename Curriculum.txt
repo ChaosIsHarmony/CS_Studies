@@ -3,11 +3,11 @@ COURSES
 Stanford
 1.) |COMPLETE|	CS106A - Programming Methodology [https://see.stanford.edu/Course/CS106A/194]
 2.)	|COMPLETE|	CS106B - Programming Abstractions [https://see.stanford.edu/Course/CS106B]
-3.) |60%| 		CS107 - Programming Paradigms [https://see.stanford.edu/Course/CS107]
+3.) |70%| 		CS107 - Programming Paradigms [https://see.stanford.edu/Course/CS107]
 
 Princeton
 1.) |COMPLETE|	CS: Programming with a Purpose [https://www.coursera.org/learn/cs-programming-java]
-2.) |40%|	CS: Algorithms, Theory, and Machines [https://www.coursera.org/learn/cs-algorithms-theory-machines]
+2.) |50%|	CS: Algorithms, Theory, and Machines [https://www.coursera.org/learn/cs-algorithms-theory-machines]
 3.) |60%|	Algorithms, Part I [https://www.coursera.org/learn/algorithms-part1]
 4.) |0%|	Algorithms, Part II [https://www.coursera.org/learn/algorithms-part2]
 
@@ -38,9 +38,12 @@ ML
 1.) |0%|	Abu-Mostafa - Learning From Data
 2.) |0%|	Russell - Artificial Intelligence A Modern Approach
 3.)	|30%|	Kinsely - Neural Networks from Scratch
-4.) |50%|	Kaggle - Intro to Machine Learning
+4.) |83%|	Kaggle - Intro to Machine Learning
 
-MATH
+Games
+1.) |25%|	Godot - 3D FPS tutorial
+
+Math
 1.)	|10%|	Strang - Calculus V. I
 2.)	|0%|	Strang - Calculus V. II
 3.)	|0%|	Strang - Calculus V. III
