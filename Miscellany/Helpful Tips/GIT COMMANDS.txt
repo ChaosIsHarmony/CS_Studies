@@ -32,3 +32,6 @@ git clone <URL>
 git diff (<commit hash> (<commit hash>)) <filename>
 
 // alter .gitignore file to tell git what to ignore e.g., *.o
+
+//can delete directories passed as params from git repo without removing from local machine
+git rm -r --cached "Dir - 1" "Dir - 2"

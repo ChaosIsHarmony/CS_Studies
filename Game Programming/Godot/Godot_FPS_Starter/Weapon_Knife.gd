@@ -4,13 +4,20 @@ extends Spatial
 # Standard interface for all weapons
 #
 const DAMAGE = 400
+const CAN_RELOAD = false
+const CAN_REFILL = false
 
+const RELOADING_ANIM_NAME = ""
 const IDLE_ANIM_NAME = "Knife_idle"
 const FIRE_ANIM_NAME = "Knife_fire"
 
 var is_weapon_enabled = false
 
 var player_node = null
+
+var ammo_in_weapon = 1
+var spare_ammo = 1
+const AMMO_IN_MAG = 1
 #------------------------------------
 
 func _ready():
@@ -46,4 +53,7 @@ func unequip_weapon():
 		is_weapon_enabled = false
 		return true
 
+	return false
+
+func reload_weapon():
 	return false
