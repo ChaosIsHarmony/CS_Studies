@@ -64,6 +64,15 @@ CODING EXPERIENCE
 	a.) Java
 3.) SAT prep software
 	a.) GD Script
-4.) Programming Challenges
+4.) Programming Challenges (CodeForces & Hackerrank)
 	a.) Java, C++
+_________________________________________________________
+
+_________________________________________________________
+GOALS
+1.) Complete 3D || 2D version of Conscientia
+2.) All Kaggle tutorials
+3.) A20J CodeForces ladders up to level 1900
+4.) Simple self-driving car Neural Network
+5.) Complete SAT prep software
 _________________________________________________________
