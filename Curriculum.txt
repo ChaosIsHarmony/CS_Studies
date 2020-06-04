@@ -7,7 +7,7 @@ Stanford
 
 Princeton
 1.) |COMPLETE|	CS: Programming with a Purpose [https://www.coursera.org/learn/cs-programming-java]
-2.) |50%|	CS: Algorithms, Theory, and Machines [https://www.coursera.org/learn/cs-algorithms-theory-machines]
+2.) |60%|	CS: Algorithms, Theory, and Machines [https://www.coursera.org/learn/cs-algorithms-theory-machines]
 3.) |60%|	Algorithms, Part I [https://www.coursera.org/learn/algorithms-part1]
 4.) |0%|	Algorithms, Part II [https://www.coursera.org/learn/algorithms-part2]
 
@@ -25,8 +25,8 @@ _________________________________________________________
 _________________________________________________________
 TEXTBOOKS
 Intro
-1.) |80%|	Sedgewick - Computer Science An Interdisciplinary Approach [Java]
-2.) |70%|	Roberts - Programming Abstractions [C++]
+1.) |85%|	Sedgewick - Computer Science An Interdisciplinary Approach [Java]
+2.) |75%|	Roberts - Programming Abstractions [C++]
 
 Algorithms
 1.) |60%|	Sedgewick - Algorithms
@@ -38,10 +38,11 @@ ML
 1.) |0%|	Abu-Mostafa - Learning From Data
 2.) |0%|	Russell - Artificial Intelligence A Modern Approach
 3.) |30%|	Kinsely - Neural Networks from Scratch
-4.) |83%|	Kaggle - Intro to Machine Learning
+4.) |100%|	Kaggle - Intro to Machine Learning
+5.) |0%|	Kaggle - Intermediate Machine Learning
 
 Games
-1.) |25%|	Godot - 3D FPS tutorial
+1.) |66%|	Godot - 3D FPS tutorial
 
 Math
 1.) |10%|	Strang - Calculus V. I

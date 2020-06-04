@@ -37,6 +37,9 @@ var animation_manager
 var health = 100
 var UI_status_label
 var simple_audio_player = preload("res://Simple_Audio_Player.tscn")
+var mouse_scroll_value = 0
+const MOUSE_SENSITIVITY_SCROLL_WHEEL = 0.08
+const MAX_HEALTH = 150
 #--------------------
 
 
@@ -91,7 +94,7 @@ func process_input(delta):
 		input_movement_vector.x += 1
 	if Input.is_action_pressed("movement_left"):
 		input_movement_vector.x -= 1
-		
+
 	input_movement_vector = input_movement_vector.normalized()
 	
 	# Basis vectors are already normalized
@@ -139,6 +142,7 @@ func process_input(delta):
 			if WEAPON_NUMBER_TO_NAME[weapon_change_number] != current_weapon_name:
 				changing_weapon_name = WEAPON_NUMBER_TO_NAME[weapon_change_number]
 				changing_weapon = true
+				mouse_scroll_value = weapon_change_number
 	# ----------------------------------
 	
 	# ----------------------------------
@@ -188,6 +192,7 @@ func process_input(delta):
 		else:
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	#-------------------------------
+
 
 func process_movement(delta):
 	dir.y = 0
@@ -283,3 +288,30 @@ func _input(event):
 		var camera_rot = rotation_helper.rotation_degrees
 		camera_rot.x = clamp(camera_rot.x, -70, 70)
 		rotation_helper.rotation_degrees = camera_rot
+		
+		if event.button_index == BUTTON_WHEEL_UP or event.button_index == BUTTON_WHEEL_DOWN:
+			if event.button_index == BUTTON_WHEEL_UP:
+				mouse_scroll_value += MOUSE_SENSITIVITY_SCROLL_WHEEL
+			elif event.button_index == BUTTON_WHEEL_DOWN:
+				mouse_scroll_value -= MOUSE_SENSITIVITY_SCROLL_WHEEL
+	
+			mouse_scroll_value = clamp(mouse_scroll_value, 0, WEAPON_NUMBER_TO_NAME.size() - 1)
+	
+			if changing_weapon == false:
+				if reloading_weapon == false:
+					var round_mouse_scroll_value = int(round(mouse_scroll_value))
+					if WEAPON_NUMBER_TO_NAME[round_mouse_scroll_value] != current_weapon_name:
+						changing_weapon_name = WEAPON_NUMBER_TO_NAME[round_mouse_scroll_value]
+						changing_weapon = true
+						mouse_scroll_value = round_mouse_scroll_value
+
+
+func add_health(additional_health):
+	health += additional_health
+	health = clamp(health, 0, MAX_HEALTH)
+
+
+func add_ammo(additional_ammo):
+	if (current_weapon_name != "UNARMED"):
+		if (weapons[current_weapon_name].CAN_REFILL == true):
+			weapons[current_weapon_name].spare_ammo += weapons[current_weapon_name].AMMO_IN_MAG * additional_ammo

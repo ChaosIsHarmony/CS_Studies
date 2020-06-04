@@ -1,6 +1,7 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
-from sklearn.tree import DecisionTreeRegressor
+#Random Forests take multiple decision trees and average them to produce a more accurate predictor
+from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_absolute_error
 
 #Steps to building a model [ref. https://www.kaggle.com/dansbecker/your-first-machine-learning-model]
@@ -10,7 +11,7 @@ from sklearn.metrics import mean_absolute_error
 #Evaluate: Determine how accurate the model's predictions are.
 def get_mae(mln, train_X, val_X, train_y, val_y):
 	#Define model as decision tree
-	housing_model = DecisionTreeRegressor(max_leaf_nodes=mln, random_state=0)
+	housing_model = RandomForestRegressor(max_leaf_nodes=mln, random_state=0)
 	#Fit model
 	housing_model.fit(train_X, train_y)
 	#Predict
