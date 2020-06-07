@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-const MAX_SPEED = 80
+const MAX_SPEED = 100
 const ACCELERATION = 500
 const FRICTION = 500
 
