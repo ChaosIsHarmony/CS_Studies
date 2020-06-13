@@ -3,11 +3,11 @@ COURSES
 Stanford
 1.) |COMPLETE|	CS106A - Programming Methodology [https://see.stanford.edu/Course/CS106A/194]
 2.) |COMPLETE|	CS106B - Programming Abstractions [https://see.stanford.edu/Course/CS106B]
-3.) |70%|	CS107 - Programming Paradigms [https://see.stanford.edu/Course/CS107]
+3.) |80%|	CS107 - Programming Paradigms [https://see.stanford.edu/Course/CS107]
 
 Princeton
 1.) |COMPLETE|	CS: Programming with a Purpose [https://www.coursera.org/learn/cs-programming-java]
-2.) |70%|	CS: Algorithms, Theory, and Machines [https://www.coursera.org/learn/cs-algorithms-theory-machines]
+2.) |COMPLETE|	CS: Algorithms, Theory, and Machines [https://www.coursera.org/learn/cs-algorithms-theory-machines]
 3.) |60%|	Algorithms, Part I [https://www.coursera.org/learn/algorithms-part1]
 4.) |0%|	Algorithms, Part II [https://www.coursera.org/learn/algorithms-part2]
 
@@ -16,20 +16,24 @@ MIT
 					[https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/]
 2.) |0%|	6.042J - Mathematics for Computer Science
 					[https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-spring-2015/index.htm]
+
 Kaggle
 1.) |100%|	Kaggle - Intro to Machine Learning
-2.) |21%|	Kaggle - Intermediate Machine Learning
+2.) |36%|	Kaggle - Intermediate Machine Learning
+
+Games
+1.) |70%|	Godot - HeartBeast 2D ARPG tutorial
 
 Khan Academy
-1.) |81%|	Calculus BC
-2.) |10%|	Statistics & Probability
+1.) |87%|	Calculus BC
+2.) |21%|	Statistics & Probability
 _________________________________________________________
 
 _________________________________________________________
 TEXTBOOKS
 Intro
-1.) |85%|	Sedgewick - Computer Science An Interdisciplinary Approach [Java]
-2.) |75%|	Roberts - Programming Abstractions [C++]
+1.) |90%|	Sedgewick - Computer Science An Interdisciplinary Approach [Java]
+2.) |80%|	Roberts - Programming Abstractions [C++]
 
 Algorithms
 1.) |60%|	Sedgewick - Algorithms

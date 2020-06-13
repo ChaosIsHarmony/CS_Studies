@@ -1,6 +1,7 @@
 extends KinematicBody2D
 
 const MAX_SPEED = 100
+const ROLL_SPEED = 125
 const ACCELERATION = 500
 const FRICTION = 500
 
@@ -12,9 +13,12 @@ var curr_dir = DIR.DOWN
 enum STATE { MOVE, ROLL, ATTACK }
 var state = STATE.MOVE
 
+var roll_vector = Vector2.ZERO
+
 onready var animPlayer = $AnimationPlayer
 onready var animTree = $AnimationTree
 onready var animState = animTree.get("parameters/playback")
+onready var swordHitBox = $SwordHitBoxPivot/SwordHitBox
 
 func _ready():
 	animTree.active = true
@@ -33,19 +37,24 @@ func move_state(delta):
 	input_vector = input_vector.normalized()
 	
 	if input_vector != Vector2.ZERO:
+		roll_vector = input_vector
+		swordHitBox.knockback_vector = roll_vector
 		animTree.set("parameters/idle/blend_position", input_vector)
 		animTree.set("parameters/run/blend_position", input_vector)
 		animTree.set("parameters/attack/blend_position", input_vector)
+		animTree.set("parameters/roll/blend_position", input_vector)
 		animState.travel("run")
 		velocity = velocity.move_toward(input_vector * MAX_SPEED, ACCELERATION * delta)
 	else:
 		animState.travel("idle")
 		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
-	
-	velocity = move_and_slide(velocity)
-	
+		
 	if Input.is_action_just_pressed("attack"):
 		state = STATE.ATTACK
+	if Input.is_action_just_pressed("roll"):
+		state = STATE.ROLL
+	
+	move()
 
 
 func attack_state(delta):
@@ -58,4 +67,14 @@ func attack_anim_over():
 
 
 func roll_state(delta):
-	pass
+	velocity = roll_vector * ROLL_SPEED
+	animState.travel("roll")
+	move()
+
+
+func roll_anim_over():
+	state = STATE.MOVE
+
+
+func move():
+	velocity = move_and_slide(velocity)
