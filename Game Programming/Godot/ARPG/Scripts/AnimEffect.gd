@@ -3,7 +3,7 @@ extends AnimatedSprite
 
 func _ready():
 	connect("animation_finished",self,"_on_anim_done")
-	play("on_destroy")
+	play("animate")
 
 
 func _on_anim_done():

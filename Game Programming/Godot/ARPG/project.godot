@@ -18,6 +18,10 @@ _global_script_class_icons={
 config/name="Arpg"
 run/main_scene="res://Levels/World.tscn"
 
+[autoload]
+
+PlayerStats="*res://Characters/PlayerStats.tscn"
+
 [display]
 
 window/size/width=320

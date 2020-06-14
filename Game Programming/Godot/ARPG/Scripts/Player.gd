@@ -4,6 +4,7 @@ const MAX_SPEED = 100
 const ROLL_SPEED = 125
 const ACCELERATION = 500
 const FRICTION = 500
+const I_FRAMES = 0.5
 
 var velocity = Vector2.ZERO
 
@@ -19,15 +20,21 @@ onready var animPlayer = $AnimationPlayer
 onready var animTree = $AnimationTree
 onready var animState = animTree.get("parameters/playback")
 onready var swordHitBox = $SwordHitBoxPivot/SwordHitBox
+onready var stats = PlayerStats
+onready var hurtBox = $HurtBox
 
 func _ready():
+	stats.connect("death", self, "queue_free")
 	animTree.active = true
 
 func _physics_process(delta):
 	match state:
-		STATE.MOVE:	move_state(delta)
-		STATE.ROLL: roll_state(delta)
-		STATE.ATTACK: attack_state(delta)
+		STATE.MOVE:
+			move_state(delta)
+		STATE.ROLL:
+			roll_state(delta)
+		STATE.ATTACK:
+			attack_state(delta)
 
 
 func move_state(delta):
@@ -52,6 +59,8 @@ func move_state(delta):
 	if Input.is_action_just_pressed("attack"):
 		state = STATE.ATTACK
 	if Input.is_action_just_pressed("roll"):
+		hurtBox.set_invincible(true)
+		hurtBox.start_i_frames(I_FRAMES)
 		state = STATE.ROLL
 	
 	move()
@@ -78,3 +87,10 @@ func roll_anim_over():
 
 func move():
 	velocity = move_and_slide(velocity)
+
+
+func _on_HurtBox_area_entered(area):
+	if not hurtBox.get_invincible():
+		stats.health -= area.damage
+		hurtBox.start_i_frames(I_FRAMES)
+		hurtBox.create_hit_effect()
