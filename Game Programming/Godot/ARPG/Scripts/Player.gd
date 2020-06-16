@@ -16,6 +16,10 @@ var state = STATE.MOVE
 
 var roll_vector = Vector2.ZERO
 
+var in_combat_mode = false
+signal in_combat
+signal not_in_combat
+
 onready var animPlayer = $AnimationPlayer
 onready var animTree = $AnimationTree
 onready var animState = animTree.get("parameters/playback")
@@ -23,11 +27,17 @@ onready var swordHitBox = $SwordHitBoxPivot/SwordHitBox
 onready var stats = PlayerStats
 onready var hurtBox = $HurtBox
 
+
 func _ready():
 	stats.connect("death", self, "queue_free")
 	animTree.active = true
 
 func _physics_process(delta):
+	if in_combat_mode:
+		emit_signal("in_combat")
+	else:
+		emit_signal("not_in_combat")
+	
 	match state:
 		STATE.MOVE:
 			move_state(delta)
@@ -94,3 +104,19 @@ func _on_HurtBox_area_entered(area):
 		stats.health -= area.damage
 		hurtBox.start_i_frames(I_FRAMES)
 		hurtBox.create_hit_effect()
+
+
+func _on_DetectionRange_area_entered(area):
+	in_combat_mode = true
+
+
+func _on_DetectionRange_area_exited(area):
+	in_combat_mode = false
+
+
+func _on_DetectionRange_body_entered(body):
+	in_combat_mode = true
+
+
+func _on_DetectionRange_body_exited(body):
+	in_combat_mode = false

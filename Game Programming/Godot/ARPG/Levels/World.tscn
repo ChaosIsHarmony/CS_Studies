@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=2]
+[gd_scene load_steps=64 format=2]
 
 [ext_resource path="res://Levels/Bush.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Characters/Player.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://UI/HealthUI.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scripts/HealthUI.gd" type="Script" id=9]
 [ext_resource path="res://Levels/Tree.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scripts/Camera.gd" type="Script" id=11]
 
 [sub_resource type="TileSet" id=1]
 0/name = "DirtTileset.png 0"
@@ -543,7 +544,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 position = Vector2( 160, 90 )
 texture = ExtResource( 3 )
 region_enabled = true
-region_rect = Rect2( 0, 0, 320, 180 )
+region_rect = Rect2( 0, 0, 1316, 535 )
 
 [node name="DirtTM" type="TileMap" parent="."]
 tile_set = SubResource( 1 )
@@ -558,10 +559,19 @@ collision_mask = 0
 format = 1
 tile_data = PoolIntArray( 0, 0, 4, 1, 0, 196609, 2, 0, 196609, 3, 0, 196610, 6, 0, 196608, 7, 0, 196609, 8, 0, 8, 9, 0, 196610, 65536, 0, 65539, 65544, 0, 65539, 131072, 0, 196612, 131073, 0, 196609, 131074, 0, 7, 131080, 0, 131076, 131081, 0, 2, 196610, 0, 65539, 196616, 0, 65540, 196617, 0, 131074, 262146, 0, 196612, 262147, 0, 196610, 262150, 0, 196608, 262151, 0, 196609, 262152, 0, 196615 )
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 90.7744, 60.0165 )
+current = true
+smoothing_enabled = true
+script = ExtResource( 11 )
+
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Player" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 90.7744, 60.0165 )
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="YSort/Player"]
+remote_path = NodePath("../../../Camera2D")
 
 [node name="Enemies" type="Node" parent="YSort"]
 
@@ -710,7 +720,9 @@ position = Vector2( 176, 32 )
 [node name="Tree" parent="YSort" instance=ExtResource( 10 )]
 position = Vector2( 160, 152 )
 
-[node name="HealthUI" parent="." instance=ExtResource( 8 )]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HealthUI" parent="CanvasLayer" instance=ExtResource( 8 )]
 margin_left = 8.0
 margin_top = 8.0
 margin_right = 72.0
