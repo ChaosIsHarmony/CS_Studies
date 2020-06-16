@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=2]
+[gd_scene load_steps=63 format=2]
 
 [ext_resource path="res://Levels/Bush.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Characters/Player.tscn" type="PackedScene" id=2]
@@ -7,6 +7,9 @@
 [ext_resource path="res://Assets/World/CliffTileset.png" type="Texture" id=5]
 [ext_resource path="res://Levels/Grass.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Characters/Bat.tscn" type="PackedScene" id=7]
+[ext_resource path="res://UI/HealthUI.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scripts/HealthUI.gd" type="Script" id=9]
+[ext_resource path="res://Levels/Tree.tscn" type="PackedScene" id=10]
 
 [sub_resource type="TileSet" id=1]
 0/name = "DirtTileset.png 0"
@@ -560,6 +563,83 @@ tile_data = PoolIntArray( 0, 0, 4, 1, 0, 196609, 2, 0, 196609, 3, 0, 196610, 6, 
 [node name="Player" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 90.7744, 60.0165 )
 
+[node name="Enemies" type="Node" parent="YSort"]
+
+[node name="Bat" parent="YSort/Enemies" instance=ExtResource( 7 )]
+position = Vector2( 216, 80 )
+
+[node name="Bat2" parent="YSort/Enemies" instance=ExtResource( 7 )]
+position = Vector2( 128, 112 )
+
+[node name="Bat3" parent="YSort/Enemies" instance=ExtResource( 7 )]
+position = Vector2( 160, 80 )
+
+[node name="Bat22" parent="YSort/Enemies" instance=ExtResource( 7 )]
+position = Vector2( 184, 64 )
+
+[node name="Bat23" parent="YSort/Enemies" instance=ExtResource( 7 )]
+position = Vector2( 168, 64 )
+
+[node name="Bat24" parent="YSort/Enemies" instance=ExtResource( 7 )]
+position = Vector2( 168, 32 )
+
+[node name="Bat25" parent="YSort/Enemies" instance=ExtResource( 7 )]
+position = Vector2( 176, 32 )
+
+[node name="Bat4" parent="YSort/Enemies" instance=ExtResource( 7 )]
+position = Vector2( 144, 96 )
+
+[node name="Bat5" parent="YSort/Enemies" instance=ExtResource( 7 )]
+position = Vector2( 216, 88 )
+
+[node name="Bat6" parent="YSort/Enemies" instance=ExtResource( 7 )]
+position = Vector2( 216, 104 )
+
+[node name="Bat7" parent="YSort/Enemies" instance=ExtResource( 7 )]
+position = Vector2( 240, 104 )
+
+[node name="Bat8" parent="YSort/Enemies" instance=ExtResource( 7 )]
+position = Vector2( 240, 80 )
+
+[node name="Bat9" parent="YSort/Enemies" instance=ExtResource( 7 )]
+position = Vector2( 232, 88 )
+
+[node name="Bat10" parent="YSort/Enemies" instance=ExtResource( 7 )]
+position = Vector2( 232, 64 )
+
+[node name="Bat11" parent="YSort/Enemies" instance=ExtResource( 7 )]
+position = Vector2( 216, 64 )
+
+[node name="Bat12" parent="YSort/Enemies" instance=ExtResource( 7 )]
+position = Vector2( 200, 80 )
+
+[node name="Bat13" parent="YSort/Enemies" instance=ExtResource( 7 )]
+position = Vector2( 208, 96 )
+
+[node name="Bat14" parent="YSort/Enemies" instance=ExtResource( 7 )]
+position = Vector2( 200, 104 )
+
+[node name="Bat15" parent="YSort/Enemies" instance=ExtResource( 7 )]
+position = Vector2( 184, 136 )
+
+[node name="Bat16" parent="YSort/Enemies" instance=ExtResource( 7 )]
+position = Vector2( 184, 152 )
+
+[node name="Bat17" parent="YSort/Enemies" instance=ExtResource( 7 )]
+position = Vector2( 208, 168 )
+
+[node name="Bat18" parent="YSort/Enemies" instance=ExtResource( 7 )]
+position = Vector2( 240, 168 )
+
+[node name="Bat19" parent="YSort/Enemies" instance=ExtResource( 7 )]
+position = Vector2( 256, 168 )
+
+[node name="Bat20" parent="YSort/Enemies" instance=ExtResource( 7 )]
+position = Vector2( 272, 168 )
+
+[node name="Bat21" parent="YSort/Enemies" instance=ExtResource( 7 )]
+position = Vector2( 288, 168 )
+
 [node name="Bushes" type="YSort" parent="YSort"]
 
 [node name="Bush" parent="YSort/Bushes" instance=ExtResource( 1 )]
@@ -627,8 +707,12 @@ position = Vector2( 176, 16 )
 [node name="Grass17" parent="YSort/Grass" instance=ExtResource( 6 )]
 position = Vector2( 176, 32 )
 
-[node name="Bat" parent="." instance=ExtResource( 7 )]
-position = Vector2( 216, 80 )
+[node name="Tree" parent="YSort" instance=ExtResource( 10 )]
+position = Vector2( 160, 152 )
 
-[node name="Bat2" parent="." instance=ExtResource( 7 )]
-position = Vector2( 128, 112 )
+[node name="HealthUI" parent="." instance=ExtResource( 8 )]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 72.0
+margin_bottom = 24.0
+script = ExtResource( 9 )
