@@ -26,6 +26,7 @@ onready var animState = animTree.get("parameters/playback")
 onready var swordHitBox = $SwordHitBoxPivot/SwordHitBox
 onready var stats = PlayerStats
 onready var hurtBox = $HurtBox
+onready var camera = get_node("../../Camera2D")
 
 
 func _ready():
@@ -106,16 +107,9 @@ func _on_HurtBox_area_entered(area):
 		hurtBox.create_hit_effect()
 
 
-func _on_DetectionRange_area_entered(area):
-	in_combat_mode = true
-
-
-func _on_DetectionRange_area_exited(area):
-	in_combat_mode = false
-
-
 func _on_DetectionRange_body_entered(body):
 	in_combat_mode = true
+	camera.start_timer(2)
 
 
 func _on_DetectionRange_body_exited(body):

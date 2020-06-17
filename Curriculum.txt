@@ -3,7 +3,7 @@ COURSES
 Stanford
 1.) |COMPLETE|	CS106A - Programming Methodology [https://see.stanford.edu/Course/CS106A/194]
 2.) |COMPLETE|	CS106B - Programming Abstractions [https://see.stanford.edu/Course/CS106B]
-3.) |95%|	CS107 - Programming Paradigms [https://see.stanford.edu/Course/CS107]
+3.) |COMPLETE|	CS107 - Programming Paradigms [https://see.stanford.edu/Course/CS107]
 
 Princeton
 1.) |COMPLETE|	CS: Programming with a Purpose [https://www.coursera.org/learn/cs-programming-java]
@@ -12,17 +12,16 @@ Princeton
 4.) |0%|	Algorithms, Part II [https://www.coursera.org/learn/algorithms-part2]
 
 MIT
-1.) |60%|	6.006 - Intro to Algorithms
-					[https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/]
-2.) |0%|	6.042J - Mathematics for Computer Science
-					[https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-spring-2015/index.htm]
+[mit = https://ocw.mit.edu/courses/electrical-engineering-and-computer-science]
+1.) |60%|	6.006 - Intro to Algorithms	[<mit>/6-006-introduction-to-algorithms-fall-2011/]
+2.) |0%|	6.042J - Mathematics for Computer Science [<mit>/6-042j-mathematics-for-computer-science-spring-2015/index.htm]
 
 Kaggle
 1.) |100%|	Kaggle - Intro to Machine Learning
 2.) |36%|	Kaggle - Intermediate Machine Learning
 
 Games
-1.) |85%|	Godot - HeartBeast 2D ARPG tutorial
+1.) |COMPLETE|	Godot - HeartBeast 2D ARPG tutorial
 
 Khan Academy
 1.) |87%|	Calculus BC
@@ -33,7 +32,33 @@ _________________________________________________________
 TEXTBOOKS
 Intro
 1.) |95%|	Sedgewick - Computer Science An Interdisciplinary Approach [Java]
+			[50%]	Chap. 1 Assignments (not exhaustive)
+			[0%]	Chap. 2 Assignments (not exhaustive)
+			[0%]	Chap. 3 Assignments (not exhaustive)
+			[0%]	Chap. 4 Assignments (not exhaustive)
+			[0%]	Chap. 5 Assignments (not exhaustive)
+			[0%]	Chap. 6 Assignments (not exhaustive)
+			[0%]	Chap. 7 Assignments (not exhaustive)
 2.) |85%|	Roberts - Programming Abstractions [C++]
+			[0%]	Chap. 1 Assignments (not exhaustive)
+			[0%]	Chap. 2 Assignments (not exhaustive)
+			[0%]	Chap. 3 Assignments (not exhaustive)
+			[0%]	Chap. 4 Assignments (not exhaustive)
+			[0%]	Chap. 5 Assignments (not exhaustive)
+			[0%]	Chap. 6 Assignments (not exhaustive)
+			[0%]	Chap. 7 Assignments (not exhaustive)
+			[0%]	Chap. 8 Assignments (not exhaustive)
+			[0%]	Chap. 9 Assignments (not exhaustive)
+			[0%]	Chap. 10 Assignments (not exhaustive)
+			[0%]	Chap. 11 Assignments (not exhaustive)
+			[0%]	Chap. 12 Assignments (not exhaustive)
+			[0%]	Chap. 13 Assignments (not exhaustive)
+			[0%]	Chap. 14 Assignments (not exhaustive)
+			[0%]	Chap. 15 Assignments (not exhaustive)
+			[0%]	Chap. 16 Assignments (not exhaustive)
+			[0%]	Chap. 17 Assignments (not exhaustive)
+			[0%]	Chap. 18 Assignments (not exhaustive)
+			[0%]	Chap. 19 Assignments (not exhaustive)
 
 Algorithms
 1.) |60%|	Sedgewick - Algorithms
