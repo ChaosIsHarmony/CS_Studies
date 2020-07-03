@@ -5,6 +5,7 @@ export var offset = Vector2(0,0)
 var invincible = false setget set_invincible, get_invincible
 
 onready var timer = $Timer
+onready var collision_shape = $CollisionShape2D
 
 signal invincible_mode_on
 signal invincible_mode_off
@@ -42,8 +43,8 @@ func _on_Timer_timeout():
 
 
 func _on_HurtBox_invincible_mode_on():
-	set_deferred("monitorable", false)
+	collision_shape.set_deferred("disabled", true)
 
 
 func _on_HurtBox_invincible_mode_off():
-	set_deferred("monitorable", true)
+	collision_shape.set_deferred("disabled", false)

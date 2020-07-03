@@ -13,18 +13,19 @@ Princeton
 
 MIT
 [mit = https://ocw.mit.edu/courses/electrical-engineering-and-computer-science]
-1.) |60%|	6.006 - Intro to Algorithms	[<mit>/6-006-introduction-to-algorithms-fall-2011/]
+1.) |70%|	6.006 - Intro to Algorithms	[<mit>/6-006-introduction-to-algorithms-fall-2011/]
 2.) |0%|	6.042J - Mathematics for Computer Science [<mit>/6-042j-mathematics-for-computer-science-spring-2015/index.htm]
 
 Kaggle
-1.) |100%|	Kaggle - Intro to Machine Learning
-2.) |36%|	Kaggle - Intermediate Machine Learning
+1.) |COMPLETE|	Kaggle - Intro to Machine Learning
+2.) |36%|		Kaggle - Intermediate Machine Learning
 
 Games
 1.) |COMPLETE|	Godot - HeartBeast 2D ARPG tutorial
+1.) |60%|		Godot - HeartBeast 2D Platformer tutorial
 
 Khan Academy
-1.) |87%|	Calculus BC
+1.) |95%|	Calculus BC
 2.) |21%|	Statistics & Probability
 _________________________________________________________
 

@@ -4,7 +4,7 @@ const MAX_SPEED = 100
 const ROLL_SPEED = 125
 const ACCELERATION = 500
 const FRICTION = 500
-const I_FRAMES = 0.5
+const I_FRAMES = 0.6
 
 var velocity = Vector2.ZERO
 
@@ -21,6 +21,7 @@ signal in_combat
 signal not_in_combat
 
 onready var animPlayer = $AnimationPlayer
+onready var blinkAnimPlayer = $BlinkAnimationPlayer
 onready var animTree = $AnimationTree
 onready var animState = animTree.get("parameters/playback")
 onready var swordHitBox = $SwordHitBoxPivot/SwordHitBox
@@ -109,8 +110,16 @@ func _on_HurtBox_area_entered(area):
 
 func _on_DetectionRange_body_entered(body):
 	in_combat_mode = true
-	camera.start_timer(2)
+	camera.start_timer()
 
 
 func _on_DetectionRange_body_exited(body):
 	in_combat_mode = false
+
+
+func _on_HurtBox_invincible_mode_on():
+	blinkAnimPlayer.play("start")
+
+
+func _on_HurtBox_invincible_mode_off():
+	blinkAnimPlayer.play("stop")

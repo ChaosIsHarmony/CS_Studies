@@ -10,7 +10,7 @@
 [ext_resource path="res://UI/HealthUI.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scripts/HealthUI.gd" type="Script" id=9]
 [ext_resource path="res://Levels/Tree.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Scripts/Camera.gd" type="Script" id=11]
+[ext_resource path="res://Components/Camera2D.tscn" type="PackedScene" id=11]
 
 [sub_resource type="TileSet" id=1]
 0/name = "DirtTileset.png 0"
@@ -541,7 +541,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 [node name="Sprite" type="Sprite" parent="."]
 
 [node name="GrassBackground" type="Sprite" parent="Sprite"]
-position = Vector2( 160, 90 )
+position = Vector2( 232, 104 )
 texture = ExtResource( 3 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 1316, 535 )
@@ -559,15 +559,14 @@ collision_mask = 0
 format = 1
 tile_data = PoolIntArray( 0, 0, 4, 1, 0, 196609, 2, 0, 196609, 3, 0, 196610, 6, 0, 196608, 7, 0, 196609, 8, 0, 8, 9, 0, 196610, 65536, 0, 65539, 65544, 0, 65539, 131072, 0, 196612, 131073, 0, 196609, 131074, 0, 7, 131080, 0, 131076, 131081, 0, 2, 196610, 0, 65539, 196616, 0, 65540, 196617, 0, 131074, 262146, 0, 196612, 262147, 0, 196610, 262150, 0, 196608, 262151, 0, 196609, 262152, 0, 196615 )
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" parent="." instance=ExtResource( 11 )]
 position = Vector2( 90.7744, 60.0165 )
-current = true
-smoothing_enabled = true
-script = ExtResource( 11 )
 
-[node name="Timer" type="Timer" parent="Camera2D"]
-one_shot = true
-autostart = true
+[node name="TopLeft" parent="Camera2D/Limits" index="0"]
+position = Vector2( -424, -160 )
+
+[node name="BottomRight" parent="Camera2D/Limits" index="1"]
+position = Vector2( 888, 368 )
 
 [node name="YSort" type="YSort" parent="."]
 
@@ -732,3 +731,5 @@ margin_top = 8.0
 margin_right = 72.0
 margin_bottom = 24.0
 script = ExtResource( 9 )
+
+[editable path="Camera2D"]
