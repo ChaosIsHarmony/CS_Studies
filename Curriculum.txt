@@ -25,41 +25,41 @@ Games
 1.) |60%|		Godot - HeartBeast 2D Platformer tutorial
 
 Khan Academy
-1.) |95%|	Calculus BC
+1.) |96%|	Calculus BC
 2.) |21%|	Statistics & Probability
 _________________________________________________________
 
 _________________________________________________________
 TEXTBOOKS
 Intro
-1.) |95%|	Sedgewick - Computer Science An Interdisciplinary Approach [Java]
-			[50%]	Chap. 1 Assignments (not exhaustive)
-			[0%]	Chap. 2 Assignments (not exhaustive)
-			[0%]	Chap. 3 Assignments (not exhaustive)
-			[0%]	Chap. 4 Assignments (not exhaustive)
-			[0%]	Chap. 5 Assignments (not exhaustive)
-			[0%]	Chap. 6 Assignments (not exhaustive)
-			[0%]	Chap. 7 Assignments (not exhaustive)
-2.) |85%|	Roberts - Programming Abstractions [C++]
-			[0%]	Chap. 1 Assignments (not exhaustive)
-			[0%]	Chap. 2 Assignments (not exhaustive)
-			[0%]	Chap. 3 Assignments (not exhaustive)
-			[0%]	Chap. 4 Assignments (not exhaustive)
-			[0%]	Chap. 5 Assignments (not exhaustive)
-			[0%]	Chap. 6 Assignments (not exhaustive)
-			[0%]	Chap. 7 Assignments (not exhaustive)
-			[0%]	Chap. 8 Assignments (not exhaustive)
-			[0%]	Chap. 9 Assignments (not exhaustive)
-			[0%]	Chap. 10 Assignments (not exhaustive)
-			[0%]	Chap. 11 Assignments (not exhaustive)
-			[0%]	Chap. 12 Assignments (not exhaustive)
-			[0%]	Chap. 13 Assignments (not exhaustive)
-			[0%]	Chap. 14 Assignments (not exhaustive)
-			[0%]	Chap. 15 Assignments (not exhaustive)
-			[0%]	Chap. 16 Assignments (not exhaustive)
-			[0%]	Chap. 17 Assignments (not exhaustive)
-			[0%]	Chap. 18 Assignments (not exhaustive)
-			[0%]	Chap. 19 Assignments (not exhaustive)
+1.) |COMPLETE|	Sedgewick - Computer Science An Interdisciplinary Approach [Java]
+				[50%]	Chap. 1 Assignments (??/??)
+				[0%]	Chap. 2 Assignments (??/??)
+				[0%]	Chap. 3 Assignments (??/??)
+				[0%]	Chap. 4 Assignments (??/??)
+				[0%]	Chap. 5 Assignments (??/??)
+				[0%]	Chap. 6 Assignments (??/??)
+				[0%]	Chap. 7 Assignments (??/??)
+2.) |COMPLETE|	Roberts - Programming Abstractions [C++]
+				[COMPLETE]	Chap. 1 Assignments (not exhaustive)
+				[0%]	Chap. 2 Assignments (12/12)
+				[0%]	Chap. 3 Assignments (??/??)
+				[0%]	Chap. 4 Assignments (??/??)
+				[0%]	Chap. 5 Assignments (??/??)
+				[0%]	Chap. 6 Assignments (??/??)
+				[0%]	Chap. 7 Assignments (??/??)
+				[0%]	Chap. 8 Assignments (??/??)
+				[0%]	Chap. 9 Assignments (??/??)
+				[0%]	Chap. 10 Assignments (??/??)
+				[0%]	Chap. 11 Assignments (??/??)
+				[0%]	Chap. 12 Assignments (??/??)
+				[0%]	Chap. 13 Assignments (??/??)
+				[0%]	Chap. 14 Assignments (??/??)
+				[0%]	Chap. 15 Assignments (??/??)
+				[0%]	Chap. 16 Assignments (??/??)
+				[0%]	Chap. 17 Assignments (??/??)
+				[0%]	Chap. 18 Assignments (??/??)
+				[0%]	Chap. 19 Assignments (??/??)
 
 Algorithms
 1.) |60%|	Sedgewick - Algorithms
@@ -83,7 +83,7 @@ Math
 5.) |10%|	Hefferon - Linear Algebra
 
 Misc
-1.) |0%|	Chacon - Pro Git
+1.) |5%|	Chacon - Pro Git
 2.) |66%|	A20J Ladder 11 - Codeforces Rating < 1300
 _________________________________________________________
 
