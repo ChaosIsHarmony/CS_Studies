@@ -42,7 +42,7 @@ Intro
 				Chap. 7 Assignments (??/??)
 2.) |COMPLETE|	Roberts - Programming Abstractions [C++]
 				Chap. 1 Assignments (12/12)
-				Chap. 2 Assignments (??/??)
+				Chap. 2 Assignments (2/18)
 				Chap. 3 Assignments (??/??)
 				Chap. 4 Assignments (??/??)
 				Chap. 5 Assignments (??/??)
@@ -85,6 +85,7 @@ Math
 Misc
 1.) |5%|	Chacon - Pro Git
 2.) |66%|	A20J Ladder 11 - Codeforces Rating < 1300
+3.) |1%|	https://github.com/karansinghgit/CodeForces-Ladders/blob/master/div2A.md
 _________________________________________________________
 
 _________________________________________________________
