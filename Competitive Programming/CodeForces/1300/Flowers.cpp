@@ -10,7 +10,7 @@
 	The number of ways that Pashmak can pick the flowers. Two ways are considered different if and only if there is at least one flower that is chosen in the first way and not chosen in the second way.
 
 	Input
-	The first line of the input contains n (2≤n≤2·105). In the next line there are n space-separated integers b 1, b 2, ..., b n (1≤b i≤109).
+	The first line of the input contains n (2≤n≤2·10^5). In the next line there are n space-separated integers b 1, b 2, ..., b n (1≤b i≤10^9).
 
 	Output
 	The only line of output should contain two integers. The maximum beauty difference and the number of ways this may happen, respectively.
