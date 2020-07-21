@@ -20,7 +20,41 @@
 *	Ex 1.3.5
 *	Loaded die program 3/8 prob for 6, 1/8 for each 1-5
 *
-*	Ex 1.3.
+*	Ex 1.3.7
+*	Suppose that i and j are both of type int. What is the value of j after each
+*	of the following statements is executed?
+*	a. for (i = 0, j = 0; i < 10; i++) j += i;		[j is 45]
+*	b. for (i = 0, j = 1; i < 10; i++) j += j;		[j is 1024]
+*	c. for (j = 0; j < 10; j++) j += j;				[j is 15]
+*	d. for (i = 0, j = 0; i < 10; i++) j += j++;	[j is 0]
+*
+*	Ex 1.3.9
+*	Write a program that, using one for loop and one if statement, prints the
+*	integers from 1,000 to 2,000 with five integers per line. Hint: Use the % operation.
+*	
+*	Ex 1.3.10
+*	Write a program that takes an integer command-line argument n, uses
+*	Math.random() to print n uniform random values between 0 and 1, and then
+*	prints their average value.
+*
+*	Ex 1.3.13
+*	What are the values of m and n after executing the following code?
+*
+*	int n = 123456789;
+*	int m = 0;
+*	while (n != 0)
+*	{
+*		m = (10 * m) + (n % 10);
+*		n = n / 10;
+*	}
+*
+*	[m is 987654321 & n is 0]
+*	
+*	Ex 1.3.16
+*	Write a program that takes an integer command-line argument n and
+*	prints all the positive powers of 2 less than or equal to n. Make
+*	sure that your program works properly for all values of n.
+*
 *************************************************/
 import java.util.Scanner;
 
@@ -42,7 +76,16 @@ public class Ex1_3
 		//ex_1_3_4();
 		
 		// Loaded die
-		ex_1_3_5();
+		//ex_1_3_5();
+		
+		// Ints from 1000-2000 @ 5/line
+		//ex_1_3_9();
+		
+		// n uniform random values and their average
+		//ex_1_3_10();
+		
+		// Powers of 2
+		//ex_1_3_16();
 	}
 
 	private static void ex_1_3_1()
@@ -98,6 +141,39 @@ public class Ex1_3
 		else if (chance < (6.0/8))	System.out.println("3");
 		else if (chance < (7.0/8))	System.out.println("2");
 		else 						System.out.println("1");
+	}
+	
+	private static void ex_1_3_9()
+	{
+		for (int i = 1000; i < 2001; i++)
+		{
+			if (i%5==0)	System.out.println();
+			System.out.print(i + " ");
+		}
+	}
+	
+	private static void ex_1_3_10()
+	{
+		int n = sc.nextInt();
+		double sum = 0.0;
+		
+		for (int i = 0; i < n; i++)
+		{
+			double new_rand = Math.random();
+			System.out.println((i+1) + ".) " + new_rand);
+			sum += new_rand;
+		}
+		
+		System.out.println("Average: " + (sum/n));
+	}
+	
+	private static void ex_1_3_16()
+	{
+		int n = sc.nextInt();
+
+		if (n == 0)		{ System.out.println(1); }
+		else if (n > 0)	{ int ans = 1; while(--n+1>0) System.out.println(ans*=2); }
+		else			{ double ans = 1; while(++n-1<0) System.out.println(ans/=2); }
 	}
 }
 

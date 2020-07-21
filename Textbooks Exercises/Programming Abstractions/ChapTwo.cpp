@@ -19,7 +19,8 @@ float problem_four();
 bool problem_five(int);
 int sum_divisors(int);
 bool problem_six(int, std::vector<int>&);
-
+double problem_seven(int);
+int problem_nine();
 
 // MAIN
 int main()
@@ -35,9 +36,15 @@ int main()
 	//for (int i = 1; i < 10000; i++)	{ problem_five(i); }
 	
 	// IsPrime
-	std::vector<int> primes;
-	primes.push_back(2);
-	for (int i = 3; i < 101; i++)	{ print(i); print(problem_six(i, primes)); }
+	//std::vector<int> primes;
+	//primes.push_back(2);
+	//for (int i = 3; i < 101; i++)	{ print(i); print(problem_six(i, primes)); }
+	
+	// Successive approx for roots
+	//print(problem_seven(get_input()));
+	
+	// Permutations
+	print(problem_nine());
 	
 	return 0;
 }
@@ -80,6 +87,35 @@ bool problem_six(int n, std::vector<int> &primes)
 	}
 	
 	return true;
+}
+
+const double EPSILON = 0.0001;
+double problem_seven(int base)
+{
+	double g = base/2;
+	//My solution:
+	//while (g*g < base-EPSILON || g*g > base+EPSILON)	{ g = (g + base/g)/2; }
+	//Book's request:
+	while (true)
+	{ 
+		double og = g;
+		g = (g + base/g)/2;
+		if (g == og || g == base/og)	break;
+	}
+	return g;
+}
+
+int problem_nine()
+{
+	// get input
+	int n = get_input();
+	int k = get_input();
+	
+	// process
+	int limit = n-k;
+	int product = n--;
+	while(n>limit) { product *= n--; }
+	return product;
 }
 
 
