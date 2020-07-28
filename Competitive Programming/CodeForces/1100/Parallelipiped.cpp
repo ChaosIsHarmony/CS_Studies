@@ -1,6 +1,25 @@
 /*
  * https://codeforces.com/problemset/problem/224/A
  
+
+You've got a rectangular parallelepiped with integer edge lengths. You know the areas of its three faces that have a common vertex. Your task is to find the sum of lengths of all 12 edges of this parallelepiped.
+
+Input
+
+The first and the single line contains three space-separated integers — the areas of the parallelepiped's faces. The area's values are positive ( > 0) and do not exceed 104. It is guaranteed that there exists at least one parallelepiped that satisfies the problem statement.
+
+Output
+
+Print a single number — the sum of all edges of the parallelepiped.
+
+SAMPLES:
+1 1 1
+	12
+
+4 6 6
+	28
+
+Observations:
  4 6 6
  =28
  because 2 x 2 x 3 dimensions

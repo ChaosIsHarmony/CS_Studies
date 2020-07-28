@@ -55,6 +55,25 @@
 *	prints all the positive powers of 2 less than or equal to n. Make
 *	sure that your program works properly for all values of n.
 *
+*	Ex 1.3.18
+*	Unlike the harmonic numbers, the sum 1/1^2 + 1/2^2 + ... + 1/n^2 does
+*	converge to a constant as n grows to infinity. (Indeed, the constant
+*	is pi^2/6, so this formula can be used to estimate the value of.) 
+*	Which of the following for loops computes this sum?
+*	Assume that n is an int variable initialized to 1000000 and sum is
+*	a double variable initialized to 0.0.
+*		a. for (int i = 1; i <= n; i++) sum += 1 / (i*i);		[int division]
+*		b. for (int i = 1; i <= n; i++) sum += 1.0 / i*i;		[divides first]
+*		c. for (int i = 1; i <= n; i++) sum += 1.0 / (i*i);		[div by 0 & infinty errors]
+*		d. for (int i = 1; i <= n; i++) sum += 1 / (1.0*i*i);	[correct]
+*
+*	Ex 1.3.21
+*	Modify 'Binary' program to get a program 'Kary' that takes two integer
+*	commandline arguments i and k and converts i to base k. Assume that i
+*	is an integer in Java’s long data type and that k is an integer between
+*	2 and 16. For bases greater than 10, use the letters A through F to represent
+*	the 11th through 16th digits, respectively.
+*
 *************************************************/
 import java.util.Scanner;
 
@@ -86,6 +105,9 @@ public class Ex1_3
 		
 		// Powers of 2
 		//ex_1_3_16();
+		
+		// Kary conversion
+		ex_1_3_21();
 	}
 
 	private static void ex_1_3_1()
@@ -174,6 +196,18 @@ public class Ex1_3
 		if (n == 0)		{ System.out.println(1); }
 		else if (n > 0)	{ int ans = 1; while(--n+1>0) System.out.println(ans*=2); }
 		else			{ double ans = 1; while(++n-1<0) System.out.println(ans/=2); }
+	}
+	
+	// INCOMPLETE works up to 10
+	private static void ex_1_3_21()
+	{
+		long i = sc.nextLong();
+		int k = sc.nextInt();	// range of k = [2-16]
+		
+		String converted_num = "";
+		while (i > 0)	{ converted_num = (i%k) + converted_num; i/=k; }
+		
+		System.out.println((converted_num.equals(""))? 0 : converted_num);
 	}
 }
 

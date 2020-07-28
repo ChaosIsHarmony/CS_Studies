@@ -29,10 +29,60 @@ SAMPLES:
 14 3
 -1 1 -1 -1 1 -1 -1 1 -1 -1 1 -1 -1 1
 	9
+	
+Observations:
+- b is the starting tab and we radiate out from there until hitting 1 or n
+- Then add up all tabs at indexes not closed
+- This will be symmetrical:
+	- in sample 1
+		- theoretically, if b = 0 were possible |e-s| would be 0 as well
+		- b = 1 yields |e-s| = 2
+		- b = 2 yields |e-s| = 0
+		- b = 3 yields |e-s| = 2
+		- b = 4 yields |e-s| = 0
+- Can add up all tabs and then subtract given closed tabs from that total to see the difference between them
  */
+#include <iostream>
+#include <cstdlib>
+
+template<typename T>
+void print(T t) { std::cout << t << std::endl; }
 
 int main()
 {
+	// Input
+	int n, k, total=0;
+	std::cin >> n >> k;
+	int tabs[n+1];
+	for (int j = 1; j < n+1; j++)	{ std::cin >> tabs[j]; total+=tabs[j]; }
+	
+	// Process
+	int max_diff = 0;
+	for (int b = 1; b <= n; b++)
+	{
+		// closed_tab = b + i * k
+		int closed_tab_hi, closed_tab_lo;
+		int new_total = total - tabs[b];
+		for (int i = 1; i <= n; i++)
+		{
+			closed_tab_hi = b + i * k;
+			closed_tab_lo = b - i * k;
+						
+			if (closed_tab_hi > n && closed_tab_lo < 1)
+				break;
+			else if (closed_tab_hi <= n && closed_tab_lo >= 1)
+				new_total -= tabs[closed_tab_hi] + tabs[closed_tab_lo];
+			else if (closed_tab_hi <= n)
+				new_total -= tabs[closed_tab_hi];
+			else
+				new_total -= tabs[closed_tab_lo];
+		}
+		max_diff = (std::abs(new_total) > max_diff) ? std::abs(new_total) : max_diff;
+	}
+	
+	// Output
+	print(max_diff);
+		
 	return 0;
 }
 
