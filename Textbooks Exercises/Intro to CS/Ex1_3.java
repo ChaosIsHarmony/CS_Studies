@@ -74,6 +74,17 @@
 *	2 and 16. For bases greater than 10, use the letters A through F to represent
 *	the 11th through 16th digits, respectively.
 *
+*   Ex 1.3.28
+*   Run quick experiments to determine the impact of using the termination
+*   condition (factor <= n/factor) instead of (factor < n) in Factors in Program
+*   1.3.9. For each method, find the largest n such that when you type in an n-digit
+*   number, the program is sure to finish within 10 seconds.
+*
+*   Ex 1.3.29
+*   Write a program Checkerboard that takes an integer command-line argument
+*   n and uses a loop nested within a loop to print out a two-dimensional n -by- n
+*   checkerboard pattern with alternating spaces and asterisks.
+*
 *************************************************/
 import java.util.Scanner;
 
@@ -107,7 +118,13 @@ public class Ex1_3
 		//ex_1_3_16();
 		
 		// Kary conversion
-		ex_1_3_21();
+		//ex_1_3_21();
+		
+		// difference between <= and <
+		//ex_1_3_28();
+		
+		// Checkerboard
+		ex_1_3_29();
 	}
 
 	private static void ex_1_3_1()
@@ -198,17 +215,71 @@ public class Ex1_3
 		else			{ double ans = 1; while(++n-1<0) System.out.println(ans/=2); }
 	}
 	
-	// INCOMPLETE works up to 10
 	private static void ex_1_3_21()
 	{
 		long i = sc.nextLong();
-		int k = sc.nextInt();	// range of k = [2-16]
+		int k = 0;
+        // range of k = [2-16]
+        while (k < 2 || k > 16) { k = sc.nextInt(); }
 		
 		String converted_num = "";
-		while (i > 0)	{ converted_num = (i%k) + converted_num; i/=k; }
-		
-		System.out.println((converted_num.equals(""))? 0 : converted_num);
+        while (i > 0)
+        {
+            char temp;
+            if (i%k < 10)       temp = (char) ('0' + (i%k));
+            else                temp = (char) ('A' + (i%k) - 10);  
+            converted_num =  temp + converted_num;
+            i/=k;
+        }
+
+		System.out.println((converted_num.equals("")) ? 0 : converted_num);
 	}
+
+    private static void ex_1_3_28()
+    {
+        long timer = System.currentTimeMillis();
+        int tot_time = 0;
+        // Print the prime factorization of n.
+        long n = sc.nextLong();
+        long n_copy = n;
+        final int TRIALS = 1000;
+
+        for (int i = 0; i < TRIALS; i ++)
+        {
+            n = n_copy;
+            // factor <= n/factor VS. factor < n/factor
+            for (long factor = 2; factor <= n/factor; factor++)
+            { // Test potential factor.
+                while (n % factor == 0)
+                { // Cast out and print factor.
+                    n /= factor;
+                    // System.out.print(factor + " ");
+                } // Any factor of n must be greater than factor.
+            }
+            //if (n > 1) System.out.print(n);
+            tot_time+=System.currentTimeMillis()-timer;
+        }
+            System.out.println(tot_time/(1.0*TRIALS));
+    }
+
+    private static void ex_1_3_29()
+    {
+        int n = sc.nextInt();
+        for (int i = 0; i < n; i++)
+        {
+            for (int j = 0; j < n; j++)
+                if (i%2==0)
+                {
+                    if (j%2==0) System.out.print("*");
+                    else        System.out.print(" ");
+                } else
+                {
+                    if (j%2==0) System.out.print(" ");
+                    else        System.out.print("*");
+                }
+            System.out.print("\n");        
+        }           
+    }
 }
 
 

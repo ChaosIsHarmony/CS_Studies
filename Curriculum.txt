@@ -39,7 +39,7 @@ _________________________________________________________
 TEXTBOOKS
 Intro
 1.) |COMPLETE|	Sedgewick - Computer Science An Interdisciplinary Approach [Java]
-				Chap. 1 Assignments (21/165)
+				Chap. 1 Assignments (30/165)
 				Chap. 2 Assignments (??/??)
 				Chap. 3 Assignments (??/??)
 				Chap. 4 Assignments (??/??)
