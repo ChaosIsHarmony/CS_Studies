@@ -16,6 +16,12 @@ MIT
 1.) |70%|	6.006 - Intro to Algorithms	[<mit>/6-006-introduction-to-algorithms-fall-2011/]
 2.) |0%|	6.042J - Mathematics for Computer Science [<mit>/6-042j-mathematics-for-computer-science-spring-2015/index.htm]
 
+Harvard
+1.) |3%|	Statistics 110 - Probability [<yt>/watch?v=KbB0FjPg0mw&list=PL2SOU6wwxB0uwwH80KTQ6ht66KWxbzTIo&index=2]
+
+UBC
+1.)	|10%|	CPSC 340 - Machine Learning [<yt>/watch?v=cM0f_03r_MY&list=PLE6Wd9FR--Ecf_5nCbnSQMHqORpiChfJf&index=1]
+
 Kaggle
 1.) |COMPLETE|	Kaggle - Intro to Machine Learning
 2.) |36%|		Kaggle - Intermediate Machine Learning
@@ -69,7 +75,7 @@ OS
 
 ML
 1.) |0%|	Abu-Mostafa - Learning From Data
-2.) |0%|	Russell - Artificial Intelligence A Modern Approach
+2.) |10%|	Russell - Artificial Intelligence A Modern Approach
 3.) |30%|	Kinsely - Neural Networks from Scratch
 
 Games
@@ -83,7 +89,7 @@ Math
 5.) |10%|	Hefferon - Linear Algebra
 
 Misc
-1.) |10%|	Chacon - Pro Git
+1.) |50%|	Chacon - Pro Git
 2.) |66%|	A20J Ladder 11 - Codeforces Rating < 1300
 3.) |3%|	https://github.com/karansinghgit/CodeForces-Ladders/blob/master/div2A.md
 _________________________________________________________
