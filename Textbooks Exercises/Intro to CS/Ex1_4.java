@@ -169,6 +169,3 @@ public class Ex1_4
             System.out.println(a[i]);
     }
 }
-
-
-
