@@ -7,16 +7,20 @@ git add <filename> || . || --all || *
 // commit files with the message
 git commit -m "Message"
 
-// push to master branch
-git push origin master
+// push to branch
+git push origin <branch>
 
-// pull from master branch
-git pull origin master
+// pull from branch
+git pull origin <branch>
 
 // branch repo from master
+// for creating new branch
+git checkout -b "branch"
+
+// for pre-existing branch
 git checkout <branch>
 
-// merge checked out branch to master
+// merge checked out branch to currently checked out branch
 git merge <branch>
 
 // 

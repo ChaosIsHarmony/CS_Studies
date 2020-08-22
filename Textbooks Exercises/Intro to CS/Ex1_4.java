@@ -58,13 +58,29 @@
 *   Halfway through, half of the array has already been overwritten...	
 *
 *	Ex 1.4.8
-*	
+*	Which values does the following code put in the array a[] ?
+*
+*       int n = 10;
+*       int[] a = new int[n];
+*       a[0] = 1;
+*       a[1] = 1;
+*       for (int i = 2; i < n; i++)
+*           a[i] = a[i-1] + a[i-2];
+*
+*   Fibonacci sequence
 *
 *	Ex 1.4.9
-*	
+*	What does the following code fragment print?
+*
+*       int[] a = { 1, 2, 3 };
+*       int[] b = { 1, 2, 3 };
+*       System.out.println(a == b);
+*
+*   false   
 *
 *	Ex 1.4.10
-*	
+*	Write a program Deal that takes an integer command-line argument n and
+*   prints n poker hands (five cards each) from a shuffled deck, separated by blank lines.
 *
 *	Ex 1.4.12
 *	
@@ -99,7 +115,16 @@ public class Ex1_4
         //ex_1_4_6();
 
         // Mirror array
-        ex_1_4_7();
+        //ex_1_4_7();
+
+        // Fibonacci
+        //ex_1_4_8();
+
+        // Relational op on arrays
+        //ex_1_4_9();
+
+        // n hands of poker from shuffled deck
+        ex_1_4_10();
 	}
 
 	private static void ex_1_4_1()
@@ -167,5 +192,75 @@ public class Ex1_4
             a[i] = a[a[i]];
         for (int i = 0; i < 10; i++)
             System.out.println(a[i]);
+    }
+
+    private static void ex_1_4_8()
+    {
+        int n = 10;
+        int[] a = new int[n];
+        a[0] = 1;
+        a[1] = 1;
+        for (int i = 2; i < n; i++)
+        {
+            a[i] = a[i-1] + a[i-2];
+            System.out.println(a[i]);
+        }
+    }
+
+    private static void ex_1_4_9()
+    {
+        int[] a = { 1, 2, 3 };
+        int[] b = { 1, 2, 3 };
+        System.out.println(a == b);
+    }
+
+
+//!!!!!!!!!!INCOMPLETE!!!!!!!
+    /*
+     * Alternative shuffle:
+     * import java.util.*
+     *
+     * List deck = new ArrayList();
+     * deck.add() ALL CARDS
+     * Collections.shuffle(deck);
+     */
+    private static void ex_1_4_10()
+    {
+        // create shuffled deck
+        int[] deck = new int[52];
+        /* 1-13 = Spades
+         * 14-26 = Hearts
+         * 27-40 = Clubs
+         * 41-52 = Diamonds 
+         */
+        deck[0] = 1;
+        for (int i = 1; i < deck.length; i++)
+            deck[i] = deck[i-1] + 1;
+
+        // shuffle
+        for (int i = 0; i < deck.length; i++)
+            swap(deck, i, (Math.random()*52));
+
+        // deal n hands
+        int n = sc.nextInt();
+        int ind = 0;
+        for (int i = 0; i < n; i++)
+        {
+            String card = " ";
+            for (int cards = 0; cards < 5; cards++, ind++)
+            {
+                // TODO print out card
+
+                System.out.print();
+            }
+            System.out.println();
+        }
+    }
+
+    private static void swap(int[] deck, int i, int j)
+    {
+        int card = deck[i];
+        deck[i] = deck[j];
+        deck[j] = card;
     }
 }
