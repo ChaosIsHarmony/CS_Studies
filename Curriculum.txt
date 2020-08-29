@@ -14,13 +14,7 @@ Princeton
 MIT
 [mit = https://ocw.mit.edu/courses/electrical-engineering-and-computer-science]
 1.) |70%|	6.006 - Intro to Algorithms	[<mit>/6-006-introduction-to-algorithms-fall-2011/]
-2.) |0%|	6.042J - Mathematics for Computer Science [<mit>/6-042j-mathematics-for-computer-science-spring-2015/index.htm]
-
-Harvard
-1.) |5%|	Statistics 110 - Probability [<yt>/watch?v=KbB0FjPg0mw&list=PL2SOU6wwxB0uwwH80KTQ6ht66KWxbzTIo&index=2]
-
-UBC
-1.)	|20%|	CPSC 340 - Machine Learning [<yt>/watch?v=cM0f_03r_MY&list=PLE6Wd9FR--Ecf_5nCbnSQMHqORpiChfJf&index=1]
+2.) |10%|	6.042J - Mathematics for Computer Science [<mit>/6-042j-mathematics-for-computer-science-spring-2015/index.htm]
 
 Kaggle
 1.) |COMPLETE|	Kaggle - Intro to Machine Learning
@@ -41,7 +35,7 @@ _________________________________________________________
 TEXTBOOKS
 Intro
 1.) |COMPLETE|	Sedgewick - Computer Science An Interdisciplinary Approach [Java]
-				Chap. 1 Assignments (42/165)
+				Chap. 1 Assignments (43/165)
 				Chap. 2 Assignments (??/??)
 				Chap. 3 Assignments (??/??)
 				Chap. 4 Assignments (??/??)
@@ -77,7 +71,7 @@ OS
 
 ML
 1.) |0%|	Abu-Mostafa - Learning From Data
-2.) |15%|	Russell - Artificial Intelligence A Modern Approach
+2.) |20%|	Russell - Artificial Intelligence A Modern Approach
 3.) |30%|	Kinsely - Neural Networks from Scratch
 
 Games

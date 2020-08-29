@@ -83,13 +83,16 @@
 *   prints n poker hands (five cards each) from a shuffled deck, separated by blank lines.
 *
 *	Ex 1.4.12
-*	
+*	Write a program DiscreteDistribution that takes a variable number of
+*	integer command-line arguments and prints the integer i with probability proportional
+*	to the ith command-line argument.
 *
 *	Ex 1.4.14
 *	
 *
 *************************************************/
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Ex1_4
 {
@@ -124,7 +127,10 @@ public class Ex1_4
         //ex_1_4_9();
 
         // n hands of poker from shuffled deck
-        ex_1_4_10();
+        //ex_1_4_10();
+		
+		// Probabilistic printing
+		ex_1_4_12();
 	}
 
 	private static void ex_1_4_1()
@@ -215,7 +221,6 @@ public class Ex1_4
     }
 
 
-//!!!!!!!!!!INCOMPLETE!!!!!!!
     /*
      * Alternative shuffle:
      * import java.util.*
@@ -236,22 +241,27 @@ public class Ex1_4
         deck[0] = 1;
         for (int i = 1; i < deck.length; i++)
             deck[i] = deck[i-1] + 1;
-
+		
         // shuffle
         for (int i = 0; i < deck.length; i++)
-            swap(deck, i, (Math.random()*52));
+            swap(deck, i, (int) (Math.random()*52));
 
         // deal n hands
         int n = sc.nextInt();
+		while (n > 10) n = sc.nextInt();
         int ind = 0;
         for (int i = 0; i < n; i++)
         {
-            String card = " ";
             for (int cards = 0; cards < 5; cards++, ind++)
             {
-                // TODO print out card
-
-                System.out.print();
+				// 1-13 = Spades
+                if (deck[ind] < 14)			print_card(deck, ind, "-S");
+				// 14-26 = Hearts
+				else if (deck[ind] < 27)	print_card(deck, ind, "-H");
+				// 27-40 = Clubs
+				else if (deck[ind] < 41)	print_card(deck, ind, "-C");
+				// 41-52 = Diamonds
+				else						print_card(deck, ind, "-D");
             }
             System.out.println();
         }
@@ -263,4 +273,45 @@ public class Ex1_4
         deck[i] = deck[j];
         deck[j] = card;
     }
+	
+	private static void print_card(int[] deck, int ind, String suit)
+	{
+		String card = "";
+		int num = deck[ind]%13;
+		switch (num)
+		{
+			case 0:					card += "K"+suit+"  "; break;
+			case 1:					card += "A"+suit+"  "; break;
+			case 2:	case 3: case 4: 
+			case 5:	case 6: case 7: 
+			case 8: case 9:			card += num +suit+"  "; break;
+			case 10:				card += num +suit+" "; break;
+			case 11:				card += "J"+suit+"  "; break;
+			case 12:				card += "Q"+suit+"  "; break;
+		}
+        System.out.print(card);
+	}
+	
+	// INCOMPLETE!!!!
+	private static void ex_1_4_12()
+	{
+		// store user input numbers in an ArrayList
+		ArrayList<Integer> numbers = new ArrayList<Integer>();
+		int n = sc.nextInt();
+		int sum = 0;
+		while (n >= 0)
+		{
+			numbers.add(n);
+			sum += n;
+			n = sc.nextInt();
+		}
+		
+		// print out integer i with a probability of ArrayList.get(i)/sum
+		for (int i = 0; i < numbers.size(); i++)
+		{
+			double prob = numbers.get(i)/(1.0*sum);
+			double rand = Math.random();
+			System.out.print(i + " "); // need to determine when to print it out
+		}
+	}
 }
