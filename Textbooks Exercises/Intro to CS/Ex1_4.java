@@ -88,7 +88,13 @@
 *	to the ith command-line argument.
 *
 *	Ex 1.4.14
-*	
+*	Write a code fragment to print the transposition (rows and columns exchanged)
+*	of a square two-dimensional array. For the example spreadsheet array in
+*	the text, you code would print the following:
+*
+*		99 98 92 94 99 90 76 92 97 89
+*		85 57 77 32 34 46 59 66 71 29
+*		98 78 76 11 22 54 88 89 24 38
 *
 *************************************************/
 import java.util.Scanner;
@@ -130,7 +136,10 @@ public class Ex1_4
         //ex_1_4_10();
 		
 		// Probabilistic printing
-		ex_1_4_12();
+		//ex_1_4_12();
+		
+		// Matrix transposition
+		ex_1_4_14();
 	}
 
 	private static void ex_1_4_1()
@@ -291,8 +300,7 @@ public class Ex1_4
 		}
         System.out.print(card);
 	}
-	
-	// INCOMPLETE!!!!
+
 	private static void ex_1_4_12()
 	{
 		// store user input numbers in an ArrayList
@@ -311,7 +319,24 @@ public class Ex1_4
 		{
 			double prob = numbers.get(i)/(1.0*sum);
 			double rand = Math.random();
-			System.out.print(i + " "); // need to determine when to print it out
+			if (rand <= prob)	System.out.print(i + " ");
+		}
+	}
+	
+	private static void ex_1_4_14()
+	{
+		// make 2D array
+		// TODO make a matrix generator
+		int[][] two_d_arr =	{{99, 98, 92, 94, 99, 90, 76, 92, 97, 89},
+							{85, 57, 77, 32, 34, 46, 59, 66, 71, 29},
+							{98, 78, 76, 11, 22, 54, 88, 89, 24, 38}};
+		
+		// transpose
+		for (int i = 0; i < two_d_arr[0].length; i++)
+		{
+			for (int j = 0; j < two_d_arr.length; j++)
+				System.out.print(two_d_arr[j][i]+" ");
+			System.out.println();
 		}
 	}
 }

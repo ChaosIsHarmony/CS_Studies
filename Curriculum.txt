@@ -26,8 +26,8 @@ Games
 
 Khan Academy
 1.) |98%|	AP Calculus BC
-2.) |21%|	AP Statistics
-3.) |10%|   AP Physics 1
+2.) |24%|	AP Statistics
+3.) |26%|   AP Physics 1
 4.) |0%|    AP Physics 2
 _________________________________________________________
 
@@ -35,7 +35,7 @@ _________________________________________________________
 TEXTBOOKS
 Intro
 1.) |COMPLETE|	Sedgewick - Computer Science An Interdisciplinary Approach [Java]
-				Chap. 1 Assignments (43/165)
+				Chap. 1 Assignments (44/165)
 				Chap. 2 Assignments (??/??)
 				Chap. 3 Assignments (??/??)
 				Chap. 4 Assignments (??/??)
