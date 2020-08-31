@@ -14,7 +14,7 @@ Princeton
 MIT
 [mit = https://ocw.mit.edu/courses/electrical-engineering-and-computer-science]
 1.) |70%|	6.006 - Intro to Algorithms	[<mit>/6-006-introduction-to-algorithms-fall-2011/]
-2.) |10%|	6.042J - Mathematics for Computer Science [<mit>/6-042j-mathematics-for-computer-science-spring-2015/index.htm]
+2.) |20%|	6.042J - Mathematics for Computer Science [<mit>/6-042j-mathematics-for-computer-science-spring-2015/index.htm]
 
 Kaggle
 1.) |COMPLETE|	Kaggle - Intro to Machine Learning
@@ -35,7 +35,7 @@ _________________________________________________________
 TEXTBOOKS
 Intro
 1.) |COMPLETE|	Sedgewick - Computer Science An Interdisciplinary Approach [Java]
-				Chap. 1 Assignments (44/165)
+				Chap. 1 Assignments (47/165)
 				Chap. 2 Assignments (??/??)
 				Chap. 3 Assignments (??/??)
 				Chap. 4 Assignments (??/??)
