@@ -1,93 +1,84 @@
 _________________________________________________________
 COURSES
-Stanford
-1.) |COMPLETE|	CS106A - Programming Methodology [https://see.stanford.edu/Course/CS106A/194]
-2.) |COMPLETE|	CS106B - Programming Abstractions [https://see.stanford.edu/Course/CS106B]
-3.) |COMPLETE|	CS107 - Programming Paradigms [https://see.stanford.edu/Course/CS107]
+--BASICS--
+	Stanford
+		1.) |COMPLETE|	CS106A - Programming Methodology [https://see.stanford.edu/Course/CS106A/194]
+		2.) |COMPLETE|	CS106B - Programming Abstractions [https://see.stanford.edu/Course/CS106B]
+		3.) |COMPLETE|	CS107 - Programming Paradigms [https://see.stanford.edu/Course/CS107]
+	Princeton
+		4.) |COMPLETE|	CS: Programming with a Purpose [https://www.coursera.org/learn/cs-programming-java]
+		5.) |COMPLETE|	CS: Algorithms, Theory, and Machines [https://www.coursera.org/learn/cs-algorithms-theory-machines]
 
-Princeton
-1.) |COMPLETE|	CS: Programming with a Purpose [https://www.coursera.org/learn/cs-programming-java]
-2.) |COMPLETE|	CS: Algorithms, Theory, and Machines [https://www.coursera.org/learn/cs-algorithms-theory-machines]
-3.) |60%|	Algorithms, Part I [https://www.coursera.org/learn/algorithms-part1]
-4.) |0%|	Algorithms, Part II [https://www.coursera.org/learn/algorithms-part2]
+--ALGORITHMS--
+	Princeton
+		1.) |60%|	Algorithms, Part I [https://www.coursera.org/learn/algorithms-part1]
+		2.) |0%|	Algorithms, Part II [https://www.coursera.org/learn/algorithms-part2]
+	MIT	[mit = https://ocw.mit.edu/courses/electrical-engineering-and-computer-science]
+		3.) |70%|	6.006 - Intro to Algorithms	[<mit>/6-006-introduction-to-algorithms-fall-2011/]
 
-MIT
-[mit = https://ocw.mit.edu/courses/electrical-engineering-and-computer-science]
-1.) |70%|	6.006 - Intro to Algorithms	[<mit>/6-006-introduction-to-algorithms-fall-2011/]
-2.) |20%|	6.042J - Mathematics for Computer Science [<mit>/6-042j-mathematics-for-computer-science-spring-2015/index.htm]
+--AI/ML--
+	Kaggle
+		1.) |COMPLETE|	Kaggle - Intro to Machine Learning
+		2.) |36%|		Kaggle - Intermediate Machine Learning
 
-Kaggle
-1.) |COMPLETE|	Kaggle - Intro to Machine Learning
-2.) |36%|		Kaggle - Intermediate Machine Learning
+--GAMES--
+	Games
+		1.) |COMPLETE|	Godot - HeartBeast 2D ARPG tutorial
+		2.) |60%|		Godot - HeartBeast 2D Platformer tutorial
 
-Games
-1.) |COMPLETE|	Godot - HeartBeast 2D ARPG tutorial
-1.) |60%|		Godot - HeartBeast 2D Platformer tutorial
+--MATH--
+	-Calculus-
+	Khan Academy
+		1.) |98%|	AP Calculus BC
+	-Discrete Math-
+	MIT
+		2.) |20%|	6.042J - Mathematics for Computer Science [<mit>/6-042j-mathematics-for-computer-science-fall-2010/]
+	Kimberly Brehm
+		3.) |5%|	Discrete Math [https://www.youtube.com/playlist?list=PLl-gb0E4MII28GykmtuBXNUNoej-vY5Rz]
+	-Statistics-
+	Khan Academy
+		4.) |28%|	AP Statistics
 
-Khan Academy
-1.) |98%|	AP Calculus BC
-2.) |24%|	AP Statistics
-3.) |26%|   AP Physics 1
-4.) |0%|    AP Physics 2
+--MISC--
+	Khan Academy
+		1.) |28%|   AP Physics 1
+		2.) |0%|    AP Physics 2
 _________________________________________________________
 
 _________________________________________________________
 TEXTBOOKS
-Intro
-1.) |COMPLETE|	Sedgewick - Computer Science An Interdisciplinary Approach [Java]
-				Chap. 1 Assignments (47/165)
-				Chap. 2 Assignments (??/??)
-				Chap. 3 Assignments (??/??)
-				Chap. 4 Assignments (??/??)
-				Chap. 5 Assignments (??/??)
-				Chap. 6 Assignments (??/??)
-				Chap. 7 Assignments (??/??)
-2.) |COMPLETE|	Roberts - Programming Abstractions [C++]
-				Chap. 1 Assignments (12/12)
-				Chap. 2 Assignments (4/18)
-				Chap. 3 Assignments (??/??)
-				Chap. 4 Assignments (??/??)
-				Chap. 5 Assignments (??/??)
-				Chap. 6 Assignments (??/??)
-				Chap. 7 Assignments (??/??)
-				Chap. 8 Assignments (??/??)
-				Chap. 9 Assignments (??/??)
-				Chap. 10 Assignments (??/??)
-				Chap. 11 Assignments (??/??)
-				Chap. 12 Assignments (??/??)
-				Chap. 13 Assignments (??/??)
-				Chap. 14 Assignments (??/??)
-				Chap. 15 Assignments (??/??)
-				Chap. 16 Assignments (??/??)
-				Chap. 17 Assignments (??/??)
-				Chap. 18 Assignments (??/??)
-				Chap. 19 Assignments (??/??)
+--BASICS--
+	Intro
+		1.) |COMPLETE|	Sedgewick - Computer Science An Interdisciplinary Approach [Java]
+						Chap. 1 Assignments (47/165)
+		2.) |COMPLETE|	Roberts - Programming Abstractions [C++]
+						Chap. 1-2 Assignments (16/30)
 
-Algorithms
-1.) |60%|	Sedgewick - Algorithms
+--ALGORITHMS--
+	1.) |60%|	Sedgewick - Algorithms
 
-OS
-1.) |60%|	Silberschatz - Operating System Concepts
+--OS--
+	1.) |60%|	Silberschatz - Operating System Concepts
 
-ML
-1.) |0%|	Abu-Mostafa - Learning From Data
-2.) |20%|	Russell - Artificial Intelligence A Modern Approach
-3.) |30%|	Kinsely - Neural Networks from Scratch
+--AI/ML--
+	1.) |0%|	Abu-Mostafa - Learning From Data
+	2.) |20%|	Russell - Artificial Intelligence A Modern Approach
+	3.) |30%|	Kinsely - Neural Networks from Scratch
 
-Games
-1.) |66%|	Godot - 3D FPS tutorial
+--GAMES--
+	1.) |66%|	Godot - 3D FPS tutorial
 
-Math
-1.) |10%|	Strang - Calculus V. I
-2.) |0%|	Strang - Calculus V. II
-3.) |0%|	Strang - Calculus V. III
-4.) |10%|	Hammack - The Book of Proof
-5.) |10%|	Hefferon - Linear Algebra
+--MATH--
+	1.) |10%|	Strang - Calculus V. I
+	2.) |0%|	Strang - Calculus V. II
+	3.) |0%|	Strang - Calculus V. III
+	4.) |10%|	Hammack - The Book of Proof
+	5.) |10%|	Hefferon - Linear Algebra
 
-Misc
-1.) |50%|	Chacon - Pro Git
-2.) |66%|	A20J Ladder 11 - Codeforces Rating < 1300
-3.) |3%|	https://github.com/karansinghgit/CodeForces-Ladders/blob/master/div2A.md
+--MISC--
+	1.) |50%|	Chacon - Pro Git
+	2.) |66%|	A20J Ladder 11 - Codeforces Rating < 1300
+	3.) |4%|	https://github.com/karansinghgit/CodeForces-Ladders/blob/master/div2A.md
 _________________________________________________________
 
 _________________________________________________________

@@ -1,5 +1,5 @@
 /*
- * https://codeforces.com/problemset/problem/58/A
+ * 
  
  troublesome inputs:
 	40 10
