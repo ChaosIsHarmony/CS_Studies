@@ -20,6 +20,8 @@ COURSES
 	Kaggle
 		1.) |COMPLETE|	Kaggle - Intro to Machine Learning
 		2.) |36%|		Kaggle - Intermediate Machine Learning
+	Harvard
+		3.) |00%|	CS50 - Intro to Artificial Intelligence with Python
 
 --GAMES--
 	Games
@@ -34,14 +36,16 @@ COURSES
 	MIT
 		2.) |20%|	6.042J - Mathematics for Computer Science [<mit>/6-042j-mathematics-for-computer-science-fall-2010/]
 	Kimberly Brehm
-		3.) |5%|	Discrete Math [https://www.youtube.com/playlist?list=PLl-gb0E4MII28GykmtuBXNUNoej-vY5Rz]
+		3.) |10%|	Discrete Math [https://www.youtube.com/playlist?list=PLl-gb0E4MII28GykmtuBXNUNoej-vY5Rz]
+	Dr. Trefor Bazett
+		4.) |20%|	Discrete Math [https://www.youtube.com/playlist?list=PLHXZ9OQGMqxersk8fUxiUMSIx0DBqsKZS]
 	-Statistics-
 	Khan Academy
-		4.) |28%|	AP Statistics
+		5.) |30%|	AP Statistics
 
 --MISC--
 	Khan Academy
-		1.) |28%|   AP Physics 1
+		1.) |30%|   AP Physics 1
 		2.) |0%|    AP Physics 2
 _________________________________________________________
 
@@ -55,18 +59,18 @@ TEXTBOOKS
 						Chap. 1-2 Assignments (16/30)
 
 --ALGORITHMS--
-	1.) |60%|	Sedgewick - Algorithms
+	1.) |60%|	Sedgewick - Algorithms [Java]
 
 --OS--
-	1.) |60%|	Silberschatz - Operating System Concepts
+	1.) |60%|	Silberschatz - Operating System Concepts [C]
 
 --AI/ML--
 	1.) |0%|	Abu-Mostafa - Learning From Data
 	2.) |20%|	Russell - Artificial Intelligence A Modern Approach
-	3.) |30%|	Kinsely - Neural Networks from Scratch
+	3.) |30%|	Kinsely - Neural Networks from Scratch [Python]
 
 --GAMES--
-	1.) |66%|	Godot - 3D FPS tutorial
+	1.) |66%|	Godot - 3D FPS tutorial [GDScript]
 
 --MATH--
 	1.) |10%|	Strang - Calculus V. I
@@ -77,24 +81,8 @@ TEXTBOOKS
 
 --MISC--
 	1.) |50%|	Chacon - Pro Git
-	2.) |66%|	A20J Ladder 11 - Codeforces Rating < 1300
-	3.) |4%|	https://github.com/karansinghgit/CodeForces-Ladders/blob/master/div2A.md
-_________________________________________________________
-
-_________________________________________________________
-CODING EXPERIENCE
-1.) Conscientia
-	a.) Java		
-	b.) GD Script
-2.) Shuraba Gym Management Software
-	a.) Java
-3.) SAT prep software
-	a.) GD Script
-4.) Programming Challenges (CodeForces & Hackerrank)
-	a.) Java
-	b.) C++
-5.) ML
-	a.) Python
+	2.) |66%|	A20J Ladder 11 - Codeforces Rating < 1300 [C++]
+	3.) |4%|	https://github.com/karansinghgit/CodeForces-Ladders/blob/master/div2A.md [C++]
 _________________________________________________________
 
 _________________________________________________________
