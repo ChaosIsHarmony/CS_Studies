@@ -9,7 +9,7 @@
  */
 package algos;
 
-public class DFS
+public class BFS
 {
 
 }

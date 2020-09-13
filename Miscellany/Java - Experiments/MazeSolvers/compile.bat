@@ -1,2 +1,2 @@
 #!/bin/bash
-javac -d bin -sourcepath src src/Main.java
+javac -d bin -sourcepath src src/MazeSolver.java

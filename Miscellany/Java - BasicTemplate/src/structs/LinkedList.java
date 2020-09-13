@@ -5,7 +5,7 @@
 package structs;
 
 public class LinkedList
-{
+{	
 	private static class SLLNode<T>
 	{
 		private T data;

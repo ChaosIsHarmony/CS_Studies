@@ -18,14 +18,20 @@ package utils;
 
 public class MazeGenerator
 {
-	public MazeGenerator(String[] args)
+	public static void main(String[] args)
+	{
+			String[] maze = generate(args);
+			for (String s: maze)
+				System.out.println(s);
+	}
+	
+	public static String[] generate(String[] args)
 	{
 		// Setup
 		int r = Integer.parseInt(args[0]);
 		int c = Integer.parseInt(args[1]);
 		double open_space_prob = Integer.parseInt(args[2])/(double) (r*c);	// prob empty space
-		boolean start_set = false;
-		boolean goal_set = false;
+		String[] maze = new String[r];
 		
 		// Create maze and print to standard output
 		// # = obstacles
@@ -34,29 +40,24 @@ public class MazeGenerator
 		// B = goal
 		char type;
 		int chance_start_goal = 1;
+		int[] start_coords = { (int) (Math.random()*r), (int) (Math.random()*c) };
+		int[] goal_coords = { (int) (Math.random()*r), (int) (Math.random()*c) }; // possible overlap
+		
 		for (int i = 0; i < r; i++)
 		{
+			String line = "";
 			for (int j =0; j < c; j++)
 			{
 				// determine space type
-				type = (Math.random() <= open_space_prob) ? ' ' : '#';
-				if (!start_set && type == ' ' && Math.random() <= (chance_start_goal/(double) (r*c)))
-				{
-					type = 'A';
-					start_set = true;
-					chance_start_goal = 1;
-				} else if (!goal_set && type == '#' && Math.random() <= (chance_start_goal/(double) (r*c)))
-				{
-					type = 'B';
-					goal_set = true;
-					chance_start_goal = 1;
-				} else
-				{
-					if (Math.random() < 0.1)	chance_start_goal++;
-				}
-				System.out.print(type);
+				if (i == start_coords[0] && j == start_coords[1])		type = 'A';
+				else if (i == goal_coords[0] && j == goal_coords[1])	type = 'B';
+				else													type = (Math.random() <= open_space_prob) ? ' ' : '#';
+
+				line += type;
 			}
-			System.out.println();
-		}		
+			maze[i] = line;
+		}
+
+		return maze;
 	}
 }

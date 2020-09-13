@@ -22,6 +22,8 @@ COURSES
 		2.) |36%|		Kaggle - Intermediate Machine Learning
 	Harvard
 		3.) |00%|	CS50 - Intro to Artificial Intelligence with Python
+	MIT
+		4.) |30%|	6.S191 - MIT Introduction to Deep Learning 2020
 
 --GAMES--
 	Games
@@ -34,18 +36,18 @@ COURSES
 		1.) |98%|	AP Calculus BC
 	-Discrete Math-
 	MIT
-		2.) |20%|	6.042J - Mathematics for Computer Science [<mit>/6-042j-mathematics-for-computer-science-fall-2010/]
+		2.) |35%|	6.042J - Mathematics for Computer Science [<mit>/6-042j-mathematics-for-computer-science-fall-2010/]
 	Kimberly Brehm
-		3.) |10%|	Discrete Math [https://www.youtube.com/playlist?list=PLl-gb0E4MII28GykmtuBXNUNoej-vY5Rz]
+		3.) |30%|	Discrete Math [https://www.youtube.com/playlist?list=PLl-gb0E4MII28GykmtuBXNUNoej-vY5Rz]
 	Dr. Trefor Bazett
-		4.) |20%|	Discrete Math [https://www.youtube.com/playlist?list=PLHXZ9OQGMqxersk8fUxiUMSIx0DBqsKZS]
+		4.) |80%|	Discrete Math [https://www.youtube.com/playlist?list=PLHXZ9OQGMqxersk8fUxiUMSIx0DBqsKZS]
 	-Statistics-
 	Khan Academy
-		5.) |30%|	AP Statistics
+		5.) |35%|	AP Statistics
 
 --MISC--
 	Khan Academy
-		1.) |30%|   AP Physics 1
+		1.) |31%|   AP Physics 1
 		2.) |0%|    AP Physics 2
 _________________________________________________________
 
@@ -54,12 +56,13 @@ TEXTBOOKS
 --BASICS--
 	Intro
 		1.) |COMPLETE|	Sedgewick - Computer Science An Interdisciplinary Approach [Java]
-						Chap. 1 Assignments (47/165)
+						Chap. 1 Assignments (48/165)
 		2.) |COMPLETE|	Roberts - Programming Abstractions [C++]
 						Chap. 1-2 Assignments (16/30)
 
 --ALGORITHMS--
 	1.) |60%|	Sedgewick - Algorithms [Java]
+				Chap. 1 Assignments (??/??)
 
 --OS--
 	1.) |60%|	Silberschatz - Operating System Concepts [C]
@@ -77,7 +80,9 @@ TEXTBOOKS
 	2.) |0%|	Strang - Calculus V. II
 	3.) |0%|	Strang - Calculus V. III
 	4.) |10%|	Hammack - The Book of Proof
-	5.) |10%|	Hefferon - Linear Algebra
+	5.) |10%|	Rosen - Discrete Mathematics and Its Applications
+	6.) |10%|	Lehman - Mathematics for Computer Science
+	7.) |10%|	Hefferon - Linear Algebra
 
 --MISC--
 	1.) |50%|	Chacon - Pro Git
