@@ -17,6 +17,9 @@
 *	from the average, divided by n-1).
 *
 *	Ex 1.5.4
+*	Extend your program from the previous exercise to create a filter that reads n
+*	floating-point numbers from standard input, and prints those that are further than
+*	1.5 standard deviations from the mean.
 *	
 *	Ex 1.5.5
 *	
@@ -48,8 +51,8 @@ public class Ex1_5
 		// Min-max (positive only)
 		//ex_1_5_2();
 		
-		// Mean and sample standard deviation
-		ex_1_5_3();
+		// Mean and sample standard deviation & Filtering outliers
+		ex_1_5_3n4();
 	}
 
 	private static void ex_1_5_1()
@@ -88,15 +91,15 @@ public class Ex1_5
 		System.out.println("Min = " + min);
     }
 	
-	private static void ex_1_5_3()
+	private static void ex_1_5_3n4()
 	{
 		// Input
 		int n = sc.nextInt();
-		int[] nums = new int[n];
-		int sum = 0;
+		double[] nums = new double[n];
+		double sum = 0;
 		for (int i = 0; i < n; i++)
 		{
-			nums[i] = sc.nextInt();
+			nums[i] = sc.nextDouble();
 			sum += nums[i];
 		}
 		
@@ -108,7 +111,16 @@ public class Ex1_5
 		double variance = 0;
 		for (int i = 0; i < n; i++)
 			if (nums[i] > 0)	variance += Math.pow((nums[i]-mean),2);
-		
-		System.out.println("Sample standard deviation = " + Math.sqrt(variance/(n-1)));
+		double std_dev = Math.sqrt(variance/(n-1));
+
+		System.out.println("Sample standard deviation = " + std_dev);
+
+		// Print outliers
+		double z_score;
+		for (int i = 0; i < n; i++)
+		{
+			z_score = (nums[i]-mean)/std_dev;
+			if (Math.abs(z_score) >= 1.5)	System.out.println(nums[i]);
+		}
 	}
 }
