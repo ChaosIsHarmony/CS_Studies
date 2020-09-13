@@ -22,6 +22,10 @@
 *	1.5 standard deviations from the mean.
 *	
 *	Ex 1.5.5
+*	Write a program that reads in a sequence of integers and prints both the
+*	integer that appears in a longest consecutive run and the length of that run. For
+*	example, if the input is 1 2 2 1 5 1 1 7 7 7 7 1 1, then your program should
+*	print Longest run: 4 consecutive 7s .
 *	
 *	Ex 1.5.6
 *	
@@ -52,7 +56,10 @@ public class Ex1_5
 		//ex_1_5_2();
 		
 		// Mean and sample standard deviation & Filtering outliers
-		ex_1_5_3n4();
+		// ex_1_5_3n4();
+
+		// Longest run
+		ex_1_5_5();
 	}
 
 	private static void ex_1_5_1()
@@ -122,5 +129,31 @@ public class Ex1_5
 			z_score = (nums[i]-mean)/std_dev;
 			if (Math.abs(z_score) >= 1.5)	System.out.println(nums[i]);
 		}
+	}
+
+	// BROKEN
+	// Assumes 0-9 inputs
+	private static void ex_1_5_5()
+	{
+		if (!sc.hasNext())	{ System.out.println("No Input."); return; }
+		
+		// Initialize
+		int[] records = new int[10];
+		
+		boolean break_loop = false;
+
+		while (break_loop)
+		{
+			try { records[sc.nextInt()]++; }
+			catch (Exception e) { break_loop = true; }
+		}
+
+		// Find largest
+		int largest = 0, run_len = 0;
+		for (int i = 0; i < records.length; i++)
+			if (records[i] > records[largest])	largest = i;
+		run_len = records[largest];
+
+		System.out.println(run_len + " consecutive " + largest + "s");
 	}
 }
