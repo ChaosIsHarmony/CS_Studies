@@ -23,10 +23,7 @@ public class MazeLoader
 		int line_cnt = 0;
 		try { 
 			sc = new Scanner(new File(filepath));
-			while(sc.hasNext())
-			{
-				tmp_arr[line_cnt++] = sc.nextLine();
-			}
+			while(sc.hasNext())	{ tmp_arr[line_cnt++] = sc.nextLine(); }
 			String[] final_arr = new String[line_cnt];
 			for (int i = 0; i < line_cnt-1; i++)
 				final_arr[i] = tmp_arr[i];

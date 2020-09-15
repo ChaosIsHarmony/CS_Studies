@@ -25,7 +25,8 @@
 *	Write a program that reads in a sequence of integers and prints both the
 *	integer that appears in a longest consecutive run and the length of that run. For
 *	example, if the input is 1 2 2 1 5 1 1 7 7 7 7 1 1, then your program should
-*	print Longest run: 4 consecutive 7s .
+*	print Longest run: 4 consecutive 7s.
+*	<add 2 simplifying assumptions: 1.) range [0-9]; 2.) -1 is terminal sentinel value>
 *	
 *	Ex 1.5.6
 *	
@@ -131,21 +132,25 @@ public class Ex1_5
 		}
 	}
 
-	// BROKEN
-	// Assumes 0-9 inputs
+	/*
+	 * Simplifying assumptions:
+	 * 		1.) integers are 0-9
+	 *		2.) -1 is the terminating sentinel value
+	 */
 	private static void ex_1_5_5()
 	{
 		if (!sc.hasNext())	{ System.out.println("No Input."); return; }
 		
 		// Initialize
 		int[] records = new int[10];
-		
-		boolean break_loop = false;
+		int next, prev = -1, curr_run = 0;
 
-		while (break_loop)
+		while ((next = sc.nextInt()) >= 0)
 		{
-			try { records[sc.nextInt()]++; }
-			catch (Exception e) { break_loop = true; }
+			if (next == prev)	{ curr_run++; records[prev] = (curr_run > records[prev]) ? curr_run : records[prev];}
+			else 				{ curr_run = 1; }
+			
+			prev = next;
 		}
 
 		// Find largest

@@ -1,0 +1,14 @@
+|Music,Violin,Applied,1.5,6,5;
+|Music,Piano,Applied,1,5,4;
+
+|Math,Calculus,Review,1,4,5;
+|Math,Statistics,Applied,1,4,5;
+|Math,Discrete,Theory,1,4,5;
+
+|Martial Arts,MMA,Review,0.5,2,3;
+:
+*Work,Teach,Spanish,Wednesday,1630,1.5;
+
+*Work,Teach,MMA,Monday,2000,3;
+*Work,Teach,MMA,Thursday,1800,4;
+*Work,Teach,MMA,Sunday,1900,2;

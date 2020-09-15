@@ -21,7 +21,7 @@ COURSES
 		1.) |COMPLETE|	Kaggle - Intro to Machine Learning
 		2.) |36%|		Kaggle - Intermediate Machine Learning
 	Harvard
-		3.) |00%|	CS50 - Intro to Artificial Intelligence with Python
+		3.) |05%|	CS50 - Intro to Artificial Intelligence with Python
 	MIT
 		4.) |30%|	6.S191 - MIT Introduction to Deep Learning 2020
 
@@ -40,7 +40,7 @@ COURSES
 	Kimberly Brehm
 		3.) |30%|	Discrete Math [https://www.youtube.com/playlist?list=PLl-gb0E4MII28GykmtuBXNUNoej-vY5Rz]
 	Dr. Trefor Bazett
-		4.) |80%|	Discrete Math [https://www.youtube.com/playlist?list=PLHXZ9OQGMqxersk8fUxiUMSIx0DBqsKZS]
+		4.) |COMPLETE|	Discrete Math [https://www.youtube.com/playlist?list=PLHXZ9OQGMqxersk8fUxiUMSIx0DBqsKZS]
 	-Statistics-
 	Khan Academy
 		5.) |35%|	AP Statistics
