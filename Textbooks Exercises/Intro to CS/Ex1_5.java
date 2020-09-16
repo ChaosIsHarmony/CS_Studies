@@ -136,9 +136,14 @@ public class Ex1_5
 	 * Simplifying assumptions:
 	 * 		1.) integers are 0-9
 	 *		2.) -1 is the terminating sentinel value
+	 *
+	 * Could use a priority queue to solve without those assumptions
 	 */
 	private static void ex_1_5_5()
 	{
+		// pq_version(); return;
+
+		// Other Version
 		if (!sc.hasNext())	{ System.out.println("No Input."); return; }
 		
 		// Initialize
@@ -160,5 +165,35 @@ public class Ex1_5
 		run_len = records[largest];
 
 		System.out.println(run_len + " consecutive " + largest + "s");
+	}
+
+	private static void pq_version()
+	{
+		MaxPQ pq = new MaxPQ();
+		int num = sc.nextInt();
+		int next = num;
+		int run = 0;
+		while(sc.hasNext())
+		{
+			next = sc.nextInt();
+			if (next == num) 	{ run++; }
+			else 				{ pq.add(new int[]{num, run}); num = next; run = 1; }  
+		}
+	}
+
+	// Only keep top three?
+	private class MaxPQ
+	{
+		private Node max;
+
+		private class Node { Node left, right; int[] num_n_run; }
+
+		public MaxPQ() {}
+
+		public void add(int[] num_n_run) {}
+		public int[] getMax() { return max.num_n_run; }
+		
+		private void sink() {}
+		private void swim() {}
 	}
 }
