@@ -21,9 +21,9 @@ COURSES
 		1.) |COMPLETE|	Kaggle - Intro to Machine Learning
 		2.) |36%|		Kaggle - Intermediate Machine Learning
 	Harvard
-		3.) |05%|	CS50 - Intro to Artificial Intelligence with Python
+		3.) |5%|	CS50 - Intro to Artificial Intelligence with Python
 	MIT
-		4.) |30%|	6.S191 - MIT Introduction to Deep Learning 2020
+		4.) |40%|	6.S191 - MIT Introduction to Deep Learning 2020
 
 --GAMES--
 	Games
@@ -36,18 +36,18 @@ COURSES
 		1.) |98%|	AP Calculus BC
 	-Discrete Math-
 	MIT
-		2.) |35%|	6.042J - Mathematics for Computer Science [<mit>/6-042j-mathematics-for-computer-science-fall-2010/]
+		2.) |45%|	6.042J - Mathematics for Computer Science [<mit>/6-042j-mathematics-for-computer-science-fall-2010/]
 	Kimberly Brehm
-		3.) |30%|	Discrete Math [https://www.youtube.com/playlist?list=PLl-gb0E4MII28GykmtuBXNUNoej-vY5Rz]
+		3.) |45%|	Discrete Math [https://www.youtube.com/playlist?list=PLl-gb0E4MII28GykmtuBXNUNoej-vY5Rz]
 	Dr. Trefor Bazett
 		4.) |COMPLETE|	Discrete Math [https://www.youtube.com/playlist?list=PLHXZ9OQGMqxersk8fUxiUMSIx0DBqsKZS]
 	-Statistics-
 	Khan Academy
-		5.) |35%|	AP Statistics
+		5.) |37%|	AP Statistics
 
 --MISC--
 	Khan Academy
-		1.) |31%|   AP Physics 1
+		1.) |33%|   AP Physics 1
 		2.) |0%|    AP Physics 2
 _________________________________________________________
 
@@ -76,9 +76,9 @@ TEXTBOOKS
 	1.) |66%|	Godot - 3D FPS tutorial [GDScript]
 
 --MATH--
-	1.) |10%|	Strang - Calculus V. I
-	2.) |0%|	Strang - Calculus V. II
-	3.) |0%|	Strang - Calculus V. III
+	1.) |10%|	Strang - Calculus I
+	2.) |0%|	Strang - Calculus II
+	3.) |0%|	Strang - Calculus III
 	4.) |10%|	Hammack - The Book of Proof
 	5.) |10%|	Rosen - Discrete Mathematics and Its Applications
 	6.) |10%|	Lehman - Mathematics for Computer Science
@@ -97,4 +97,5 @@ GOALS
 3.) A20J CodeForces ladders up to level 1900
 4.) Simple self-driving car Neural Network
 5.) Complete SAT prep software
+6.) fast.ai
 _________________________________________________________

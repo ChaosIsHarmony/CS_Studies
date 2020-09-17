@@ -2,10 +2,11 @@ package entities;
 
 public class Event
 {
+	public static enum DAY {SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY};
 	private final String category, subject, type;
-	private final float duration;
+	private final int duration; // only by hours, no half hours
 	
-	public Event(String category, String subject, String type, float duration)
+	public Event(String category, String subject, String type, int duration)
 	{
 		this.category = category;
 		this.subject = subject;
@@ -16,5 +17,5 @@ public class Event
 	public String getCategory()	{ return this.category; }
 	public String getSubject() 	{ return this.subject; }
 	public String getType() 	{ return this.type; }
-	public float getDuration() 	{ return this.duration; }
+	public int getDuration() 	{ return this.duration; }
 }

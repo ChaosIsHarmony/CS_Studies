@@ -4,7 +4,7 @@ public class SkillEvent extends Event
 {
 	private final int priority, frequency;
 	
-	public SkillEvent(String category, String subject, String type, float duration, int frequency, int priority)
+	public SkillEvent(String category, String subject, String type, int duration, int frequency, int priority)
 	{
 		super(category, subject, type, duration);
 		this.frequency = frequency;

@@ -5,7 +5,7 @@ import entities.Event;
 public class Main
 {
 	private static Scanner sc;
-	private final static String SUBJECTS_EVENTS_LIST_FILE = "\\txt_files\\subj_and_events.txt";
+	private final static String SUBJECTS_EVENTS_LIST_FILE = "\\txt_files\\skills_and_fixed.txt";
 	
 	public static void main(String[] args)
 	{
