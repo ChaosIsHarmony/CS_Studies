@@ -23,7 +23,7 @@ COURSES
 	Harvard
 		3.) |5%|	CS50 - Intro to Artificial Intelligence with Python
 	MIT
-		4.) |40%|	6.S191 - MIT Introduction to Deep Learning 2020
+		4.) |50%|	6.S191 - MIT Introduction to Deep Learning 2020
 
 --GAMES--
 	Games
@@ -47,8 +47,10 @@ COURSES
 
 --MISC--
 	Khan Academy
-		1.) |33%|   AP Physics 1
+		1.) |34%|   AP Physics 1
 		2.) |0%|    AP Physics 2
+		3.) |0%|    AP Chemistry
+		4.) |0%|    AP Biology
 _________________________________________________________
 
 _________________________________________________________

@@ -8,6 +8,7 @@ import entities.FixedEvent;
 
 public class Scheduler
 {
+	private static final String LIST_START_DELIM = ".";
 	private static final String FIXED_SKILL_DELIM = ":";
 	private static final String END_ENTRY_DELIM = ";";
 	private static final String COMPONENT_DELIM = ",";
@@ -24,6 +25,7 @@ public class Scheduler
 			String content = "";
 			while(sc.hasNext()) content += sc.nextLine();
 			sc.close();
+			content = content.substring(content.indexOf(LIST_START_DELIM)+1); // parse to end of comments
 			// parse
 			String[] skill_events_str = content.substring(0,content.indexOf(FIXED_SKILL_DELIM)).split(END_ENTRY_DELIM);
 			String[] fixed_events_str = content.substring(content.indexOf(FIXED_SKILL_DELIM)+1).split(END_ENTRY_DELIM);	
@@ -45,7 +47,7 @@ public class Scheduler
 				//System.out.println(fixed_events_obj[i]);
 			}
 			
-			// schedule
+			// create schedule
 			return schedule(skill_events_obj, fixed_events_obj);			
 			
 		} catch (Exception e) { System.out.println(filepath + " not found"); }
@@ -63,23 +65,15 @@ public class Scheduler
 			int start_time = ((FixedEvent) e).getStartTime();
 			int duration = ((FixedEvent) e).getDuration();
 			int day = ((FixedEvent) e).getDay();
-			while (duration > 0)	{ schedule[start_time+duration][day] = e; duration--; }
-		}
-		
-		for (int i = 0; i < 24; i++)
-		{
-			for (int j = 0; j < 7; j++)
-				if (schedule[i][j] != null)	System.out.printf("%-8s", schedule[i][j].getType());
-				else						System.out.printf("%-8s", "");
-			System.out.println();
+			while (duration > 0)	{ schedule[start_time+(--duration)][day] = e; }
 		}
 			
 		// Find space for skill events
+		MaxPQ<SkillEvent> pq = new MaxPQ<SkillEvent>(skills.length);
+		for(Event e : skills) pq.insert((SkillEvent) e);
 		
-		return null;
+		// TODO iterate through 2D schedule and place classes by priority into all available spots
+		
+		return schedule;
 	}
-	
-	// Test suite
-	public static void main(String[] args)
-	{}
 }

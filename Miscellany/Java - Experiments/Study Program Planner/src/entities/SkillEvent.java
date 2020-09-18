@@ -1,6 +1,6 @@
 package entities;
 
-public class SkillEvent extends Event
+public class SkillEvent extends Event implements Comparable<SkillEvent>
 {
 	private final int priority, frequency;
 	
@@ -15,4 +15,12 @@ public class SkillEvent extends Event
 	public int getFrequency()	{ return this.frequency; }
 	
 	public String toString()	{ return getCategory() + " " + getSubject() + " " + getType() + " " + getDuration() + " " + frequency + " " + priority; }
+	
+	@Override
+	public int compareTo(SkillEvent that)
+	{
+		if (this.priority > that.priority)	return 1;
+		if (this.priority < that.priority)	return -1;
+		else								return 0;
+	}
 }

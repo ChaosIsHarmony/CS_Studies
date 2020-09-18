@@ -141,11 +141,12 @@ public class Ex1_5
 	 */
 	private static void ex_1_5_5()
 	{
-		// pq_version(); return;
-
-		// Other Version
 		if (!sc.hasNext())	{ System.out.println("No Input."); return; }
 		
+		pq_version(); return;
+
+		/*
+		// Other Version
 		// Initialize
 		int[] records = new int[10];
 		int next, prev = -1, curr_run = 0;
@@ -165,6 +166,7 @@ public class Ex1_5
 		run_len = records[largest];
 
 		System.out.println(run_len + " consecutive " + largest + "s");
+		*/
 	}
 
 	private static void pq_version()
@@ -177,23 +179,64 @@ public class Ex1_5
 		{
 			next = sc.nextInt();
 			if (next == num) 	{ run++; }
-			else 				{ pq.add(new int[]{num, run}); num = next; run = 1; }  
+			else 				{ System.out.println(num); pq.insert(new int[]{num, run}); num = next; run = 1; }  
 		}
+		
+		int[] max = pq.getMax();
+		System.out.println(max[1] + " consecutive " + max[0] + "s");
 	}
 
-	// Only keep top three?
-	private class MaxPQ
+	// Only keeps top ten by default, but can change to capacity of client's choice
+	private static class MaxPQ
 	{
-		private Node max;
+		private Node[] heap;
+		private final int CAPACITY;
+		private int last = 0;
 
-		private class Node { Node left, right; int[] num_n_run; }
+		private class Node
+		{
+			int[] num_n_run;
+			public Node(int[] arr) { num_n_run = arr; }
+		}
 
-		public MaxPQ() {}
+		public MaxPQ() { CAPACITY = 10; heap = new Node[CAPACITY+1]; }
+		public MaxPQ(int max_cap) { CAPACITY = max_cap; heap = new Node[CAPACITY+1]; }
 
-		public void add(int[] num_n_run) {}
-		public int[] getMax() { return max.num_n_run; }
+		public void insert(int[] num_n_run)
+		{ 
+			// do not add if at max capacity and is less than min
+			if (last == CAPACITY && num_n_run[1] < heap[last].num_n_run[1]) return;
+			else if (last == CAPACITY)										delMin();
+			
+			heap[++last] = new Node(num_n_run); swim(last); }
+		public int[] getMax() { return heap[1].num_n_run; }
 		
-		private void sink() {}
-		private void swim() {}
+		private void sink(int k)
+		{
+			while (2*k <= last)
+			{
+				int j = 2*k;
+				if (j < last && less(j, j+1))	j++;
+				if (!less(k, j))				break;
+				exch(k, j);
+				k = j;
+			}
+		}
+		
+		private void swim(int k)
+		{
+			while (k > 1 && less(k/2,k))
+			{
+				exch(k, k/2);
+				k = k/2;
+			}
+		}
+		
+		// helper methods
+		private boolean less(int a, int b)
+		{ return heap[a].num_n_run[1] < heap[b].num_n_run[1]; }
+		private void exch(int a, int b)
+		{ Node tmp = heap[a]; heap[a] = heap[b]; heap[b] = tmp; }
+		private void delMin() { heap[last--] = null; };
 	}
 }
