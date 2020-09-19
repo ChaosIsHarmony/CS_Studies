@@ -1,3 +1,8 @@
+/*
+ * Both Singly and Doubly Linked list implementations using private inner clases of 
+ * Node ADT to support any reference type data
+ */
+
 public class LinkedList
 {
 	private static class SLLNode<T>

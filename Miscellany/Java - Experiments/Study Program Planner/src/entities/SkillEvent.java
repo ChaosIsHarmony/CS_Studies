@@ -19,8 +19,14 @@ public class SkillEvent extends Event implements Comparable<SkillEvent>
 	@Override
 	public int compareTo(SkillEvent that)
 	{
-		if (this.priority > that.priority)	return 1;
-		if (this.priority < that.priority)	return -1;
-		else								return 0;
+		// greater than
+		if (this.priority > that.priority)		return 1;
+		// less than
+		if (this.priority < that.priority)		return -1;
+		// equal to
+		if (this.frequency > that.frequency)	return 1;
+		if (this.frequency < that.frequency)	return -1;
+		// completely equal
+		return 0;
 	}
 }

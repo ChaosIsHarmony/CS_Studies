@@ -26,7 +26,9 @@ public class MaxPQ<T extends Comparable<T>>
 			else if (last == CAPACITY)										delMin();
 		}
 		
-		heap[++last] = new_entry; swim(last); }
+		heap[++last] = new_entry;
+		swim(last);
+	}
 	
 	public T getMax() { return heap[1]; }
 	

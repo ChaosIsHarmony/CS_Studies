@@ -1,3 +1,11 @@
+/*
+ * Stack implementation using a Singly Linked List of reference type Nodes
+ * 
+ * Improvements:
+ *		- Make it iterable using the Iterable interface
+ */
+
+
 public class Stack<T>
 {
 	private class Node<U>
