@@ -71,9 +71,13 @@ public class Scheduler
 		// Find space for skill events
 		MaxPQ<SkillEvent> pq = new MaxPQ<SkillEvent>(skills.length);
 		for(Event e : skills) pq.insert((SkillEvent) e);
+
+		while (!pq.isEmpty()) System.out.println(pq.delMax());
 		
 		// TODO iterate through 2D schedule and place classes by priority into all available spots
-		
+		// Only music has restrictions of being between 10-22H
+
+
 		return schedule;
 	}
 }

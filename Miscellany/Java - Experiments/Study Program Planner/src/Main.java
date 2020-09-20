@@ -5,7 +5,7 @@ import entities.Event;
 public class Main
 {
 	private static Scanner sc;
-	private final static String SUBJECTS_EVENTS_LIST_FILE = "\\txt_files\\skills_and_fixed.txt";
+	private final static String SUBJECTS_EVENTS_LIST_FILE = "/txt_files/skills_and_fixed.txt";
 	
 	public static void main(String[] args)
 	{
@@ -46,13 +46,13 @@ public class Main
 					{
 						switch (k)
 						{
-							case 0: day = "Sunday"; break;
-							case 1: day = "Monday"; break;
-							case 2: day = "Tuesday"; break;
-							case 3: day = "Wednesday"; break;
-							case 4: day = "Thursday"; break;
-							case 5: day = "Friday"; break;
-							case 6: day = "Saturday"; break;
+							case 0: day = "Sunday";		break;
+							case 1: day = "Monday";		break;
+							case 2: day = "Tuesday";	break;
+							case 3: day = "Wednesday";	break;
+							case 4: day = "Thursday";	break;
+							case 5: day = "Friday";		break;
+							case 6: day = "Saturday";	break;
 						}
 						System.out.printf("%-10S", day);
 					}

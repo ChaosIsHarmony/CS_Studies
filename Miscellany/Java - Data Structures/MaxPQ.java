@@ -2,7 +2,6 @@
  * Max Priority Queue implemented using an array of fixed capacity
  *
  * Improvements:
- *		- Resizing array
  *		- Heapsort
  */
 
@@ -25,8 +24,7 @@ public class MaxPQ<T extends Comparable<T>>
 		CAPACITY = max_cap;
 		heap = (T[]) new Comparable[CAPACITY+1]; 
 	}
-	// TODO implement a resizing array MaxPQ constructor + resize() method
-
+	
 	// accessors & mutators
 	public void insert(T new_entry)
 	{
@@ -49,6 +47,14 @@ public class MaxPQ<T extends Comparable<T>>
 	}
 	
 	public T getMax() { return heap[1]; }
+
+	public T delMax()
+	{
+		T tmp = getMax();
+		heap[1] = heap[last--];
+		sink(1);
+		return tmp;
+	}
 	
 	public boolean isEmpty() { return last == 0; }
 	
@@ -64,13 +70,9 @@ public class MaxPQ<T extends Comparable<T>>
 			k = j;
 		}
 	}
-		
+	
 	private void swim(int k)
 	{
-
-		//BUGGY
-			System.out.println("A"+k);
-			System.out.println("B"+(k/2));
 		while (k > 1 && less(k/2,k))
 		{	
 			exch(k, k/2);
@@ -91,7 +93,7 @@ public class MaxPQ<T extends Comparable<T>>
 	{
 		CAPACITY = cap;
 		T[] tmp = (T[]) new Comparable[CAPACITY+1];
-		for (int i = 0; i < last; i++)
+		for (int i = 0; i <= last; i++)
 			tmp[i] = heap[i];
 		heap = tmp;
 	}
@@ -125,7 +127,7 @@ public class MaxPQ<T extends Comparable<T>>
 		pq.insert(new Node(new int[]{11,12}));
 		pq.insert(new Node(new int[]{12,11}));
 		
-		System.out.println(pq.getMax().arr[1]);
+		while(!pq.isEmpty()) { System.out.println(pq.delMax().arr[1]); }
 	}
 	
 	private static class Node implements Comparable<Node>

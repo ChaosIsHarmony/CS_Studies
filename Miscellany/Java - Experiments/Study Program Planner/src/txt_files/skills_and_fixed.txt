@@ -24,6 +24,14 @@
 *Rest,Sleep,Sleep,5,1,8;
 *Rest,Sleep,Sleep,6,1,8;
 
+*Reading,Spanish,Reading,0,0,1;
+*Reading,Japanese,Reading,1,0,1;
+*Reading,Spanish,Reading,2,0,1;
+*Reading,Japanese,Reading,3,0,1;
+*Reading,Spanish,Reading,4,0,1;
+*Reading,Japanese,Reading,5,0,1;
+*Reading,Spanish,Reading,6,0,1;
+
 *Work,Teach,Dr. G,3,15,4;
 *Work,Teach,Dr. G,0,14,3;
 
