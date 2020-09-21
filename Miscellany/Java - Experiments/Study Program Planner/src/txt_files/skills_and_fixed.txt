@@ -1,21 +1,27 @@
 //Skill = Category,Subject,Type,Duration,Frequency,Priority
 //Fixed = Category,Subject,Type,Day,Start,Duration
 .
-|Music,Violin,Applied,2,6,5;
-|Music,Piano,Applied,1,5,4;
-|Music,Composition,Applied,1,3,2;
+|Music,Applied,Violin,2,6,5;
+|Music,Applied,Piano,1,5,4;
+|Music,Applied,Compose,1,3,2;
 
-|Math,Calculus,Review,1,4,5;
-|Math,Statistics,Applied,1,4,5;
-|Math,Discrete,Theory,1,4,5;
-|Math,Linear Algebra,Theory,1,3,3;
+|Math,Applied,Calculus,1,5,5;
+|Math,Applied,Statistics,1,5,5;
+|Math,Theory,Discrete,1,5,5;
+|Math,Applied,Lin Alg,1,5,3;
 
-|Comp Sci,Programming,Applied,1,4,5;
-|Comp Sci,ML,Theory,1,2,3;
-|Comp Sci,ML,Applied,1,3,4;
+|Science,Theory,Physics,1,4,3;
 
-|Martial Arts,MMA,Review,1,2,3;
+|Comp Sci,Applied,Coding,1,4,5;
+|Comp Sci,Theory,ML,1,2,3;
+|Comp Sci,Applied,ML,1,3,4;
 :
+*Aidos,Duty,Bath,0,22,1;
+*Aidos,Duty,Bath,2,22,1;
+*Aidos,Duty,Bath,3,22,1;
+*Aidos,Duty,Bath,5,22,1;
+*Aidos,Duty,Bath,6,22,1;
+
 *Rest,Sleep,Sleep,0,1,8;
 *Rest,Sleep,Sleep,1,1,8;
 *Rest,Sleep,Sleep,2,1,8;
@@ -35,6 +41,6 @@
 *Work,Teach,Dr. G,3,15,4;
 *Work,Teach,Dr. G,0,14,3;
 
-*Work,Teach,MMA,1,19,4;
+*Work,Teach,MMA,1,19,5;
 *Work,Teach,MMA,4,16,8;
 *Work,Teach,MMA,0,18,4;

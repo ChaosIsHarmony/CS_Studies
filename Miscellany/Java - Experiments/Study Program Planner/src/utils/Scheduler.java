@@ -67,17 +67,45 @@ public class Scheduler
 			int day = ((FixedEvent) e).getDay();
 			while (duration > 0)	{ schedule[start_time+(--duration)][day] = e; }
 		}
+		// Take care of Aidos every 2 hour block
+		for (int day = 0; day < 7; day++)
+			for (int hour = 11; hour < 21; hour++)
+				if ((hour-11)%3==0 && schedule[hour][day] == null)
+				{ schedule[hour][day] = new FixedEvent("Aidos","Duty","On Call",day,hour,1); continue; }
 			
 		// Find space for skill events
 		MaxPQ<SkillEvent> pq = new MaxPQ<SkillEvent>(skills.length);
 		for(Event e : skills) pq.insert((SkillEvent) e);
 
-		while (!pq.isEmpty()) System.out.println(pq.delMax());
+		while (!pq.isEmpty())
+		{
+			SkillEvent e = pq.delMax();
+			int day = 0;
+			for (int freq = e.getFrequency(); freq > 0 || day > 12; )
+			{
+				
+				for (int hour = 9; hour < 24; hour++)
+				{
+					// No music before 1200 or after 2100
+					if ((hour < 12 || hour > 21) && e.getCategory().equals("Music"))
+					{ continue; }
+					
+					// doesn't fit into this time slot
+					boolean found = true;
+					for (int dur = e.getDuration()-1; dur >= 0; dur--)
+					{ if (schedule[hour+dur][day] != null) found = false; }
+					if (!found) continue;
+				
+					// found a time slot
+					for (int dur = e.getDuration()-1; dur >= 0; dur--)
+					{ schedule[hour+dur][day] = e; }
+					freq--;
+					break;
+				}
+				day = (day+2)%7;
+			}
+		}
 		
-		// TODO iterate through 2D schedule and place classes by priority into all available spots
-		// Only music has restrictions of being between 10-22H
-
-
 		return schedule;
 	}
 }
