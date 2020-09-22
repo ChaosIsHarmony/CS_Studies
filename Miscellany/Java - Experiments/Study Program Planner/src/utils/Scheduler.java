@@ -15,7 +15,7 @@ public class Scheduler
 	private static final int SKILL_ARR_COMPONENT_LEN = 6;
 	private static final int FIXED_ARR_COMPONENT_LEN = 6;
 	
-	public static Event[][] create(String filename)
+	public static Event[][] create(String filename, int skip)
 	{
 		String filepath = new File("").getAbsolutePath()+filename;
 		
@@ -48,14 +48,14 @@ public class Scheduler
 			}
 			
 			// create schedule
-			return schedule(skill_events_obj, fixed_events_obj);			
+			return schedule(skill_events_obj, fixed_events_obj, skip);			
 			
 		} catch (Exception e) { System.out.println(filepath + " not found"); }
 		
 		return null;
 	}
 	
-	private static Event[][] schedule(Event[] skills, Event[] fixed)
+	private static Event[][] schedule(Event[] skills, Event[] fixed, int skip)
 	{
 		Event[][] schedule = new Event[24][7];
 		
@@ -80,29 +80,37 @@ public class Scheduler
 		while (!pq.isEmpty())
 		{
 			SkillEvent e = pq.delMax();
-			int day = 0;
-			for (int freq = e.getFrequency(); freq > 0 || day > 12; )
+			int day = 0, cycle = 0; // Cycle prevents infinite loops for impossible scheduling tasks
+			for (int freq = e.getFrequency(); freq > 0 && cycle < skip*2; )
 			{
-				
 				for (int hour = 9; hour < 24; hour++)
 				{
+					// Same activity already on the same day
+					// Change day, reset hour, and then continue loop
+					if (schedule[hour][day] != null && schedule[hour][day].getType() == e.getType())
+					{ break; }
+				
 					// No music before 1200 or after 2100
-					if ((hour < 12 || hour > 21) && e.getCategory().equals("Music"))
+					if ((hour < 12 || hour > 20) && (e.getType().equals("Violin")||e.getType().equals("Piano")))
 					{ continue; }
 					
-					// doesn't fit into this time slot
-					boolean found = true;
+					// Check for available time slot
+					boolean hasConflict = false;
+					// Time slot occupied
 					for (int dur = e.getDuration()-1; dur >= 0; dur--)
-					{ if (schedule[hour+dur][day] != null) found = false; }
-					if (!found) continue;
+					{ if (schedule[hour+dur][day] != null)	hasConflict = true; }
 				
-					// found a time slot
-					for (int dur = e.getDuration()-1; dur >= 0; dur--)
-					{ schedule[hour+dur][day] = e; }
-					freq--;
-					break;
+					// Found a time slot
+					if (!hasConflict)
+					{
+						for (int dur = e.getDuration()-1; dur >= 0; dur--)
+						{ schedule[hour+dur][day] = e; }
+						freq--;
+						break;
+					}
 				}
-				day = (day+2)%7;
+				cycle = ((day+skip)>6) ? cycle+1 : cycle;
+				day = (day+skip)%7;
 			}
 		}
 		

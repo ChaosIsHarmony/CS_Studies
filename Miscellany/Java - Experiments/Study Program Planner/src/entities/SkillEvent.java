@@ -14,6 +14,7 @@ public class SkillEvent extends Event implements Comparable<SkillEvent>
 	public int getPriority()	{ return this.priority; }
 	public int getFrequency()	{ return this.frequency; }
 	
+	// Same order as constructor
 	public String toString()	{ return getCategory() + " " + getSubject() + " " + getType() + " " + getDuration() + " " + frequency + " " + priority; }
 	
 	@Override
