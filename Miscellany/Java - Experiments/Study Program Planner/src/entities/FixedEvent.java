@@ -7,7 +7,7 @@ public class FixedEvent extends Event
 	
 	public FixedEvent(String category, String subject, String type, int day, int start_time, int duration)
 	{
-		super(category, subject, type, duration);
+		super(false, category, subject, type, duration);
 		this.day = day;
 		this.start_time = start_time;
 	}
@@ -16,5 +16,5 @@ public class FixedEvent extends Event
 	public int getStartTime()	{ return this.start_time; }
 	
 	// Same order as constructor
-	public String toString()	{ return getCategory() + " " + getSubject() + " " + getType() + " " + day + " " + start_time + " " + getDuration(); }
+	public String toString()	{ return getIsSkill() + " " + getCategory() + " " + getSubject() + " " + getType() + " " + day + " " + start_time + " " + getDuration(); }
 }

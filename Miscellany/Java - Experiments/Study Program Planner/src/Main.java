@@ -46,6 +46,68 @@ public class Main
 		// This file contains a specially formatted list of "Subjects to Study" and "Fixed Events"
 		Event[][] schedule = Scheduler.create(SUBJECTS_EVENTS_LIST_FILE,skip);
 		
+		// Display
+		display(schedule);
+		
+		System.out.println("Save [s], Try a new pattern [c], or Back to Main [b]?");
+		while (true){
+			String input = sc.nextLine();
+			switch (input)
+			{
+				case "S":
+				case "s": try { save(schedule); } catch (Exception e) {} break;
+				case "C":
+				case "c": createNewSchedule(skip*2); break;
+				case "B":
+				case "b": System.out.println("Use Case:\n\nCreate Weekly Schedule = C\nView Weekly Schedule = V\nExit = X"); break;
+				default: System.out.println("Invalid Input"); continue;
+			}
+			break;
+		}
+	}
+	
+	private static void viewOldSchedule()
+	{
+		// TODO enforce format
+		System.out.println("What was Sunday's date? [YYYY-MM-DD]");
+		String date = sc.nextLine();
+
+		String filepath = new File("").getAbsolutePath()+SCHEDULES_FILE;
+
+		Scanner sc_2 = new Scanner(filepath);
+		Event[][] schedule = new Event[24][7];
+		boolean found = false;
+
+		while (sc_2.hasNext())
+		{
+			if (sc_2.nextLine().contains(date))	found = true;
+			if (found)
+			{
+				String line = "";
+				// parse out events
+				while (!(line = sc_2.nextLine()).contains(date))
+				{
+					// is a skill
+					if (Boolean.parseBoolean(line.substring(0,line.indexOf(","))))
+					{
+						int start = line.indexOf(",");
+						String cat = 
+					}
+					// is fixed 
+					else
+					{
+
+					}
+
+				}
+				break;
+			}
+		}
+	}
+
+	// Helper Methods
+	private static void display(Event[][] schedule)
+	{
 		// Display new schedule by day [24 x 7]
 		// Can input a specific cell to see specs of event
 		for (int i = 0; i < 24; i++)
@@ -81,24 +143,8 @@ public class Main
 			}
 			System.out.println();
 		}
-		
-		System.out.println("Save [s], Try a new pattern [c], or Back to Main [b]?");
-		while (true){
-			String input = sc.nextLine();
-			switch (input)
-			{
-				case "S":
-				case "s": try { save(schedule); } catch (Exception e) {} break;
-				case "C":
-				case "c": createNewSchedule(skip*2); break;
-				case "B":
-				case "b": System.out.println("Use Case:\n\nCreate Weekly Schedule = C\nView Weekly Schedule = V\nExit = X"); break;
-				default: System.out.println("Invalid Input"); continue;
-			}
-			break;
-		}
 	}
-	
+
 	private static void save(Event[][] schedule) throws IOException
 	{
 		// TODO: enforce format
@@ -108,7 +154,7 @@ public class Main
 		String filepath = new File("").getAbsolutePath()+SCHEDULES_FILE;
 		
         try (FileWriter fileWriter = new FileWriter(filepath, true)) {
-			fileWriter.write("[/"+date+"]");
+			fileWriter.write("[/"+date+"]\n");
             for (int i = 0; i < 24; i++)
 			{
 				String line = "";
@@ -116,14 +162,10 @@ public class Main
 					line += schedule[i][j]+",";
 				fileWriter.write(line+"\n");
 			}
-			fileWriter.write("["+date+"/]");
+			fileWriter.write("["+date+"/]\n");
 			
 			System.out.println("Save successful");
         } catch (Exception e) { System.out.println("Save unsuccessful"); }
 	}
 	
-	private static void viewOldSchedule()
-	{
-		System.out.println("Old");
-	}
 }

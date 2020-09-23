@@ -1,28 +1,33 @@
 /*
- * Max Priority Queue implemented using an array of fixed capacity
+ * GENERAL:
+ * Max Priority Queue implemented using an array of fixed capacity and resizes if 
+ * 
+ * NOTES:
+ * If cannot handle resizing array lag on 2^n inserts, then should use a linked list
+ * If space is more important that time, then arrays are better in all cases
  *
- * Improvements:
+ * IMPROVEMENTS:
  *		- Heapsort
  */
 
 public class MaxPQ<T extends Comparable<T>>
 {
 	private T[] heap;
-	private int CAPACITY;
+	private int capacity;
 	private int last = 0;
 	private boolean hasMax = false;
 
 	public MaxPQ(boolean hasMax)
 	{
 		this.hasMax = hasMax;
-		CAPACITY = 2; 
-		heap = (T[]) new Comparable[CAPACITY+1];
+		capacity = 2; 
+		heap = (T[]) new Comparable[capacity+1];
 	}
 	public MaxPQ(int max_cap)
 	{
 		this.hasMax = true;
-		CAPACITY = max_cap;
-		heap = (T[]) new Comparable[CAPACITY+1]; 
+		capacity = max_cap;
+		heap = (T[]) new Comparable[capacity+1]; 
 	}
 	
 	// accessors & mutators
@@ -30,16 +35,16 @@ public class MaxPQ<T extends Comparable<T>>
 	{
 		// Grow if this item would increase beyond capacity
 		// Or if hasMax, then delMin() or skip depending on value
-		if (last == CAPACITY)
+		if (last == capacity)
 		{
-			if (!hasMax)									resize(CAPACITY*2);
+			if (!hasMax)									resize(capacity*2);
 			// do not add if at max capacity and is less than min
 			else if (new_entry.compareTo(heap[last]) < 0)	return;
 			else											delMin();	
 		}
 		// Shrink if contents only fill 1/4 of array
-		else if (!hasMax && CAPACITY/4 > last)
-		{ resize(CAPACITY/2); }
+		else if (!hasMax && capacity/4 > last)
+		{ resize(capacity/2); }
 
 		heap[++last] = new_entry;
 		swim(last);
@@ -91,8 +96,8 @@ public class MaxPQ<T extends Comparable<T>>
 	
 	private void resize(int cap)
 	{
-		CAPACITY = cap;
-		T[] tmp = (T[]) new Comparable[CAPACITY+1];
+		capacity = cap;
+		T[] tmp = (T[]) new Comparable[capacity+1];
 		for (int i = 0; i <= last; i++)
 			tmp[i] = heap[i];
 		heap = tmp;
