@@ -16,5 +16,5 @@ public class FixedEvent extends Event
 	public int getStartTime()	{ return this.start_time; }
 	
 	// Same order as constructor
-	public String toString()	{ return getIsSkill() + " " + getCategory() + " " + getSubject() + " " + getType() + " " + day + " " + start_time + " " + getDuration(); }
+	public String toString()	{ return isSkill() + " " + getCategory() + " " + getSubject() + " " + getType() + " " + day + " " + start_time + " " + getDuration(); }
 }

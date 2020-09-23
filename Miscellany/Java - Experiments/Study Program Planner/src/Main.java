@@ -49,7 +49,7 @@ public class Main
 		// Display
 		display(schedule);
 		
-		System.out.println("Save [s], Try a new pattern [c], or Back to Main [b]?");
+		System.out.println("Save [s], Try a new pattern [c], Previous pattern [p], or Back to Main [b]?");
 		while (true){
 			String input = sc.nextLine();
 			switch (input)
@@ -58,6 +58,8 @@ public class Main
 				case "s": try { save(schedule); } catch (Exception e) {} break;
 				case "C":
 				case "c": createNewSchedule(skip*2); break;
+				case "P":
+				case "p": createNewSchedule(((skip>1)? skip/2 : skip)); break;
 				case "B":
 				case "b": System.out.println("Use Case:\n\nCreate Weekly Schedule = C\nView Weekly Schedule = V\nExit = X"); break;
 				default: System.out.println("Invalid Input"); continue;
@@ -77,7 +79,8 @@ public class Main
 		Scanner sc_2 = new Scanner(filepath);
 		Event[][] schedule = new Event[24][7];
 		boolean found = false;
-
+		
+		// TODO: finish parser
 		while (sc_2.hasNext())
 		{
 			if (sc_2.nextLine().contains(date))	found = true;
@@ -91,7 +94,7 @@ public class Main
 					if (Boolean.parseBoolean(line.substring(0,line.indexOf(","))))
 					{
 						int start = line.indexOf(",");
-						String cat = 
+						String cat = "";
 					}
 					// is fixed 
 					else

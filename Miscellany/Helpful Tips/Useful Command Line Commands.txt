@@ -4,8 +4,6 @@ $ ping www.google.com 		// check internet connection
 $ ip route | grep default	// find ip address for router
 
 $ systeminfo 						// gets computer info
-$ systeminfo > '/root/data.txt' 	// saves command's output to a text file
-$ systeminfo >> '/root/data.txt'	// appends command's output to pre-existing text file
 
 $ mkdir dirName 	// makes a directory
 $ rmdir dirName 	// deletes a directory (must be empty before removing)
@@ -26,5 +24,6 @@ $ grep -R "keywords" dir 			// searches for keywords in all files of dir (case i
 $ grep -c "keywords" file 			// searches and displays # of times keywords in file
 
 $ prog < file	// prog will take file as input
-$ prog > file	// prog will save output to file
+$ prog > file	// prog will save output to file [overwrites file contents if file already exists]
+$ prog >> file	// prog will append output to file
 $ prog1 | prog2	// prog2 will take prog1's output as input

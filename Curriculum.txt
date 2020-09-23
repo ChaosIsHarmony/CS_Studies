@@ -23,7 +23,7 @@ COURSES
 	Harvard
 		3.) |5%|	CS50 - Intro to Artificial Intelligence with Python
 	MIT
-		4.) |60%|	6.S191 - MIT Introduction to Deep Learning 2020
+		4.) |70%|	6.S191 - MIT Introduction to Deep Learning 2020
 
 --GAMES--
 	Games
@@ -36,9 +36,9 @@ COURSES
 		1.) |98%|	AP Calculus BC
 	-Discrete Math-
 	MIT
-		2.) |50%|	6.042J - Mathematics for Computer Science [<mit>/6-042j-mathematics-for-computer-science-fall-2010/]
+		2.) |60%|	6.042J - Mathematics for Computer Science [<mit>/6-042j-mathematics-for-computer-science-fall-2010/]
 	Kimberly Brehm
-		3.) |55%|	Discrete Math [https://www.youtube.com/playlist?list=PLl-gb0E4MII28GykmtuBXNUNoej-vY5Rz]
+		3.) |60%|	Discrete Math [https://www.youtube.com/playlist?list=PLl-gb0E4MII28GykmtuBXNUNoej-vY5Rz]
 	Dr. Trefor Bazett
 		4.) |COMPLETE|	Discrete Math [https://www.youtube.com/playlist?list=PLHXZ9OQGMqxersk8fUxiUMSIx0DBqsKZS]
 	-Statistics-
