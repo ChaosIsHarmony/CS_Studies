@@ -18,12 +18,14 @@ COURSES
 
 --AI/ML--
 	Kaggle
-		1.) |COMPLETE|	Kaggle - Intro to Machine Learning
-		2.) |36%|		Kaggle - Intermediate Machine Learning
+		1.) |COMPLETE|	Intro to Machine Learning
+		2.) |36%|		Intermediate Machine Learning
 	Harvard
 		3.) |5%|	CS50 - Intro to Artificial Intelligence with Python
 	MIT
-		4.) |70%|	6.S191 - MIT Introduction to Deep Learning 2020
+		4.) |80%|	6.S191 - MIT Introduction to Deep Learning 2020
+    Fast.ai
+        5.) |00%|	Practical Deep Learning for Coders
 
 --GAMES--
 	Games
