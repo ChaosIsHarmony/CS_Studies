@@ -3,11 +3,13 @@
  *	1 & 2 are reimplementations of their counterparts in Chap. 1 
  */
 #include <iostream>
-#include <math.h>
+#include <random>
 #include <vector>
+#include <math.h>
 
 // UTILITIES
-float get_input() { float i; std::cin >> i; return i; }
+template<typename I>
+I get_input(I& i) { std::cin >> i; return i; }
 
 template<typename T>
 void print(T t) { std::cout << t << std::endl; }
@@ -21,6 +23,7 @@ int sum_divisors(int);
 bool problem_six(int, std::vector<int>&);
 double problem_seven(int);
 int problem_nine();
+double problem_twelve();
 
 // MAIN
 int main()
@@ -44,7 +47,10 @@ int main()
 	//print(problem_seven(get_input()));
 	
 	// Permutations
-	print(problem_nine());
+	//print(problem_nine());
+
+	// Random Average
+	print(problem_twelve());
 	
 	return 0;
 }
@@ -55,8 +61,10 @@ int problem_three(float f) { return int(f+0.5); }
 
 float problem_four()
 { 
-	float temp = get_input();
-	float wind_spd = get_input();
+	float temp;
+	get_input(temp);
+	float wind_spd;
+	get_input(wind_spd);
 	
 	if (wind_spd == 0)	return temp;
 	else if (temp > 40)	throw "Undefined above 40C";
@@ -108,14 +116,31 @@ double problem_seven(int base)
 int problem_nine()
 {
 	// get input
-	int n = get_input();
-	int k = get_input();
+	int n;
+	get_input(n);
+	int k;
+	get_input(k);
 	
 	// process
 	int limit = n-k;
 	int product = n--;
 	while(n>limit) { product *= n--; }
 	return product;
+}
+
+double problem_twelve()
+{
+	int n_trials;
+	get_input(n_trials);
+	double average;
+	std::random_device rd;
+	std::mt19937 mt(rd());
+	std::uniform_real_distribution<double> dist(0.0, 1.0);
+
+	// Generate random numbers [0-1], average them and return their average
+	for (int i = 0; i < n_trials; i++) average += dist(mt);
+
+	return average/n_trials;
 }
 
 

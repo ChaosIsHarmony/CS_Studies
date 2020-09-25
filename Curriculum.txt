@@ -23,7 +23,7 @@ COURSES
 	Harvard
 		3.) |5%|	CS50 - Intro to Artificial Intelligence with Python
 	MIT
-		4.) |80%|	6.S191 - MIT Introduction to Deep Learning 2020
+		4.) |90%|	6.S191 - MIT Introduction to Deep Learning 2020
     Fast.ai
         5.) |00%|	Practical Deep Learning for Coders
 
@@ -56,13 +56,13 @@ COURSES
 _________________________________________________________
 
 _________________________________________________________
-TEXTBOOKS
+BOOKS
 --BASICS--
 	Intro
 		1.) |COMPLETE|	Sedgewick - Computer Science An Interdisciplinary Approach [Java]
 						Chap. 1 Assignments (48/165)
 		2.) |COMPLETE|	Roberts - Programming Abstractions [C++]
-						Chap. 1-2 Assignments (16/30)
+						Chap. 1-2 Assignments (17/30)
 
 --ALGORITHMS--
 	1.) |60%|	Sedgewick - Algorithms [Java]
@@ -92,6 +92,7 @@ TEXTBOOKS
 	1.) |50%|	Chacon - Pro Git
 	2.) |66%|	A20J Ladder 11 - Codeforces Rating < 1300 [C++]
 	3.) |4%|	https://github.com/karansinghgit/CodeForces-Ladders/blob/master/div2A.md [C++]
+    4.) |20%|   Hunt - The Pragmatic Programmer
 _________________________________________________________
 
 _________________________________________________________
