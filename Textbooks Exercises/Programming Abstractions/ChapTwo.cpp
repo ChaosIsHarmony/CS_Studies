@@ -24,6 +24,9 @@ bool problem_six(int, std::vector<int>&);
 double problem_seven(int);
 int problem_nine();
 double problem_twelve();
+void problem_thirteen();
+double problem_fourteen();
+void problem_fifteen();
 
 // MAIN
 int main()
@@ -50,8 +53,17 @@ int main()
 	//print(problem_nine());
 
 	// Random Average
-	print(problem_twelve());
+	//print(problem_twelve());
 	
+	// Radioactive decay
+	//problem_thirteen();
+
+	// Estimating pi
+	//print(problem_fourteen());
+
+	// Three consecutive heads
+	problem_fifteen();
+
 	return 0;
 }
 
@@ -133,6 +145,8 @@ double problem_twelve()
 	int n_trials;
 	get_input(n_trials);
 	double average;
+
+	// random number generator
 	std::random_device rd;
 	std::mt19937 mt(rd());
 	std::uniform_real_distribution<double> dist(0.0, 1.0);
@@ -144,6 +158,70 @@ double problem_twelve()
 }
 
 
+void problem_thirteen()
+{
+	int years = 0;
+	int atoms;
+	get_input(atoms);
+	
+	// random number generator
+	std::random_device rd;
+	std::mt19937 mt(rd());
+	std::uniform_real_distribution<double> dist(0.0, 1.0);
+
+	std::string output;
+
+	while (atoms > 0)
+	{ 
+		for (int i = 0; i < atoms; i++) { if (dist(mt) < 0.5) atoms--; }
+		output = "There are " + std::to_string(atoms) + " atoms at the end of year " + std::to_string(++years) + "."; 
+		print(output);
+	}
+}
+
+double problem_fourteen()
+{
+	int num_darts;
+	double x, y;
+	int darts_in_circ = 0;
+	get_input(num_darts);
+
+	// random number generator
+	std::random_device rd;
+	std::mt19937 mt(rd());
+	std::uniform_real_distribution<double> dist(-1.0, 1.0);
+
+	for (int i = 0; i < num_darts; i++)
+	{
+		x = dist(mt);
+		y = dist(mt);
+
+		if ((x*x+y*y)<1) darts_in_circ++;
+	}
+
+	return double(darts_in_circ)/(num_darts-darts_in_circ);
+}
 
 
+void problem_fifteen()
+{
+	int threshold;
+	get_input(threshold);
 
+	int heads_run = 0;
+	int tot_flips = 0;
+
+	// random number generator
+	std::random_device rd;
+	std::mt19937 mt(rd());
+	std::uniform_real_distribution<double> dist(0.0, 1.0);
+
+	while (heads_run < threshold) 
+	{ 
+		heads_run = (dist(mt) < 0.5) ? heads_run+1 : 0;
+		tot_flips++;
+	}
+
+	std::string output = "It took " + std::to_string(tot_flips) + " to get " + std::to_string(threshold) + " heads in a row.";
+	print(output);
+}

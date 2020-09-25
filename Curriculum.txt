@@ -62,7 +62,7 @@ BOOKS
 		1.) |COMPLETE|	Sedgewick - Computer Science An Interdisciplinary Approach [Java]
 						Chap. 1 Assignments (48/165)
 		2.) |COMPLETE|	Roberts - Programming Abstractions [C++]
-						Chap. 1-2 Assignments (17/30)
+						Chap. 1-2 Assignments (20/30)
 
 --ALGORITHMS--
 	1.) |60%|	Sedgewick - Algorithms [Java]
