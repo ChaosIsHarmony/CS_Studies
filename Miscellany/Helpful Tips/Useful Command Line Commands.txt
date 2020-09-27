@@ -23,6 +23,14 @@ $ grep -i "keywords" file 			// searches for keywords in file (case insensitive)
 $ grep -R "keywords" dir 			// searches for keywords in all files of dir (case insensitive)
 $ grep -c "keywords" file 			// searches and displays # of times keywords in file
 
+$ diff file1 file2		// shows difference between two files
+$ diff -q file1 file2	// shows that two files differ, but not the differences
+$ diff -s file1 file2	// shows that two files at the same
+$ diff -i file1 file2	// shows that two files at the differ, but ignores case
+$ diff -w file1 file2	// shows that two files at the differ, but ignores whitespace
+$ diff -B file1 file2	// shows that two files at the differ, but ignores blank lines
+$ diff -qr dir1 dir2	// shows that two directories differ, but not the differences
+
 $ prog < file	// prog will take file as input
 $ prog > file	// prog will save output to file [overwrites file contents if file already exists]
 $ prog >> file	// prog will append output to file
