@@ -71,7 +71,7 @@ public class Scheduler
 		for (int day = 0; day < 7; day++)
 			for (int hour = 11; hour < 21; hour++)
 				if ((hour-11)%3==0 && schedule[hour][day] == null)
-				{ schedule[hour][day] = new FixedEvent("Aidos","Duty","On Call",day,hour,1); continue; }
+				{ schedule[hour][day] = new FixedEvent("Aidos","Duty","On_Call",day,hour,1); continue; } // must use underscore
 			
 		// Find space for skill events
 		MaxPQ<SkillEvent> pq = new MaxPQ<SkillEvent>(skills.length);

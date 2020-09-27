@@ -4,6 +4,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 import utils.Scheduler;
 import entities.Event;
+import entities.FixedEvent;
+import entities.SkillEvent;
 
 public class Main
 {
@@ -28,7 +30,7 @@ public class Main
 		sc = new Scanner(System.in);
 		
 		// Determine current use case
-		System.out.println("Use Case:\n\nCreate Weekly Schedule = C\nView Weekly Schedule = V\nExit = X");
+		System.out.println("Create Weekly Schedule = C\nView Weekly Schedule = V\nExit = X");
 		
 		// Load appropriate file
 		String input;
@@ -61,7 +63,7 @@ public class Main
 				case "P":
 				case "p": createNewSchedule(((skip>1)? skip/2 : skip)); break;
 				case "B":
-				case "b": System.out.println("Use Case:\n\nCreate Weekly Schedule = C\nView Weekly Schedule = V\nExit = X"); break;
+				case "b": System.out.println("\n\nCreate Weekly Schedule = C\nView Weekly Schedule = V\nExit = X"); break;
 				default: System.out.println("Invalid Input"); continue;
 			}
 			break;
@@ -76,36 +78,53 @@ public class Main
 
 		String filepath = new File("").getAbsolutePath()+SCHEDULES_FILE;
 
-		Scanner sc_2 = new Scanner(filepath);
-		Event[][] schedule = new Event[24][7];
-		boolean found = false;
-		
-		// TODO: finish parser
-		while (sc_2.hasNext())
-		{
-			if (sc_2.nextLine().contains(date))	found = true;
-			if (found)
+		try { 
+			Scanner sc_2 = new Scanner(new File(filepath));
+
+			Event[][] schedule = new Event[24][7];
+			boolean found = false;
+			
+			// TODO: finish parser
+			while (sc_2.hasNext())
 			{
-				String line = "";
-				// parse out events
-				while (!(line = sc_2.nextLine()).contains(date))
+				// looks only for start entry of date
+				if (sc_2.nextLine().contains(date))	found = true;
+				
+				if (found)
 				{
-					// is a skill
-					if (Boolean.parseBoolean(line.substring(0,line.indexOf(","))))
+					String line = sc_2.nextLine();
+					int cnt = 0;
+					// parse out events until second occurrence of date
+					for(int i = 0; i < 24; i++, line = sc_2.nextLine())
 					{
-						int start = line.indexOf(",");
-						String cat = "";
-					}
-					// is fixed 
-					else
-					{
+						String[] events = line.split(","); // splits line into events
+						for (int j = 0; j < 7; j++)
+						{
+							if (events[j].equals("null")) continue; // if no event slotted for that time
 
+							String[] fields = events[j].split(" "); //splits events into fields
+							// is a skill
+							if (Boolean.parseBoolean(fields[0]))
+							{
+								SkillEvent e = new SkillEvent(fields[1], fields[2], fields[3], Integer.parseInt(fields[4]), Integer.parseInt(fields[5]), Integer.parseInt(fields[6]));
+								schedule[i][j] = e;
+							}
+							// is fixed 
+							else
+							{
+								FixedEvent e = new FixedEvent(fields[1], fields[2], fields[3], Integer.parseInt(fields[4]), Integer.parseInt(fields[5]), Integer.parseInt(fields[6]));
+								schedule[i][j] = e;
+							}
+							
+						}
 					}
-
+					break; // finished loading relevant entries from the schedule
 				}
-				break;
 			}
-		}
+			display(schedule);
+			// Determine current use case
+			System.out.println("\n\nCreate Weekly Schedule = C\nView Weekly Schedule = V\nExit = X");
+		} catch (Exception e) { System.out.println("Failed to load: " + filepath); }
 	}
 
 	// Helper Methods
@@ -168,6 +187,7 @@ public class Main
 			fileWriter.write("["+date+"/]\n");
 			
 			System.out.println("Save successful");
+			System.out.println("\n\nCreate Weekly Schedule = C\nView Weekly Schedule = V\nExit = X");
         } catch (Exception e) { System.out.println("Save unsuccessful"); }
 	}
 	
