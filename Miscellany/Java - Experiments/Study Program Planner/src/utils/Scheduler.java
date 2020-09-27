@@ -67,10 +67,10 @@ public class Scheduler
 			int day = ((FixedEvent) e).getDay();
 			while (duration > 0)	{ schedule[start_time+(--duration)][day] = e; }
 		}
-		// Take care of Aidos every 2 hour block
+		// Take care of Aidos every 2 hour block [if the two hours prior are reserved for skills]
 		for (int day = 0; day < 7; day++)
 			for (int hour = 11; hour < 21; hour++)
-				if ((hour-11)%3==0 && schedule[hour][day] == null)
+				if (schedule[hour][day] == null && schedule[hour-1][day] == null && schedule[hour-2][day] == null)
 				{ schedule[hour][day] = new FixedEvent("Aidos","Duty","On_Call",day,hour,1); continue; } // must use underscore
 			
 		// Find space for skill events
@@ -80,8 +80,8 @@ public class Scheduler
 		while (!pq.isEmpty())
 		{
 			SkillEvent e = pq.delMax();
-			int day = 0, cycle = 0; // Cycle prevents infinite loops for impossible scheduling tasks
-			for (int freq = e.getFrequency(); freq > 0 && cycle < skip*2; )
+			int day = 0, cycle = 0, freq = 0; // Cycle prevents infinite loops for impossible scheduling tasks
+			for (freq = e.getFrequency(); freq > 0 && cycle < skip*2; )
 			{
 				for (int hour = 9; hour < 24; hour++)
 				{
@@ -111,6 +111,11 @@ public class Scheduler
 				}
 				cycle = ((day+skip)>6) ? cycle+1 : cycle;
 				day = (day+skip)%7;
+			}
+			// didn't find slot for all instances on first pass; try swapping
+			if (freq != 0)
+			{
+				System.out.println(e.getType() + " has " + freq + " unaccounted for times.");	
 			}
 		}
 		

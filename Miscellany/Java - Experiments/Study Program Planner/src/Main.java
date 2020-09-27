@@ -37,7 +37,7 @@ public class Main
 		while (!(input = sc.nextLine()).equals("X"))
 			if (input.equals("C") || input.equals("c"))			createNewSchedule(1);
 			else if (input.equals("V") || input.equals("v"))	viewOldSchedule();
-			else												System.out.println("Invalid Input");
+			else												System.out.println("Invalid Input [Main]");
 		
 		sc.close();
 	}
@@ -51,7 +51,7 @@ public class Main
 		// Display
 		display(schedule);
 		
-		System.out.println("Save [s], Try a new pattern [c], Previous pattern [p], or Back to Main [b]?");
+		System.out.println("Save [s], Try a new pattern [c], Previous pattern [p], or Back to Main [b], Exchange spots manually [e], Input event manually [m]?");
 		while (true){
 			String input = sc.nextLine();
 			switch (input)
@@ -64,7 +64,11 @@ public class Main
 				case "p": createNewSchedule(((skip>1)? skip/2 : skip)); break;
 				case "B":
 				case "b": System.out.println("\n\nCreate Weekly Schedule = C\nView Weekly Schedule = V\nExit = X"); break;
-				default: System.out.println("Invalid Input"); continue;
+				case "E":
+				case "e": moveManually(schedule); break;
+				case "M":
+				case "m": inputEventManually(schedule); break;
+				default: System.out.println("Invalid Input [Create New Schedule]"); continue;
 			}
 			break;
 		}
@@ -191,4 +195,29 @@ public class Main
         } catch (Exception e) { System.out.println("Save unsuccessful"); }
 	}
 	
+	private static void moveManually(Event[][] schedule)
+	{
+		// Prompt user to insert space separated pairs to swap
+		System.out.println("List hour [0-23] and day [0-7] indexes for as many pairs you want to swap (e.g., 11 0 11 1 <- moves Event at 11,0 to 11,1)\n-1 to stop");
+
+		int hour_1, day_1, hour_2, day_2;
+		while(sc.hasNext())
+		{
+			if ((hour_1 = sc.nextInt()) < 0) break; // breaks on sentinel value of -1
+			day_1 = sc.nextInt();
+			hour_2 = sc.nextInt();
+			day_2 = sc.nextInt();
+			
+			Event tmp = schedule[hour_1][day_1];
+			schedule[hour_1][day_1] = schedule[hour_2][day_2];
+			schedule[hour_2][day_2] = tmp;
+		}
+		System.out.println("\n\nNew Schedule");
+		display(schedule);
+	}
+
+	private static void inputEventManually(Event[][] schedule)
+	{
+		// TODO: handle manually event creation
+	}
 }

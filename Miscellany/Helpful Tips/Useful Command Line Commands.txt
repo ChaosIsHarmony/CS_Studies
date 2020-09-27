@@ -3,11 +3,13 @@ Useful Command Line Commands
 $ ping www.google.com 		// check internet connection
 $ ip route | grep default	// find ip address for router
 
-$ systeminfo 						// gets computer info
+$ systeminfo	// gets computer info
 
 $ mkdir dirName 	// makes a directory
 $ rmdir dirName 	// deletes a directory (must be empty before removing)
 $ rm -r dirName 	// deletes a directory and all sub directories (even if not empty)
+$ rm filename       // deletes a file
+$ rm *.extension    // deletes all files of type extension
 $ cp file dir 		// copies file from current directory into destination directory
 $ cp * dir 			// copies all files from current dir into destination dir
 $ cp *.txt dir 		// copies all files of given extension from curr dir into dest dir
