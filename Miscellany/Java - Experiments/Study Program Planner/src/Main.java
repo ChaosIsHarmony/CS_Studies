@@ -18,11 +18,11 @@ public class Main
 		if (os.contains("Windows"))
 		{
 			SUBJECTS_EVENTS_LIST_FILE = "\\txt_files\\skills_and_fixed.txt";
-			SCHEDULES_FILE = "\\txt_files\\schedules.txt";
+			SCHEDULES_FILE = "\\txt_files\\schedules";
 		} else
 		{
 			SUBJECTS_EVENTS_LIST_FILE = "/txt_files/skills_and_fixed.txt";
-			SCHEDULES_FILE = "/txt_files/schedules.txt";
+			SCHEDULES_FILE = "/txt_files/schedules";
 		}
 	}
 	public static void main(String[] args)
@@ -34,10 +34,10 @@ public class Main
 		
 		// Load appropriate file
 		String input;
-		while (!(input = sc.nextLine()).equals("X"))
-			if (input.equals("C") || input.equals("c"))			createNewSchedule(1);
-			else if (input.equals("V") || input.equals("v"))	viewOldSchedule();
-			else												System.out.println("Invalid Input [Main]");
+		while (!(input = sc.nextLine()).toLowerCase().equals("x"))
+			if (input.equals("c"))		createNewSchedule(1);
+			else if (input.equals("v"))	viewOldSchedule();
+			else						System.out.println("Invalid Input [Main]");
 		
 		sc.close();
 	}
@@ -50,28 +50,23 @@ public class Main
 		
 		// Display
 		display(schedule);
+		boolean finished = false;
+		while (!finished){
+			System.out.println("Save [s], Try a new pattern [c], Previous pattern [p], or Back to Main [b], Exchange spots manually [e], Input event manually [m]?");
 		
-		System.out.println("Save [s], Try a new pattern [c], Previous pattern [p], or Back to Main [b], Exchange spots manually [e], Input event manually [m]?");
-		while (true){
 			String input = sc.nextLine();
-			switch (input)
+			switch (input.toLowerCase())
 			{
-				case "S":
-				case "s": try { save(schedule); } catch (Exception e) {} break;
-				case "C":
+				case "s": try { save(schedule); } catch (Exception e) {} finally { finished = true; } break;
 				case "c": createNewSchedule(skip*2); break;
-				case "P":
 				case "p": createNewSchedule(((skip>1)? skip/2 : skip)); break;
-				case "B":
-				case "b": System.out.println("\n\nCreate Weekly Schedule = C\nView Weekly Schedule = V\nExit = X"); break;
-				case "E":
+				case "b": finished = true; break;
 				case "e": moveManually(schedule); break;
-				case "M":
 				case "m": inputEventManually(schedule); break;
-				default: System.out.println("Invalid Input [Create New Schedule]"); continue;
+				default: System.out.println("Invalid Input [Create New Schedule]"); break;
 			}
-			break;
 		}
+		sc.reset();
 	}
 	
 	private static void viewOldSchedule()
@@ -80,7 +75,7 @@ public class Main
 		System.out.println("What was Sunday's date? [YYYY-MM-DD]");
 		String date = sc.nextLine();
 
-		String filepath = new File("").getAbsolutePath()+SCHEDULES_FILE;
+		String filepath = new File("").getAbsolutePath()+SCHEDULES_FILE+date+".txt";
 
 		try { 
 			Scanner sc_2 = new Scanner(new File(filepath));
@@ -88,47 +83,40 @@ public class Main
 			Event[][] schedule = new Event[24][7];
 			boolean found = false;
 			
-			// TODO: finish parser
+			// parser
+			// BUGGY
 			while (sc_2.hasNext())
 			{
-				// looks only for start entry of date
-				if (sc_2.nextLine().contains(date))	found = true;
-				
-				if (found)
+				String line = sc_2.nextLine();
+				int cnt = 0;
+				// parse out events until second occurrence of date
+				for(int i = 0; i < 24; i++, line = sc_2.nextLine())
 				{
-					String line = sc_2.nextLine();
-					int cnt = 0;
-					// parse out events until second occurrence of date
-					for(int i = 0; i < 24; i++, line = sc_2.nextLine())
+					String[] events = line.split(","); // splits line into events
+					for (int j = 0; j < 7; j++)
 					{
-						String[] events = line.split(","); // splits line into events
-						for (int j = 0; j < 7; j++)
-						{
-							if (events[j].equals("null")) continue; // if no event slotted for that time
+						if (events[j].equals("null")) continue; // if no event slotted for that time
 
-							String[] fields = events[j].split(" "); //splits events into fields
-							// is a skill
-							if (Boolean.parseBoolean(fields[0]))
-							{
-								SkillEvent e = new SkillEvent(fields[1], fields[2], fields[3], Integer.parseInt(fields[4]), Integer.parseInt(fields[5]), Integer.parseInt(fields[6]));
-								schedule[i][j] = e;
-							}
-							// is fixed 
-							else
-							{
-								FixedEvent e = new FixedEvent(fields[1], fields[2], fields[3], Integer.parseInt(fields[4]), Integer.parseInt(fields[5]), Integer.parseInt(fields[6]));
-								schedule[i][j] = e;
-							}
-							
+						String[] fields = events[j].split(" "); //splits events into fields
+						// is a skill
+						if (Boolean.parseBoolean(fields[0]))
+						{
+							SkillEvent e = new SkillEvent(fields[1], fields[2], fields[3], Integer.parseInt(fields[4]), Integer.parseInt(fields[5]), Integer.parseInt(fields[6]));
+							schedule[i][j] = e;
+						}
+						// is fixed 
+						else
+						{
+							FixedEvent e = new FixedEvent(fields[1], fields[2], fields[3], Integer.parseInt(fields[4]), Integer.parseInt(fields[5]), Integer.parseInt(fields[6]));
+							schedule[i][j] = e;
 						}
 					}
-					break; // finished loading relevant entries from the schedule
+				break; // finished loading relevant entries from the schedule
 				}
 			}
 			display(schedule);
-			// Determine current use case
-			System.out.println("\n\nCreate Weekly Schedule = C\nView Weekly Schedule = V\nExit = X");
 		} catch (Exception e) { System.out.println("Failed to load: " + filepath); }
+		sc.reset();
 	}
 
 	// Helper Methods
@@ -169,6 +157,7 @@ public class Main
 			}
 			System.out.println();
 		}
+		sc.reset();
 	}
 
 	private static void save(Event[][] schedule) throws IOException
@@ -177,22 +166,22 @@ public class Main
 		System.out.println("What is Sunday's date? [YYYY-MM-DD]");
 		String date = sc.nextLine();
 		
-		String filepath = new File("").getAbsolutePath()+SCHEDULES_FILE;
+		String filepath = new File("").getAbsolutePath()+SCHEDULES_FILE+date+".txt";
 		
-        try (FileWriter fileWriter = new FileWriter(filepath, true)) {
-			fileWriter.write("[/"+date+"]\n");
-            for (int i = 0; i < 24; i++)
+        try (FileWriter fileWriter = new FileWriter(filepath, false)) {
+			for (int i = 0; i < 24; i++)
 			{
 				String line = "";
 				for (int j = 0; j < 7; j++)
 					line += schedule[i][j]+",";
 				fileWriter.write(line+"\n");
 			}
-			fileWriter.write("["+date+"/]\n");
 			
 			System.out.println("Save successful");
 			System.out.println("\n\nCreate Weekly Schedule = C\nView Weekly Schedule = V\nExit = X");
-        } catch (Exception e) { System.out.println("Save unsuccessful"); }
+			fileWriter.close();
+        } catch (Exception e) { System.out.println("Save unsuccessful"); System.out.println(); }
+		sc.reset();
 	}
 	
 	private static void moveManually(Event[][] schedule)
@@ -214,10 +203,50 @@ public class Main
 		}
 		System.out.println("\n\nNew Schedule");
 		display(schedule);
+		sc.reset();
 	}
 
 	private static void inputEventManually(Event[][] schedule)
 	{
-		// TODO: handle manually event creation
+		// Prompt user to insert space separated parameters for new event including start time and day
+		System.out.println("List space-separated skill/fixed, category, subject, type, day, start_time, and duration\n-1 to stop");
+		
+		while (true)
+		{
+			String event = sc.nextLine();
+			String[] fields = event.split(" ");
+		
+			// fixed
+			if (fields[0].toLowerCase().equals("-1"))	return;
+			else if (fields[0].toLowerCase().equals("fixed"))
+			{
+				int day = Integer.parseInt(fields[4]);
+				int start_time = Integer.parseInt(fields[5]);
+				int duration = Integer.parseInt(fields[6]);
+				Event e = new FixedEvent(fields[1],fields[2],fields[3],day,start_time,duration);
+				for (int i = 0; i < duration; i++)
+					schedule[start_time+i][day] = e;
+			}
+			// skill
+			else
+			{
+				int day = Integer.parseInt(fields[4]);
+				int start_time = Integer.parseInt(fields[5]);
+				int duration = Integer.parseInt(fields[6]);
+				Event e = new SkillEvent(fields[1],fields[2],fields[3],duration,-1,-1);
+				for (int i = 0; i < duration; i++)
+					schedule[start_time+i][day] = e;
+			}
+			
+			display(schedule);
+			
+			System.out.println("\n\nSave? [y/n]");
+			
+			String ans = sc.nextLine();
+			if (ans.toLowerCase().equals("y")) break;
+		}
+		try { save(schedule); }
+		catch (Exception e) {}
+		sc.reset();
 	}
 }
