@@ -12,6 +12,7 @@ public class Main
 	private static Scanner sc;
 	private final static String SUBJECTS_EVENTS_LIST_FILE;
 	private final static String SCHEDULES_FILE;
+	// change slashes depending on OS
 	static {
 		String os = System.getProperty("os.name");
 		System.out.println(os);
@@ -35,9 +36,9 @@ public class Main
 		// Load appropriate file
 		String input;
 		while (!(input = sc.nextLine()).toLowerCase().equals("x"))
-			if (input.equals("c"))		createNewSchedule(1);
-			else if (input.equals("v"))	viewOldSchedule();
-			else						System.out.println("Invalid Input [Main]");
+			if (input.toLowerCase().equals("c"))		createNewSchedule(1);
+			else if (input.toLowerCase().equals("v"))	viewOldSchedule();
+			else										System.out.println("Invalid Input [Main]");
 		
 		sc.close();
 	}
@@ -84,35 +85,30 @@ public class Main
 			boolean found = false;
 			
 			// parser
-			// BUGGY
-			while (sc_2.hasNext())
+			String line = sc_2.nextLine();
+			// parse out events until second occurrence of date
+			for(int i = 0; i < 24; i++)
 			{
-				String line = sc_2.nextLine();
-				int cnt = 0;
-				// parse out events until second occurrence of date
-				for(int i = 0; i < 24; i++, line = sc_2.nextLine())
+				String[] events = line.split(","); // splits line into events
+				for (int j = 0; j < 7; j++)
 				{
-					String[] events = line.split(","); // splits line into events
-					for (int j = 0; j < 7; j++)
-					{
-						if (events[j].equals("null")) continue; // if no event slotted for that time
+					if (events[j].equals("null")) continue; // if no event slotted for that time
 
-						String[] fields = events[j].split(" "); //splits events into fields
-						// is a skill
-						if (Boolean.parseBoolean(fields[0]))
-						{
-							SkillEvent e = new SkillEvent(fields[1], fields[2], fields[3], Integer.parseInt(fields[4]), Integer.parseInt(fields[5]), Integer.parseInt(fields[6]));
-							schedule[i][j] = e;
-						}
-						// is fixed 
-						else
-						{
-							FixedEvent e = new FixedEvent(fields[1], fields[2], fields[3], Integer.parseInt(fields[4]), Integer.parseInt(fields[5]), Integer.parseInt(fields[6]));
-							schedule[i][j] = e;
-						}
+					String[] fields = events[j].split(" "); //splits events into fields
+					// is a skill
+					if (Boolean.parseBoolean(fields[0]))
+					{
+						SkillEvent e = new SkillEvent(fields[1], fields[2], fields[3], Integer.parseInt(fields[4]), Integer.parseInt(fields[5]), Integer.parseInt(fields[6]));
+						schedule[i][j] = e;
 					}
-				break; // finished loading relevant entries from the schedule
+					// is fixed 
+					else
+					{
+						FixedEvent e = new FixedEvent(fields[1], fields[2], fields[3], Integer.parseInt(fields[4]), Integer.parseInt(fields[5]), Integer.parseInt(fields[6]));
+						schedule[i][j] = e;
+					}
 				}
+				if (sc_2.hasNext())	line = sc_2.nextLine();
 			}
 			display(schedule);
 		} catch (Exception e) { System.out.println("Failed to load: " + filepath); }

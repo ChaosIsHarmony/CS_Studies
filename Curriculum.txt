@@ -38,14 +38,14 @@ COURSES
 		1.) |98%|	AP Calculus BC
 	-Discrete Math-
 	MIT
-		2.) |60%|	6.042J - Mathematics for Computer Science [<mit>/6-042j-mathematics-for-computer-science-fall-2010/]
+		2.) |70%|	6.042J - Mathematics for Computer Science [<mit>/6-042j-mathematics-for-computer-science-fall-2010/]
 	Kimberly Brehm
 		3.) |60%|	Discrete Math [https://www.youtube.com/playlist?list=PLl-gb0E4MII28GykmtuBXNUNoej-vY5Rz]
 	Dr. Trefor Bazett
 		4.) |COMPLETE|	Discrete Math [https://www.youtube.com/playlist?list=PLHXZ9OQGMqxersk8fUxiUMSIx0DBqsKZS]
 	-Statistics-
 	Khan Academy
-		5.) |37%|	AP Statistics
+		5.) |38%|	AP Statistics
 
 --MISC--
 	Khan Academy
