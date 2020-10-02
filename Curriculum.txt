@@ -38,9 +38,9 @@ COURSES
 		1.) |98%|	AP Calculus BC
 	-Discrete Math-
 	MIT
-		2.) |70%|	6.042J - Mathematics for Computer Science [<mit>/6-042j-mathematics-for-computer-science-fall-2010/]
+		2.) |80%|	6.042J - Mathematics for Computer Science [<mit>/6-042j-mathematics-for-computer-science-fall-2010/]
 	Kimberly Brehm
-		3.) |60%|	Discrete Math [https://www.youtube.com/playlist?list=PLl-gb0E4MII28GykmtuBXNUNoej-vY5Rz]
+		3.) |70%|	Discrete Math [https://www.youtube.com/playlist?list=PLl-gb0E4MII28GykmtuBXNUNoej-vY5Rz]
 	Dr. Trefor Bazett
 		4.) |COMPLETE|	Discrete Math [https://www.youtube.com/playlist?list=PLHXZ9OQGMqxersk8fUxiUMSIx0DBqsKZS]
 	-Statistics-
@@ -91,7 +91,7 @@ BOOKS
 --MISC--
 	1.) |50%|	Chacon - Pro Git
 	2.) |66%|	A20J Ladder 11 - Codeforces Rating < 1300 [C++]
-	3.) |5%|	https://github.com/karansinghgit/CodeForces-Ladders/blob/master/div2A.md [C++]
+	3.) |6%|	https://github.com/karansinghgit/CodeForces-Ladders/blob/master/div2A.md [C++]
     4.) |20%|   Hunt - The Pragmatic Programmer
 _________________________________________________________
 
