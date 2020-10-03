@@ -58,16 +58,15 @@ public class Main
 			String input = sc.nextLine();
 			switch (input.toLowerCase())
 			{
-				case "s": try { save(schedule); } catch (Exception e) {} finally { finished = true; } break;
+				case "s": try { save(schedule); } catch (Exception e) {} finally { return; }
 				case "c": createNewSchedule(skip*2); break;
 				case "p": createNewSchedule(((skip>1)? skip/2 : skip)); break;
-				case "b": finished = true; break;
+				case "b": return;
 				case "e": moveManually(schedule); break;
 				case "m": inputEventManually(schedule); break;
 				default: System.out.println("Invalid Input [Create New Schedule]"); break;
 			}
 		}
-		sc.reset();
 	}
 	
 	private static void viewOldSchedule()
@@ -112,7 +111,6 @@ public class Main
 			}
 			display(schedule);
 		} catch (Exception e) { System.out.println("Failed to load: " + filepath); }
-		sc.reset();
 	}
 
 	// Helper Methods
@@ -153,7 +151,6 @@ public class Main
 			}
 			System.out.println();
 		}
-		sc.reset();
 	}
 
 	private static void save(Event[][] schedule) throws IOException
@@ -177,7 +174,6 @@ public class Main
 			System.out.println("\n\nCreate Weekly Schedule = C\nView Weekly Schedule = V\nExit = X");
 			fileWriter.close();
         } catch (Exception e) { System.out.println("Save unsuccessful"); System.out.println(); }
-		sc.reset();
 	}
 	
 	private static void moveManually(Event[][] schedule)
@@ -199,13 +195,12 @@ public class Main
 		}
 		System.out.println("\n\nNew Schedule");
 		display(schedule);
-		sc.reset();
 	}
 
 	private static void inputEventManually(Event[][] schedule)
 	{
 		// Prompt user to insert space separated parameters for new event including start time and day
-		System.out.println("List space-separated skill/fixed, category, subject, type, day, start_time, and duration\n-1 to stop");
+		System.out.println("List space-separated skill/fixed, category, subject, type, day, start_time, and duration");
 		
 		while (true)
 		{
@@ -213,7 +208,6 @@ public class Main
 			String[] fields = event.split(" ");
 		
 			// fixed
-			if (fields[0].toLowerCase().equals("-1"))	return;
 			else if (fields[0].toLowerCase().equals("fixed"))
 			{
 				int day = Integer.parseInt(fields[4]);
@@ -236,13 +230,10 @@ public class Main
 			
 			display(schedule);
 			
-			System.out.println("\n\nSave? [y/n]");
+			System.out.println("\n\nFinished [y/n]");
 			
 			String ans = sc.nextLine();
 			if (ans.toLowerCase().equals("y")) break;
 		}
-		try { save(schedule); }
-		catch (Exception e) {}
-		sc.reset();
 	}
 }

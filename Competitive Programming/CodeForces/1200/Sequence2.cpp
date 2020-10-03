@@ -10,9 +10,9 @@ The shooshuns wonder after how many operations all numbers on the board will be 
 
 	Input
 
-The first line contains two space-separated integers n and k (1 ≤ k ≤ n ≤ 105).
+The first line contains two space-separated integers n and k (1≤k≤n≤10^5).
 
-The second line contains n space-separated integers: a1, a2, ..., an (1 ≤ ai ≤ 105) — the sequence that the shooshuns found.
+The second line contains n space-separated integers: a_1,a_2,...,a_n (1≤a_i≤10^5) — the sequence that the shooshuns found.
 
 	Output
 
