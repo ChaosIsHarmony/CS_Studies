@@ -29,7 +29,12 @@
 *	[add 2 simplifying assumptions: 1.) range [0-9]; 2.) -1 is terminal sentinel value]
 *	
 *	Ex 1.5.6
-*	
+*	Write a filter that reads in a sequence of integers and prints the integers,
+*	removing repeated values that appear consecutively. For example, if the input is
+*		1 2 2 1 5 1 1 7 7 7 7 1 1 1 1 1 1 1 1 1
+*	your program should print		
+*		1 2 1 5 1 7 1
+*
 *	Ex 1.5.7
 *	
 *	Ex 1.5.10
@@ -57,10 +62,13 @@ public class Ex1_5
 		//ex_1_5_2();
 		
 		// Mean and sample standard deviation & Filtering outliers
-		// ex_1_5_3n4();
+		//ex_1_5_3n4();
 
 		// Longest run
-		ex_1_5_5();
+		//ex_1_5_5();
+
+		// Filter
+		ex_1_5_6();
 	}
 
 	private static void ex_1_5_1()
@@ -238,5 +246,21 @@ public class Ex1_5
 		private void exch(int a, int b)
 		{ Node tmp = heap[a]; heap[a] = heap[b]; heap[b] = tmp; }
 		private void delMin() { heap[last--] = null; };
+	}
+
+	private static void ex_1_5_6()
+	{
+		// read in numbers
+		int next_int = sc.nextInt();
+		String ans = next_int + " ";
+		// must hit ctrl-d on Linux or ctrl-z on Windows to signal EOF
+		while(sc.hasNext())
+		{
+			next_int = sc.nextInt();
+			// filter repeats
+			if (Integer.parseInt(ans.substring(ans.length()-2,ans.length()-1)) != next_int)
+			{ ans += next_int + " "; }
+		}
+		System.out.println(ans);
 	}
 }

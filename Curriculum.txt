@@ -60,13 +60,13 @@ BOOKS
 --BASICS--
 	Intro
 		1.) |COMPLETE|	Sedgewick - Computer Science An Interdisciplinary Approach [Java]
-						Chap. 1 Assignments (total: 48)
+						Chap. 1 Assignments (total: 49)
 		2.) |COMPLETE|	Roberts - Programming Abstractions [C++]
 						Chap. 1-2 Assignments (total: 20)
 
 --ALGORITHMS--
 	1.) |60%|	Sedgewick - Algorithms [Java]
-				Chap. 1 Assignments (total: ??)
+				Chap. 1 Assignments (total: 0)
 
 --OS--
 	1.) |60%|	Silberschatz - Operating System Concepts [C]
@@ -91,18 +91,21 @@ BOOKS
 
 --MISC--
 	1.) |50%|	Chacon - Pro Git
-	2.) |66%|	A20J Ladder 11 - Codeforces Rating < 1300 [C++]
-	3.) |6%|	https://github.com/karansinghgit/CodeForces-Ladders/blob/master/div2A.md [C++]
-    4.) |30%|   Hunt - The Pragmatic Programmer
-	5.) |5%|	Spraul - Think Like a Programmer
+	2.) |00%|	CodeForces Ladders [C++]
+				Lv. 600-1300 (total: 61)
+	2.) |00%|	Hackerrank [Java/C++]
+				Easy-Medium (total: 32)
+    3.) |30%|   Hunt - The Pragmatic Programmer
+	4.) |5%|	Spraul - Think Like a Programmer
 _________________________________________________________
 
 _________________________________________________________
 GOALS
 1.) Complete 3D || 2D version of Conscientia
 2.) All Kaggle tutorials
-3.) A20J CodeForces ladders up to level 1900
+3.) CodeForces ladders up to level 1900
 4.) Simple self-driving car Neural Network
 5.) Complete SAT prep software
 6.) fast.ai
+7.) Voice control system for OpenPilot
 _________________________________________________________
