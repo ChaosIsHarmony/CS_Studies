@@ -45,7 +45,7 @@ COURSES
 		4.) |COMPLETE|	Discrete Math [https://www.youtube.com/playlist?list=PLHXZ9OQGMqxersk8fUxiUMSIx0DBqsKZS]
 	-Statistics-
 	Khan Academy
-		5.) |38%|	AP Statistics
+		5.) |39%|	AP Statistics
 
 --MISC--
 	Khan Academy
@@ -70,6 +70,7 @@ BOOKS
 
 --OS--
 	1.) |60%|	Silberschatz - Operating System Concepts [C]
+	2.) |5%|	Downey - Think OS
 
 --AI/ML--
 	1.) |0%|	Abu-Mostafa - Learning From Data
@@ -83,16 +84,17 @@ BOOKS
 	1.) |10%|	Strang - Calculus I
 	2.) |0%|	Strang - Calculus II
 	3.) |0%|	Strang - Calculus III
-	4.) |10%|	Hammack - The Book of Proof
-	5.) |10%|	Rosen - Discrete Mathematics and Its Applications
-	6.) |10%|	Lehman - Mathematics for Computer Science
-	7.) |10%|	Hefferon - Linear Algebra
+	4.) |10%|	Rosen - Discrete Mathematics and Its Applications
+	5.) |10%|	Lehman - Mathematics for Computer Science
+	6.) |10%|	Hefferon - Linear Algebra
+	7.) |5%|	Downey - Think Stats
 
 --MISC--
 	1.) |50%|	Chacon - Pro Git
 	2.) |66%|	A20J Ladder 11 - Codeforces Rating < 1300 [C++]
 	3.) |6%|	https://github.com/karansinghgit/CodeForces-Ladders/blob/master/div2A.md [C++]
-    4.) |20%|   Hunt - The Pragmatic Programmer
+    4.) |30%|   Hunt - The Pragmatic Programmer
+	5.) |5%|	Spraul - Think Like a Programmer
 _________________________________________________________
 
 _________________________________________________________

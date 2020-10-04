@@ -117,7 +117,7 @@ public class Main
 	private static void display(Event[][] schedule)
 	{
 		// Display new schedule by day [24 x 7]
-		// Can input a specific cell to see specs of event
+		// TODO: Can input a specific cell to see specs of event
 		for (int i = 0; i < 24; i++)
 		{
 			if (i > 0) System.out.printf("%-5s", i+"H");
