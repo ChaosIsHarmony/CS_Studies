@@ -208,7 +208,7 @@ public class Main
 			String[] fields = event.split(" ");
 		
 			// fixed
-			else if (fields[0].toLowerCase().equals("fixed"))
+			if (fields[0].toLowerCase().equals("fixed"))
 			{
 				int day = Integer.parseInt(fields[4]);
 				int start_time = Integer.parseInt(fields[5]);
