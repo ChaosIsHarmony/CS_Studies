@@ -12,7 +12,7 @@ COURSES
 --ALGORITHMS--
 	Princeton
 		1.) |COMPLETE|	Algorithms, Part I [https://www.coursera.org/learn/algorithms-part1]
-		2.) |5%|	Algorithms, Part II [https://www.coursera.org/learn/algorithms-part2]
+		2.) |10%|	Algorithms, Part II [https://www.coursera.org/learn/algorithms-part2]
 	MIT	[mit = https://ocw.mit.edu/courses/electrical-engineering-and-computer-science]
 		3.) |70%|	6.006 - Intro to Algorithms	[<mit>/6-006-introduction-to-algorithms-fall-2011/]
 
@@ -25,7 +25,7 @@ COURSES
 	MIT
 		4.) |COMPLETE|	6.S191 - MIT Introduction to Deep Learning 2020
     Fast.ai
-        5.) |00%|	Practical Deep Learning for Coders
+        5.) |25%|	Practical Deep Learning for Coders
 
 --GAMES--
 	Games
@@ -45,7 +45,7 @@ COURSES
 		4.) |COMPLETE|	Discrete Math [https://www.youtube.com/playlist?list=PLHXZ9OQGMqxersk8fUxiUMSIx0DBqsKZS]
 	-Statistics-
 	Khan Academy
-		5.) |39%|	AP Statistics
+		5.) |41%|	AP Statistics
 
 --MISC--
 	Khan Academy
@@ -60,7 +60,7 @@ BOOKS
 --BASICS--
 	Intro
 		1.) |COMPLETE|	Sedgewick - Computer Science An Interdisciplinary Approach [Java]
-						Chap. 1 Assignments (total: 49)
+						Chap. 1 Assignments (total: 51)
 		2.) |COMPLETE|	Roberts - Programming Abstractions [C++]
 						Chap. 1-2 Assignments (total: 20)
 
@@ -70,30 +70,30 @@ BOOKS
 
 --OS--
 	1.) |60%|	Silberschatz - Operating System Concepts [C]
-	2.) |5%|	Downey - Think OS
+	2.) |15%|	Downey - Think OS
+
+--LANG--
+	1.) |5%|	Lospinoso - C++ Crash Course
 
 --AI/ML--
 	1.) |0%|	Abu-Mostafa - Learning From Data
 	2.) |20%|	Russell - Artificial Intelligence A Modern Approach
 	3.) |30%|	Kinsely - Neural Networks from Scratch [Python]
+	4.) |00%|	Gugger - Deep Learning for Coders [Python]
 
 --GAMES--
 	1.) |66%|	Godot - 3D FPS tutorial [GDScript]
 
 --MATH--
 	1.) |10%|	Strang - Calculus I
-	2.) |0%|	Strang - Calculus II
-	3.) |0%|	Strang - Calculus III
-	4.) |10%|	Rosen - Discrete Mathematics and Its Applications
-	5.) |10%|	Lehman - Mathematics for Computer Science
-	6.) |10%|	Hefferon - Linear Algebra
-	7.) |5%|	Downey - Think Stats
+	2.) |10%|	Rosen - Discrete Mathematics and Its Applications
+	3.) |5%|	Downey - Think Stats
 
 --MISC--
 	1.) |50%|	Chacon - Pro Git
-	2.) |00%|	CodeForces Ladders [C++]
+	2.) |N/A|	CodeForces Ladders [C++]
 				Lv. 600-1300 (total: 61)
-	2.) |00%|	Hackerrank [Java/C++]
+	2.) |N/A|	Hackerrank [Java/C++]
 				Easy-Medium (total: 32)
     3.) |30%|   Hunt - The Pragmatic Programmer
 	4.) |5%|	Spraul - Think Like a Programmer

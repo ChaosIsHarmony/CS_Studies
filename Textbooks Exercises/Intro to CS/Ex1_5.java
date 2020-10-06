@@ -36,9 +36,17 @@
 *		1 2 1 5 1 7 1
 *
 *	Ex 1.5.7
-*	
+*	Write a program that takes an integer command-line argument n, reads in
+*	n-1 distinct integers between 1 and n, and determines the missing value.
+*
 *	Ex 1.5.10
-*	
+*	Write a filter TenPerLine that reads from standard input a sequence of
+*	integers between 0 and 99 and prints them back, 10 integers per line, with columns
+*	aligned. Then write a program RandomIntSeq that takes two integer commandline
+*	arguments m and n and prints n random integers between 0 and m-1. Test your
+*	programs with the command java RandomIntSeq 200 100 | java TenPerLine.
+*	(Simulated piping by writing two distinct methods)
+*
 *	Ex 1.5.11
 *	
 *	Ex 1.5.14
@@ -67,8 +75,14 @@ public class Ex1_5
 		// Longest run
 		//ex_1_5_5();
 
-		// Filter
-		ex_1_5_6();
+		// Filter repeats
+		//ex_1_5_6();
+		
+		// Determine missing value
+		//ex_1_5_7();
+		
+		// Rand sequence && Ten per line filter
+		ex_1_5_8();
 	}
 
 	private static void ex_1_5_1()
@@ -262,5 +276,42 @@ public class Ex1_5
 			{ ans += next_int + " "; }
 		}
 		System.out.println(ans);
+	}
+	
+	private static void ex_1_5_7()
+	{
+		// Get number of values
+		int n = sc.nextInt();
+		boolean[] listed = new boolean[n+1];
+		
+		// Get all n-1 user-inputted values
+		for (int i = 1; i < n; i++) { listed[sc.nextInt()] = true; }
+		
+		// print out the index of the missing value
+		for (int i = 1; i < n+1; i++) { if(!listed[i]) System.out.println("Number missing is " + i + "."); }
+	}
+	
+	private static void ex_1_5_8()
+	{
+		// simulate a pipe by giving randSeq's output as input to tenPerLine
+		tenPerLine(randSeq(sc.nextInt(), sc.nextInt()));
+	}
+	
+	private static int[] randSeq(int m, int n)
+	{
+		int[] arr = new int[n];
+		for (int i = 0; i < n; i++) { arr[i] = (int) (Math.random()*m); }
+		return arr;
+	}
+	
+	private static void tenPerLine(int[] arr)
+	{
+		System.out.printf("%5d", arr[0]);
+		for (int i = 1; i < arr.length; i++)
+		{
+			if (i%10 == 0)	System.out.println(); 	// must go before print statement
+													// otherwise, prints oddly
+			System.out.printf("%5d", arr[i]);
+		}
 	}
 }
