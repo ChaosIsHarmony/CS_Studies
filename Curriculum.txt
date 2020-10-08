@@ -12,7 +12,7 @@ COURSES
 --ALGORITHMS--
 	Princeton
 		1.) |COMPLETE|	Algorithms, Part I [https://www.coursera.org/learn/algorithms-part1]
-		2.) |10%|	Algorithms, Part II [https://www.coursera.org/learn/algorithms-part2]
+		2.) |20%|	Algorithms, Part II [https://www.coursera.org/learn/algorithms-part2]
 	MIT	[mit = https://ocw.mit.edu/courses/electrical-engineering-and-computer-science]
 		3.) |70%|	6.006 - Intro to Algorithms	[<mit>/6-006-introduction-to-algorithms-fall-2011/]
 
@@ -38,7 +38,7 @@ COURSES
 		1.) |98%|	AP Calculus BC
 	-Discrete Math-
 	MIT
-		2.) |80%|	6.042J - Mathematics for Computer Science [<mit>/6-042j-mathematics-for-computer-science-fall-2010/]
+		2.) |COMPLETE|	6.042J - Mathematics for Computer Science [<mit>/6-042j-mathematics-for-computer-science-fall-2010/]
 	Kimberly Brehm
 		3.) |70%|	Discrete Math [https://www.youtube.com/playlist?list=PLl-gb0E4MII28GykmtuBXNUNoej-vY5Rz]
 	Dr. Trefor Bazett
@@ -58,14 +58,13 @@ _________________________________________________________
 _________________________________________________________
 BOOKS
 --BASICS--
-	Intro
-		1.) |COMPLETE|	Sedgewick - Computer Science An Interdisciplinary Approach [Java]
-						Chap. 1 Assignments (total: 51)
-		2.) |COMPLETE|	Roberts - Programming Abstractions [C++]
-						Chap. 1-2 Assignments (total: 20)
+	1.) |COMPLETE|	Sedgewick - Computer Science An Interdisciplinary Approach [Java]
+					Chap. 1 Assignments (total: 51)
+	2.) |COMPLETE|	Roberts - Programming Abstractions [C++]
+					Chap. 1-2 Assignments (total: 20)
 
 --ALGORITHMS--
-	1.) |60%|	Sedgewick - Algorithms [Java]
+	1.) |65%|	Sedgewick - Algorithms [Java]
 				Chap. 1 Assignments (total: 0)
 
 --OS--

@@ -33,6 +33,10 @@ SAMPLE:
 
 2 2
 	0
+	
+Troublesome Inputs:
+729 501
+	228
 
 Observations:
 	- A group is defined as a vertex of degree x and all its connected nodes, even if x = 0
@@ -78,12 +82,11 @@ int main()
 	// Case m == n
 	if (m == n)						{ print(0); return 0; } 
 	// 2 | n
-	if 		(n%2==0 && m < (n/2))	{ print((n/2)-((n/2)-m)); return 0; }
-	else if (n%2==0 && m >= (n/2))	{ print((n/2)-(m-(n/2))); return 0; }
+	if 		(n%2==0 && m < (n/2))	{ print(m); return 0; }
+	else if (n%2==0 && m >= (n/2))	{ print(n-m); return 0; }
 	// ~ 2 | n
-	if 		(m <= (n/2))			{ print((n/2)-((n/2)-m)); return 0; }
-	else if (m == (n/2)+1)			{ print((n/2)-(m-(n/2))+1); return 0; }
-	else							{ print((n/2)-(m-(n/2))); return 0; }
+	if 		(m <= (n/2))			{ print(m); return 0; }
+	else							{ print(n-m); return 0; }
 
 	return 0;
 }
