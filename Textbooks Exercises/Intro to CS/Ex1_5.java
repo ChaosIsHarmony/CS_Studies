@@ -48,9 +48,22 @@
 *	(Simulated piping by writing two distinct methods)
 *
 *	Ex 1.5.11
-*	
+*	Write a program that reads in text from standard input and prints the number 
+*	of words in the text. For the purpose of this exercise, a word is a sequence of
+*	non-whitespace characters that is surrounded by whitespace.
+*
 *	Ex 1.5.14
-*	
+*	Which of the following require saving all the values from standard input (in
+*	an array, say), and which could be implemented as a filter using only a fixed number
+*	of variables? For each, the input comes from standard input and consists of n real
+*	numbers between 0 and 1.
+*		• Print the maximum and minimum numbers.					[Filter]
+*		• Print the sum of the squares of the n numbers.			[Filter]
+*		• Print the average of the n numbers.						[Filter]
+*		• Print the median of the n numbers.						[Ordered Array]
+*		• Print the percentage of numbers greater than the average.	[Ordered Array]
+*		• Print the n numbers in increasing order.					[Max Heap]
+*		• Print the n numbers in random order.						[Shuffled Array]
 *
 *************************************************/
 import java.util.Scanner;
@@ -82,7 +95,12 @@ public class Ex1_5
 		//ex_1_5_7();
 		
 		// Rand sequence && Ten per line filter
-		ex_1_5_8();
+		//ex_1_5_10();
+
+		// Word count
+		//ex_1_5_11();
+
+		sc.close();
 	}
 
 	private static void ex_1_5_1()
@@ -291,7 +309,7 @@ public class Ex1_5
 		for (int i = 1; i < n+1; i++) { if(!listed[i]) System.out.println("Number missing is " + i + "."); }
 	}
 	
-	private static void ex_1_5_8()
+	private static void ex_1_5_10()
 	{
 		// simulate a pipe by giving randSeq's output as input to tenPerLine
 		tenPerLine(randSeq(sc.nextInt(), sc.nextInt()));
@@ -313,5 +331,16 @@ public class Ex1_5
 													// otherwise, prints oddly
 			System.out.printf("%5d", arr[i]);
 		}
+	}
+
+	private static void ex_1_5_11()
+	{
+		// read in file contents
+		String file_contents_str = "";
+		while (sc.hasNext()) 
+			file_contents_str += sc.nextLine();
+		String[] words = file_contents_str.split(" "); // split on whitespace
+
+		System.out.println(words.length);
 	}
 }
