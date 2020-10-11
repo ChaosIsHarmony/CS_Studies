@@ -25,7 +25,7 @@ COURSES
 	MIT
 		4.) |COMPLETE|	6.S191 - MIT Introduction to Deep Learning 2020
     Fast.ai
-        5.) |25%|	Practical Deep Learning for Coders
+        5.) |75%|	Practical Deep Learning for Coders
 
 --GAMES--
 	Games
@@ -69,7 +69,7 @@ BOOKS
 
 --OS--
 	1.) |60%|	Silberschatz - Operating System Concepts [C]
-	2.) |15%|	Downey - Think OS
+	2.) |50%|	Downey - Think OS
 
 --LANG--
 	1.) |5%|	Lospinoso - C++ Crash Course
@@ -95,7 +95,7 @@ BOOKS
 	2.) |N/A|	Hackerrank [Java/C++]
 				Easy-Medium (total: 32)
     3.) |30%|   Hunt - The Pragmatic Programmer
-	4.) |5%|	Spraul - Think Like a Programmer
+	4.) |10%|	Spraul - Think Like a Programmer
 _________________________________________________________
 
 _________________________________________________________
