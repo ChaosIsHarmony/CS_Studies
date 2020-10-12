@@ -12,9 +12,9 @@ COURSES
 --ALGORITHMS--
 	Princeton
 		1.) |COMPLETE|	Algorithms, Part I [https://www.coursera.org/learn/algorithms-part1]
-		2.) |20%|	Algorithms, Part II [https://www.coursera.org/learn/algorithms-part2]
+		2.) |25%|	Algorithms, Part II [https://www.coursera.org/learn/algorithms-part2]
 	MIT	[mit = https://ocw.mit.edu/courses/electrical-engineering-and-computer-science]
-		3.) |70%|	6.006 - Intro to Algorithms	[<mit>/6-006-introduction-to-algorithms-fall-2011/]
+		3.) |75%|	6.006 - Intro to Algorithms	[<mit>/6-006-introduction-to-algorithms-fall-2011/]
 
 --AI/ML--
 	Kaggle
@@ -69,10 +69,11 @@ BOOKS
 
 --OS--
 	1.) |60%|	Silberschatz - Operating System Concepts [C]
-	2.) |50%|	Downey - Think OS
+	2.) |80%|	Downey - Think OS
 
 --LANG--
-	1.) |5%|	Lospinoso - C++ Crash Course
+	1.) |15%|	Lospinoso - C++ Crash Course
+				Chap. 1 Assignments (total: 4)
 
 --AI/ML--
 	1.) |0%|	Abu-Mostafa - Learning From Data
@@ -95,7 +96,7 @@ BOOKS
 	2.) |N/A|	Hackerrank [Java/C++]
 				Easy-Medium (total: 32)
     3.) |30%|   Hunt - The Pragmatic Programmer
-	4.) |10%|	Spraul - Think Like a Programmer
+	4.) |20%|	Spraul - Think Like a Programmer
 _________________________________________________________
 
 _________________________________________________________
