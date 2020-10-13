@@ -74,6 +74,8 @@ BOOKS
 --LANG--
 	1.) |15%|	Lospinoso - C++ Crash Course
 				Chap. 1 Assignments (total: 4)
+	2.) |05%|	Shaw - Learn Python the Hard Way
+				Assignments (total: 1)
 
 --AI/ML--
 	1.) |0%|	Abu-Mostafa - Learning From Data

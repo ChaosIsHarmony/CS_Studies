@@ -1,0 +1,17 @@
+// Controls
+i	// insert mode
+esc	// command mode
+:q	// quit
+:wq	// save & quit
+:q!	// trash all changes
+G	// move to the bottom of file
+gg	// move to top of file
+// Edit
+u	// undo
+CTRL+R	// redo
+0	// curspr to start of line
+dw	// delete word
+dxw	// delete x words [replace x w/ a num]
+dd	// delete line
+p	// after dd will place deleted line after cursor
+A	// append text to end of line
