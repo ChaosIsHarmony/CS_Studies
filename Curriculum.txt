@@ -40,12 +40,12 @@ COURSES
 	MIT
 		2.) |COMPLETE|	6.042J - Mathematics for Computer Science [<mit>/6-042j-mathematics-for-computer-science-fall-2010/]
 	Kimberly Brehm
-		3.) |70%|	Discrete Math [https://www.youtube.com/playlist?list=PLl-gb0E4MII28GykmtuBXNUNoej-vY5Rz]
+		3.) |80%|	Discrete Math [https://www.youtube.com/playlist?list=PLl-gb0E4MII28GykmtuBXNUNoej-vY5Rz]
 	Dr. Trefor Bazett
 		4.) |COMPLETE|	Discrete Math [https://www.youtube.com/playlist?list=PLHXZ9OQGMqxersk8fUxiUMSIx0DBqsKZS]
 	-Statistics-
 	Khan Academy
-		5.) |41%|	AP Statistics
+		5.) |42%|	AP Statistics
 
 --MISC--
 	Khan Academy
@@ -69,7 +69,7 @@ BOOKS
 
 --OS--
 	1.) |60%|	Silberschatz - Operating System Concepts [C]
-	2.) |80%|	Downey - Think OS
+	2.) |COMPLETE|	Downey - Think OS
 
 --LANG--
 	1.) |15%|	Lospinoso - C++ Crash Course
