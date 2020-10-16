@@ -14,7 +14,7 @@ COURSES
 		1.) |COMPLETE|	Algorithms, Part I [https://www.coursera.org/learn/algorithms-part1]
 		2.) |25%|	Algorithms, Part II [https://www.coursera.org/learn/algorithms-part2]
 	MIT	[mit = https://ocw.mit.edu/courses/electrical-engineering-and-computer-science]
-		3.) |75%|	6.006 - Intro to Algorithms	[<mit>/6-006-introduction-to-algorithms-fall-2011/]
+		3.) |COMPLETE|	6.006 - Intro to Algorithms	[<mit>/6-006-introduction-to-algorithms-fall-2011/]
 
 --AI/ML--
 	Kaggle
@@ -64,7 +64,7 @@ BOOKS
 					Chap. 1-2 Assignments (total: 20)
 
 --ALGORITHMS--
-	1.) |65%|	Sedgewick - Algorithms [Java]
+	1.) |75%|	Sedgewick - Algorithms [Java]
 				Chap. 1 Assignments (total: 0)
 
 --OS--
@@ -74,8 +74,8 @@ BOOKS
 --LANG--
 	1.) |15%|	Lospinoso - C++ Crash Course [C++] (100)
 				Chap. 1 Assignments (total: 4)
-	2.) |05%|	Shaw - Learn Python the Hard Way
-				Assignments (total: 1)
+	2.) |10%|	Shaw - Learn Python the Hard Way
+				Assignments (total: 6)
 
 --AI/ML--
 	1.) |0%|	Abu-Mostafa - Learning From Data
