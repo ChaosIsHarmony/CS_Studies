@@ -7,10 +7,10 @@ esc	// command mode
 G	// move to the bottom of file
 gg	// move to top of file
 e	// move to the end of a word
+0	// cursor to start of line
 // Edit
 u	// undo
 CTRL+R	// redo
-0	// curspr to start of line
 dw	// delete word
 dxw	// delete x words [replace x w/ a num]
 dd	// delete line

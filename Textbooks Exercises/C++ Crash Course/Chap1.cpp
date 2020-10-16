@@ -1,5 +1,5 @@
 /*
- * Exercises for Lospinoso - C++ Crash Course
+ * Exercises for Chap. 1 of Lospinoso - C++ Crash Course
  */
 
 #include <iostream>

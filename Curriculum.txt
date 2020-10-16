@@ -18,19 +18,19 @@ COURSES
 
 --AI/ML--
 	Kaggle
-		1.) |COMPLETE|	Intro to Machine Learning
-		2.) |36%|		Intermediate Machine Learning
+		1.) |COMPLETE|	Intro to Machine Learning	[]
+		2.) |36%|	Intermediate Machine Learning	[]
 	Harvard
-		3.) |5%|	CS50 - Intro to Artificial Intelligence with Python
+		3.) |5%|	CS50 - Intro to Artificial Intelligence with Python	[]
 	MIT
-		4.) |COMPLETE|	6.S191 - MIT Introduction to Deep Learning 2020
-    Fast.ai
-        5.) |75%|	Practical Deep Learning for Coders
+		4.) |COMPLETE|	6.S191 - MIT Introduction to Deep Learning 2020	[https://www.youtube.com/watch?v=njKP3FqW3Sk&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI]
+    	Fast.ai
+        	5.) |75%|	Practical Deep Learning for Coders	[https://course.fast.ai/]
 
 --GAMES--
 	Games
 		1.) |COMPLETE|	Godot - HeartBeast 2D ARPG tutorial
-		2.) |60%|		Godot - HeartBeast 2D Platformer tutorial
+		2.) |60%|	Godot - HeartBeast 2D Platformer tutorial
 
 --MATH--
 	-Calculus-
@@ -59,7 +59,7 @@ _________________________________________________________
 BOOKS
 --BASICS--
 	1.) |COMPLETE|	Sedgewick - Computer Science An Interdisciplinary Approach [Java]
-					Chap. 1 Assignments (total: 53)
+					Chap. 1-2 Assignments (total: 57)
 	2.) |COMPLETE|	Roberts - Programming Abstractions [C++]
 					Chap. 1-2 Assignments (total: 20)
 
@@ -69,12 +69,12 @@ BOOKS
 
 --OS--
 	1.) |60%|	Silberschatz - Operating System Concepts [C]
-	2.) |COMPLETE|	Downey - Think OS
+	2.) |COMPLETE|	Downey - Think OS [C]
 
 --LANG--
 	1.) |15%|	Lospinoso - C++ Crash Course [C++] (100)
 				Chap. 1 Assignments (total: 4)
-	2.) |10%|	Shaw - Learn Python the Hard Way
+	2.) |10%|	Shaw - Learn Python the Hard Way [Python]
 				Assignments (total: 6)
 
 --AI/ML--
@@ -97,7 +97,7 @@ BOOKS
 				Lv. 600-1300 (total: 63)
 	2.) |N/A|	Hackerrank [Java/C++]
 				Easy-Medium (total: 32)
-    3.) |30%|   Hunt - The Pragmatic Programmer
+    	3.) |50%|	Hunt - The Pragmatic Programmer
 	4.) |20%|	Spraul - Think Like a Programmer
 _________________________________________________________
 
