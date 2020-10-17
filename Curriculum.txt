@@ -98,7 +98,7 @@ BOOKS
 	2.) |N/A|	Hackerrank [Java/C++]
 				Easy-Medium (total: 32)
     	3.) |50%|	Hunt - The Pragmatic Programmer
-	4.) |20%|	Spraul - Think Like a Programmer
+	4.) |33%|	Spraul - Think Like a Programmer
 _________________________________________________________
 
 _________________________________________________________
