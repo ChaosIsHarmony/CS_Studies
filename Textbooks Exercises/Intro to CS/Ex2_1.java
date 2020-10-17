@@ -125,10 +125,21 @@ public class Ex2_1
 		//ex_2_1_3();
 		
 		// equal arrays
-		ex_2_1_4();
+		//ex_2_1_4();
+
+		// are triangular
+		//ex_2_1_5();
+
+		// sigmoid
+		//ex_2_1_6();
+	
+		// Newton-Rhapson sqrt
+		//ex_2_1_7();
+	
+		// lg() using Math lib
+		ex_2_1_9(); 
 	}
 	
-
 	private static void ex_2_1_1()
 	{
 		int a = sc.nextInt();		
@@ -207,4 +218,34 @@ public class Ex2_1
 		return true;
 	}
 
+	private static void ex_2_1_5()
+	{
+		double[] args = { sc.nextDouble(), sc.nextDouble(), sc.nextDouble() };
+		for (int i = 0; i < args.length; i++)
+			if (args[i]+args[(i+1)%args.length] < args[(i+2)%args.length])	{ System.out.println(false); return; }
+		System.out.println(true);
+	}
+
+	private static void ex_2_1_6()
+	{
+		double x = sc.nextDouble();
+		System.out.println(1 / (1 + Math.exp(-x)));
+	}
+
+	private static void ex_2_1_7()
+	{
+		double EPSILON = 1e-15;
+		double num = sc.nextDouble();
+		double guess = num;
+		while (Math.abs(guess - (num/guess)) > EPSILON * guess)	{ guess = ((num/guess) + guess) / 2.0; }
+		
+		System.out.println(guess);
+	}
+
+	private static void ex_2_1_9()
+	{
+		double n = sc.nextDouble();
+		double result = Math.log(n)/Math.log(2);
+		System.out.println(result);
+	}	
 }
