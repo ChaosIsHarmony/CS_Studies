@@ -1,20 +1,25 @@
 // Controls
-i	// insert mode
-esc	// command mode
-:q	// quit
-:wq	// save & quit
-:q!	// trash all changes
-G	// move to the bottom of file
-gg	// move to top of file
-e	// move to the end of a word
-0	// cursor to start of line
+i			// insert mode
+esc			// command mode
+:q			// quit
+:q!			// trash all changes
+:wq			// save & quit
+:w 			// save w/o quitting
+:set number	// show line numbers
+G			// move to the bottom of file
+gg			// move to top of file
+e			// move to the end of a word
+0			// cursor to start of line
+CTRL+z		// put vim in background
+fg			// bring vim back to foreground (?) after CTRL+z
+
 // Edit
-u	// undo
-CTRL+R	// redo
-dw	// delete word
-dxw	// delete x words [replace x w/ a num]
-dd	// delete line
-y	// copy line
-p	// after y will place copied line after cursor
-	// after dd will place deleted line after cursor
-A	// append text to end of line
+u		// undo
+CTRL+r	// redo
+dw		// delete word
+dxw		// delete x words [replace x w/ a num]
+dd		// delete line
+y		// copy line
+p		// after y will place copied line after cursor
+		// after dd will place deleted line after cursor
+A		// append text to end of line

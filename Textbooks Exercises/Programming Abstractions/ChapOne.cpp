@@ -12,85 +12,85 @@ int get_input() { int i; std::cin >> i; return i; }
 
 
 // PROTOTYPES
-int problem_one(int);
-std::string problem_two(int);
-int problem_three();
-int problem_four();
-int problem_five();
-std::string problem_six();
-float problem_seven();
-int problem_eight();
-std::string problem_nine();
+int ex_one(int);
+std::string ex_two(int);
+int ex_three();
+int ex_four();
+int ex_five();
+std::string ex_six();
+float ex_seven();
+int ex_eight();
+std::string ex_nine();
 void find_factors(std::vector<int>&, int, int);
 void find_primes(std::vector<int>&, int);
-void problem_ten();
+void ex_ten();
 void hailstone(int);
-float problem_eleven();
-float problem_tweleve();
+float ex_eleven();
+float ex_tweleve();
 
 
 int main()
 {
 	// Convert Celsius to Farenheit
-	//print(problem_one(get_input())); 
+	//print(ex_one(get_input())); 
 	
 	// Convert Meters to Feet & Inches
-	//print(problem_two(get_input()));
+	//print(ex_two(get_input()));
 	
 	// Gauss Sum from 1-100
-	//print(problem_three());
+	//print(ex_three());
 	
 	// Sum of first N odd integers
-	//print(problem_four());
+	//print(ex_four());
 	
 	// Read input from client until Sentinel 0, then print highest value entered
-	//print(problem_five());
+	//print(ex_five());
 	
 	// Same as five but with highest and second highest
-	//print(problem_six());
+	//print(ex_six());
 	
 	// Average of exam scores
-	//print(problem_seven());
+	//print(ex_seven());
 	
 	// Reverse digits
-	//print(problem_eight());
+	//print(ex_eight());
 	
 	// Prime factorization of given num N
-	//print(problem_nine());
+	//print(ex_nine());
 	
 	// Hailstone sequencevoidm_ten);
-	//problem_ten();
+	//ex_ten();
 	
 	// Leibniz pi
-	//print(problem_eleven());
+	//print(ex_eleven());
 	
 	// Area of a quarter circle
-	print(problem_tweleve());
+	print(ex_tweleve());
 	
 	return 0;
 }
 
 //----------------------------
 // SOLUTIONS
-int problem_one(int i)
+int ex_one(int i)
 {
 	return (9.0*i/5.0)+32;
 }
 
-std::string problem_two(int i)
+std::string ex_two(int i)
 {
 	int inches = i/0.0254;
 	return ""+std::to_string(inches/12)+" feet " + std::to_string(inches%12);
 }
 
-int problem_three()
+int ex_three()
 {
 	// (0+100)+(1+99)+...+(48+52)+(49+51)+50
 	// 0 to 49 combinations forming 100 (i.e., 50*100) plus 50
 	return 50*100+50;
 }
 
-int problem_four()
+int ex_four()
 {
 	int N = 0;
 	while(N < 1) { std::cin >> N; } // ensure the answer is positive
@@ -102,7 +102,7 @@ int problem_four()
 }
 
 const int SENTINEL = 0;
-int problem_five()
+int ex_five()
 {
 	int input = get_input();
 	int highest = input;
@@ -110,7 +110,7 @@ int problem_five()
 	return highest;
 }
 
-std::string problem_six()
+std::string ex_six()
 {
 	int highest[2];
 	highest[0] = get_input();
@@ -132,7 +132,7 @@ std::string problem_six()
 	return result;
 }
 	
-float problem_seven()
+float ex_seven()
 {
 	int sum = 0, total = 0;
 	int input = get_input();
@@ -140,7 +140,7 @@ float problem_seven()
 	return float(sum)/total;
 }
 
-int problem_eight()
+int ex_eight()
 {
 	int number = get_input();
 	int reversed_num = 0;
@@ -154,7 +154,7 @@ int problem_eight()
 }
 
 
-std::string problem_nine()
+std::string ex_nine()
 {
 	std::vector<int> prime_factors;
 	int N = get_input();
@@ -188,7 +188,7 @@ void find_primes(std::vector<int> & primes, int N)
 	}
 }
 	
-void problem_ten()
+void ex_ten()
 {
 	hailstone(get_input());
 }
@@ -207,7 +207,7 @@ void hailstone(int N)
 	}
 }
 
-float problem_eleven()
+float ex_eleven()
 {
 	float pi_approx = 1;
 	int divisor = 3;
@@ -220,7 +220,7 @@ float problem_eleven()
 	return pi_approx*4;
 }
 
-float problem_tweleve()
+float ex_tweleve()
 {
 	int radius = get_input();
 	float dx = radius/10000.0;

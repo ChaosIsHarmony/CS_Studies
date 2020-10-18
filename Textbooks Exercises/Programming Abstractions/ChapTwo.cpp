@@ -16,62 +16,62 @@ void print(T t) { std::cout << t << std::endl; }
 
 
 // PROTOTYPES
-int problem_three(float);
-float problem_four();
-bool problem_five(int);
+int ex_three(float);
+float ex_four();
+bool ex_five(int);
 int sum_divisors(int);
-bool problem_six(int, std::vector<int>&);
-double problem_seven(int);
-int problem_nine();
-double problem_twelve();
-void problem_thirteen();
-double problem_fourteen();
-void problem_fifteen();
+bool ex_six(int, std::vector<int>&);
+double ex_seven(int);
+int ex_nine();
+double ex_twelve();
+void ex_thirteen();
+double ex_fourteen();
+void ex_fifteen();
 
 // MAIN
 int main()
 {
 	// Rounding
-	//print(problem_three(get_input()));
+	//print(ex_three(get_input()));
 	
 	// Windchill
-	//try 						{ print(problem_four()); }
+	//try 						{ print(ex_four()); }
 	//catch (const char* msg)	{ print(msg); }
 	
 	// Perfect Numbers
-	//for (int i = 1; i < 10000; i++)	{ problem_five(i); }
+	//for (int i = 1; i < 10000; i++)	{ ex_five(i); }
 	
 	// IsPrime
 	//std::vector<int> primes;
 	//primes.push_back(2);
-	//for (int i = 3; i < 101; i++)	{ print(i); print(problem_six(i, primes)); }
+	//for (int i = 3; i < 101; i++)	{ print(i); print(ex_six(i, primes)); }
 	
 	// Successive approx for roots
-	//print(problem_seven(get_input()));
+	//print(ex_seven(get_input()));
 	
 	// Permutations
-	//print(problem_nine());
+	//print(ex_nine());
 
 	// Random Average
-	//print(problem_twelve());
+	//print(ex_twelve());
 	
 	// Radioactive decay
-	//problem_thirteen();
+	//ex_thirteen();
 
 	// Estimating pi
-	//print(problem_fourteen());
+	//print(ex_fourteen());
 
 	// Three consecutive heads
-	problem_fifteen();
+	ex_fifteen();
 
 	return 0;
 }
 
 
 // IMPLEMENTATIONS
-int problem_three(float f) { return int(f+0.5); }
+int ex_three(float f) { return int(f+0.5); }
 
-float problem_four()
+float ex_four()
 { 
 	float temp;
 	get_input(temp);
@@ -82,7 +82,7 @@ float problem_four()
 	else if (temp > 40)	throw "Undefined above 40C";
 	else				return (35.74 + (0.6215*temp) - (35.75*powf(wind_spd,0.16)) +(0.4275*temp*powf(wind_spd,0.16))); }
 
-bool problem_five(int n)
+bool ex_five(int n)
 {
 	if (sum_divisors(n) == n)	{ print(n); return true; }
 	else						return false;
@@ -98,7 +98,7 @@ int sum_divisors(int n)
 	return sum;
 }
 
-bool problem_six(int n, std::vector<int> &primes)
+bool ex_six(int n, std::vector<int> &primes)
 {
 	for (int i : primes)
 	{
@@ -110,7 +110,7 @@ bool problem_six(int n, std::vector<int> &primes)
 }
 
 const double EPSILON = 0.0001;
-double problem_seven(int base)
+double ex_seven(int base)
 {
 	double g = base/2;
 	//My solution:
@@ -125,7 +125,7 @@ double problem_seven(int base)
 	return g;
 }
 
-int problem_nine()
+int ex_nine()
 {
 	// get input
 	int n;
@@ -140,7 +140,7 @@ int problem_nine()
 	return product;
 }
 
-double problem_twelve()
+double ex_twelve()
 {
 	int n_trials;
 	get_input(n_trials);
@@ -158,7 +158,7 @@ double problem_twelve()
 }
 
 
-void problem_thirteen()
+void ex_thirteen()
 {
 	int years = 0;
 	int atoms;
@@ -179,7 +179,7 @@ void problem_thirteen()
 	}
 }
 
-double problem_fourteen()
+double ex_fourteen()
 {
 	int num_darts;
 	double x, y;
@@ -203,7 +203,7 @@ double problem_fourteen()
 }
 
 
-void problem_fifteen()
+void ex_fifteen()
 {
 	int threshold;
 	get_input(threshold);
