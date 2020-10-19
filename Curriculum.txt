@@ -12,7 +12,7 @@ COURSES
 --ALGORITHMS--
 	Princeton
 		1.) |COMPLETE|	Algorithms, Part I [https://www.coursera.org/learn/algorithms-part1]
-		2.) |35%|	Algorithms, Part II [https://www.coursera.org/learn/algorithms-part2]
+		2.) |40%|	Algorithms, Part II [https://www.coursera.org/learn/algorithms-part2]
 	MIT	[mit = https://ocw.mit.edu/courses/electrical-engineering-and-computer-science]
 		3.) |COMPLETE|	6.006 - Intro to Algorithms	[<mit>/6-006-introduction-to-algorithms-fall-2011/]
 
@@ -40,7 +40,7 @@ COURSES
 	MIT
 		2.) |COMPLETE|	6.042J - Mathematics for Computer Science [<mit>/6-042j-mathematics-for-computer-science-fall-2010/]
 	Kimberly Brehm
-		3.) |85%|	Discrete Math [https://www.youtube.com/playlist?list=PLl-gb0E4MII28GykmtuBXNUNoej-vY5Rz]
+		3.) |90%|	Discrete Math [https://www.youtube.com/playlist?list=PLl-gb0E4MII28GykmtuBXNUNoej-vY5Rz]
 	Dr. Trefor Bazett
 		4.) |COMPLETE|	Discrete Math [https://www.youtube.com/playlist?list=PLHXZ9OQGMqxersk8fUxiUMSIx0DBqsKZS]
 	-Statistics-
@@ -75,10 +75,10 @@ BOOKS
 	1.) |15%|	Lospinoso - C++ Crash Course [C++] (100)
 				Chap. 1 Assignments (total: 4)
 	2.) |10%|	Shaw - Learn Python the Hard Way [Python]
-				Assignments (total: 11)
+				Assignments (total: 14)
 
 --AI/ML--
-	1.) |0%|	Abu-Mostafa - Learning From Data
+	1.) |00%|	Abu-Mostafa - Learning From Data
 	2.) |20%|	Russell - Artificial Intelligence A Modern Approach
 	3.) |30%|	Kinsely - Neural Networks from Scratch [Python]
 	4.) |00%|	Gugger - Deep Learning for Coders [Python]
