@@ -136,8 +136,20 @@ public class Ex2_1
 		// Newton-Rhapson sqrt
 		//ex_2_1_7();
 	
-		// lg() using Math lib
-		ex_2_1_9(); 
+		// double lg() using Math lib
+		//ex_2_1_9();
+
+		// int lg() w/o using Math lib
+		//ex_2_1_10();
+
+		// signum()
+		//ex_2_1_11();
+		
+		// What does this do?
+		//ex_2_1_12();
+		
+		// luhn formula
+		ex_2_1_14();
 	}
 	
 	private static void ex_2_1_1()
@@ -248,4 +260,66 @@ public class Ex2_1
 		double result = Math.log(n)/Math.log(2);
 		System.out.println(result);
 	}	
+
+	private static void ex_2_1_10()
+	{
+		int n = sc.nextInt();
+		// return the largest integer not larger than the base-2 logarithm of n
+		int tot = 1;
+		int exp = 0;
+		while (tot < n)
+		{
+			if ((tot *= 2) > n)	break;	// if another iteration would push it beyond the limit, break
+			exp++;				// else, increment the exponent counter
+		}
+		System.out.printf("Largest int not larger than log_2(n) = %d", exp);
+	}
+
+	private static void ex_2_1_11()
+	{
+		int n = sc.nextInt();
+
+		if (n < 0)	System.out.println(-1);
+		else if (n > 0)	System.out.println(+1);
+		else		System.out.println(0);
+	}
+	
+	private static void ex_2_1_12()
+	{
+		String s = "Hello";
+		s = duplicate(s);
+		String t = "Bye";
+		t = duplicate(duplicate(duplicate(t)));
+		System.out.println((s + t).equals("HelloHelloByeByeByeByeByeByeByeBye"));
+	}
+	
+	private static String duplicate(String s)
+	{
+		String t = s + s;
+		return t;
+	}
+	
+	private static void ex_2_1_14()
+	{
+		long ten_dig_int = sc.nextLong();
+		long cp_ten_dig = ten_dig_int;
+		int dbl_cnt = 0;
+		int checksum = 0;
+		while (cp_ten_dig > 0)
+		{
+			if (dbl_cnt++ % 2 == 0)	checksum += dbl((int) (cp_ten_dig % 10));
+			else					checksum += cp_ten_dig % 10;
+			cp_ten_dig /= 10;
+		}
+		int off_by = checksum % 10;
+		long new_ten_dig = (ten_dig_int * 10) + (10 - off_by);
+		System.out.println(new_ten_dig);
+	}
+	
+	private static int dbl(int d)
+	{
+		d *= 2;
+		if (d < 10)	return d;
+		else		return (d % 10) + (d % 100);
+	}
 }
