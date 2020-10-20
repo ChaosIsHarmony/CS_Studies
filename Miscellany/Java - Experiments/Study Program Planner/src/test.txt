@@ -1,0 +1,25 @@
+     SUNDAY    MONDAY    TUESDAY   WEDNESDAY THURSDAY  FRIDAY    SATURDAY  
+0H   Reading   Reading   Reading   Reading   Reading   Reading   Reading   
+1H   Sleep     Sleep     Sleep     Sleep     Sleep     Sleep     Sleep     
+2H   Sleep     Sleep     Sleep     Sleep     Sleep     Sleep     Sleep     
+3H   Sleep     Sleep     Sleep     Sleep     Sleep     Sleep     Sleep     
+4H   Sleep     Sleep     Sleep     Sleep     Sleep     Sleep     Sleep     
+5H   Sleep     Sleep     Sleep     Sleep     Sleep     Sleep     Sleep     
+6H   Sleep     Sleep     Sleep     Sleep     Sleep     Sleep     Sleep     
+7H   Sleep     Sleep     Sleep     Sleep     Sleep     Sleep     Sleep     
+8H   Sleep     Sleep     Sleep     Sleep     Sleep     Sleep     Sleep     
+9H   Bfast     Bfast     Bfast     Bfast     Bfast     Bfast     Bfast     
+10H  ML        StatisticsML        Calculus  ML        Calculus  ML        
+11H  C++       Java      C++       Discrete  C++       StatisticsViolin    
+12H  Dr._G     On_Call   On_Call   On_Call   On_Call   On_Call   Dr._G     
+13H  Dr._G     Violin    Violin    Violin    Violin    Violin    Dr._G     
+14H  Dr._G     Piano     Piano     Piano     Piano     Piano     Dr._G     
+15H  Dr._G     On_Call   On_Call   Dr._G     On_Call   Dr._G     Dr._G     
+16H  Dr._G     Python    Calculus  Dr._G     MMA       Dr._G     Dr._G     
+17H  Python    Discrete  StatisticsDr._G     MMA       Dr._G     Dr._G     
+18H  MMA       On_Call   On_Call   Dr._G     MMA       Dr._G     Dr._G     
+19H  MMA       MMA       Physics   Dr._G     MMA       Dr._G     Java      
+20H  MMA       MMA       Consc.    Dr._G     MMA       Dr._G     Physics   
+21H  MMA       MMA       Compose   Consc.    MMA       Dr._G     Discrete  
+22H  Bath      MMA       Bath      Bath      MMA       Bath      Bath      
+23H  Physics   MMA                           MMA       Python    Compose   

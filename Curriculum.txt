@@ -24,7 +24,7 @@ COURSES
 		3.) |5%|	CS50 - Intro to Artificial Intelligence with Python	[]
 	MIT
 		4.) |COMPLETE|	6.S191 - MIT Intro to DL 2020	[https://www.youtube.com/watch?v=njKP3FqW3Sk&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI]
-    	Fast.ai
+    Fast.ai
 		5.) |COMPLETE|	Practical Deep Learning for Coders	[https://course.fast.ai/]
 
 --GAMES--
@@ -72,7 +72,7 @@ BOOKS
 	2.) |COMPLETE|	Downey - Think OS [C]
 
 --LANG--
-	1.) |15%|	Lospinoso - C++ Crash Course [C++] (100)
+	1.) |15%|	Lospinoso - C++ Crash Course [C++] (107)
 				Chap. 1 Assignments (total: 4)
 	2.) |10%|	Shaw - Learn Python the Hard Way [Python]
 				Assignments (total: 14)
@@ -81,7 +81,7 @@ BOOKS
 	1.) |00%|	Abu-Mostafa - Learning From Data
 	2.) |20%|	Russell - Artificial Intelligence A Modern Approach
 	3.) |30%|	Kinsely - Neural Networks from Scratch [Python]
-	4.) |00%|	Gugger - Deep Learning for Coders [Python]
+	4.) |05%|	Gugger - Deep Learning for Coders [Python]
 
 --GAMES--
 	1.) |66%|	Godot - 3D FPS tutorial [GDScript]
@@ -94,7 +94,7 @@ BOOKS
 --MISC--
 	1.) |50%|	Chacon - Pro Git
 	2.) |N/A|	CodeForces Ladders [C++]
-				Lv. 600-1300 (total: 63)
+				Lv. 600-1300 (total: 65)
 	2.) |N/A|	Hackerrank [Java/C++]
 				Easy-Medium (total: 32)
 	3.) |50%|	Hunt - The Pragmatic Programmer
