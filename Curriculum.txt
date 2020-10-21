@@ -18,8 +18,8 @@ COURSES
 
 --AI/ML--
 	Kaggle
-		1.) |COMPLETE|	Intro to Machine Learning	[]
-		2.) |36%|	Intermediate Machine Learning	[]
+		1.) |COMPLETE|	Intro to Machine Learning	[https://www.kaggle.com/learn/intro-to-machine-learning]
+		2.) |36%|	Intermediate Machine Learning	[https://www.kaggle.com/learn/intermediate-machine-learning]
 	Harvard
 		3.) |5%|	CS50 - Intro to Artificial Intelligence with Python	[]
 	MIT
@@ -58,47 +58,49 @@ _________________________________________________________
 _________________________________________________________
 BOOKS
 --CS BASICS--
-	1.) |COMPLETE|	Sedgewick - Computer Science An Interdisciplinary Approach [Java]
+	1.) |COMPLETE|	Sedgewick - Computer Science An Interdisciplinary Approach {Java}
 					Chap. 1-2 Assignments (total: 65)
-	2.) |COMPLETE|	Roberts - Programming Abstractions [C++]
+	2.) |COMPLETE|	Roberts - Programming Abstractions {C++}
 					Chap. 1-3 Assignments (total: 21)
 
 --ALGORITHMS--
-	1.) |75%|	Sedgewick - Algorithms [Java]
+	1.) |75%|	Sedgewick - Algorithms {Java}
 				Chap. 1 Assignments (total: 0)
 
 --OS--
-	1.) |60%|	Silberschatz - Operating System Concepts [C]
-	2.) |COMPLETE|	Downey - Think OS [C]
+	1.) |60%|	Silberschatz - Operating System Concepts {C}
+	2.) |COMPLETE|	Downey - Think OS {C}
 
 --LANG--
-	1.) |15%|	Lospinoso - C++ Crash Course [C++] (107)
+	1.) |15%|	Lospinoso - C++ Crash Course {C++} (107)
 				Chap. 1 Assignments (total: 4)
-	2.) |10%|	Shaw - Learn Python the Hard Way [Python]
+	2.) |10%|	Shaw - Learn Python the Hard Way {Python}
 				Assignments (total: 14)
 
 --AI/ML--
 	1.) |00%|	Abu-Mostafa - Learning From Data
 	2.) |20%|	Russell - Artificial Intelligence A Modern Approach
-	3.) |30%|	Kinsely - Neural Networks from Scratch [Python]
-	4.) |05%|	Gugger - Deep Learning for Coders [Python]
+	3.) |30%|	Kinsely - Neural Networks from Scratch {Python}
+	4.) |05%|	Gugger - Deep Learning for Coders {Python}
 
 --GAMES--
-	1.) |66%|	Godot - 3D FPS tutorial [GDScript]
+	1.) |66%|	Godot - 3D FPS tutorial {GDScript}
 
 --MATH--
-	1.) |10%|	Strang - Calculus I
-	2.) |10%|	Rosen - Discrete Mathematics and Its Applications
+	1.) |00%|	Strang - Calculus I
+				Assignments (total: 0)
+	2.) |00%|	Rosen - Discrete Mathematics and Its Applications (27)
+				Assignments (total: 0)
 	3.) |5%|	Downey - Think Stats
 
 --MISC--
 	1.) |50%|	Chacon - Pro Git
-	2.) |N/A|	CodeForces Ladders [C++]
+	2.) |N/A|	CodeForces Ladders {C++}
 				Lv. 600-1300 (total: 65)
-	2.) |N/A|	Hackerrank [Java/C++]
+	2.) |N/A|	Hackerrank {Java/C++}
 				Easy-Medium (total: 32)
 	3.) |50%|	Hunt - The Pragmatic Programmer
-	4.) |33%|	Spraul - Think Like a Programmer
+	4.) |33%|	Spraul - Think Like a Programmer {C++}
 _________________________________________________________
 
 _________________________________________________________
@@ -110,4 +112,5 @@ GOALS
 5.) Complete SAT prep software
 6.) fast.ai
 7.) Voice control system for OpenPilot
+8.) Lie detector using voice and NNs
 _________________________________________________________
