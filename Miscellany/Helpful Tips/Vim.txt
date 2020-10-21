@@ -12,6 +12,8 @@ e			// move to the end of a word
 0			// cursor to start of line
 CTRL+z		// put vim in background
 fg			// bring vim back to foreground (?) after CTRL+z
+CTRL+s 		// scroll lock
+Ctrl+q 		// cures CTRL+s
 
 // Edit
 u		// undo

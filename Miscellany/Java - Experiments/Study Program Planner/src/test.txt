@@ -18,8 +18,8 @@
 16H  Dr._G     Python    Calculus  Dr._G     MMA       Dr._G     Dr._G     
 17H  Python    Discrete  StatisticsDr._G     MMA       Dr._G     Dr._G     
 18H  MMA       On_Call   On_Call   Dr._G     MMA       Dr._G     Dr._G     
-19H  MMA       MMA       Physics   Dr._G     MMA       Dr._G     Java      
-20H  MMA       MMA       Consc.    Dr._G     MMA       Dr._G     Physics   
-21H  MMA       MMA       Compose   Consc.    MMA       Dr._G     Discrete  
+19H  MMA       MMA       Physics   Dr._G     MMA       Dr._G     Dr._G      
+20H  MMA       MMA       Consc.    Dr._G     MMA       Dr._G     Dr._G   
+21H  MMA       MMA       Compose   Consc.    MMA       Dr._G     Dr._G  
 22H  Bath      MMA       Bath      Bath      MMA       Bath      Bath      
-23H  Physics   MMA                           MMA       Python    Compose   
+23H  Physics   MMA                 Java      MMA       Python    Physics   
