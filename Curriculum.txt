@@ -72,7 +72,7 @@ BOOKS
 	2.) |COMPLETE|	Downey - Think OS {C}
 
 --LANG--
-	1.) |15%|	Lospinoso - C++ Crash Course {C++} (107)
+	1.) |15%|	Lospinoso - C++ Crash Course {C++} (111)
 				Chap. 1 Assignments (total: 4)
 	2.) |10%|	Shaw - Learn Python the Hard Way {Python}
 				Assignments (total: 14)
