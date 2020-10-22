@@ -40,3 +40,16 @@ LESSONS:
 	- Make things as configurable as possible w/o having to change code
 	- This can be accomplished with a database schema filled with variables
 	- "Program for the general case, and put the specifics somewhere else... Put Abstractions in Code, Details in Metadata." 
+
+- Events and Signals [pg. 182]
+	- Useful when helping large-scale programs communicate between modules
+	- Publish/subscribe model to maintain decoupling paradigm
+		- Only listen for signals for events that are relevant to a given module
+
+- Model-View-Controller (MVC) [pg. 185]
+	- Model = data container & manipulator
+	- View(s) = data displayer
+	- Controller = view manipulator
+		- Controller logic affects only view, not the Model
+	- Model outputs signals, View subscribes
+	- Controller outputs signals, View & Model subscribe
