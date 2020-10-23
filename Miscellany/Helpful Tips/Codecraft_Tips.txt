@@ -53,3 +53,9 @@ LESSONS:
 		- Controller logic affects only view, not the Model
 	- Model outputs signals, View subscribes
 	- Controller outputs signals, View & Model subscribe
+
+- Blackboards [pg. 190]
+	- This approach makes facts/data available and methods can query/check for facts/data, but these can arrive asynchronously
+
+- Don't program by coincidence [pg. 198]
+	- Understand how your code works, inlcuding every call it relies upon to other libraries (relying only on documented behavior from library methods) 
