@@ -149,7 +149,10 @@ public class Ex2_1
 		//ex_2_1_12();
 		
 		// luhn formula
-		ex_2_1_14();
+		//ex_2_1_14();
+
+		// normalize w/ max-min matching during input
+		ex_2_1_16();
 	}
 	
 	private static void ex_2_1_1()
@@ -321,5 +324,31 @@ public class Ex2_1
 		d *= 2;
 		if (d < 10)	return d;
 		else		return (d % 10) + (d % 100);
+	}
+
+	private static void ex_2_1_16()
+	{
+		int size = sc.nextInt();
+		double min = Double.MAX_VALUE, max = Double.MIN_VALUE;
+		double[] arr = new double[size];
+		for (int i = 0; i < size; i++)
+		{
+			arr[i] = sc.nextDouble();
+			min = (arr[i] < min) ? arr[i] : min;
+			max = (arr[i] > max) ? arr[i] : max;
+		 }
+		// print out original array
+		for (double d : arr) { System.out.print(d + " "); }
+		System.out.println();
+		// normalize
+		scale(arr, min, max);
+		// print out altered array
+		for (double d : arr) { System.out.print(d + " "); }	
+		System.out.println();
+	}
+	
+	private static void scale(double[] arr, double min, double max)
+	{
+		for (int i = 0; i < arr.length; i++)	{ arr[i] = (arr[i] - min) / (max - min); }
 	}
 }
