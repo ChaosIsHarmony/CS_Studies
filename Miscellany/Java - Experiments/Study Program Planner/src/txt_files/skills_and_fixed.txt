@@ -28,6 +28,7 @@
 *Aidos,Duty,Bath,3,22,1;
 *Aidos,Duty,Bath,5,22,1;
 *Aidos,Duty,Bath,6,22,1;
+*Aidos,Duty,AIT,1,9,4;
 
 *Rest,Sleep,Sleep,0,1,8;
 *Rest,Sleep,Sleep,1,1,8;
@@ -54,9 +55,9 @@
 *Reading,Spanish,Reading,6,0,1;
 
 *Work,Teach,Dr._G,0,12,5;
-*Work,Teach,Dr._G,3,15,6;
-*Work,Teach,Dr._G,5,15,7;
-*Work,Teach,Dr._G,6,12,7;
+*Work,Teach,Dr._G,3,15,4;
+*Work,Teach,Dr._G,5,17,5;
+*Work,Teach,Dr._G,6,14,7;
 
 *Work,Teach,MMA,1,19,5;
 *Work,Teach,MMA,4,16,8;
