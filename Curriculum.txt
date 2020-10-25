@@ -75,7 +75,7 @@ BOOKS
 	1.) |15%|	Lospinoso - C++ Crash Course {C++} (117)
 				Chap. 1 Assignments (total: 4)
 	2.) |15%|	Shaw - Learn Python the Hard Way {Python}
-				Assignments (total: 16)
+				Assignments (total: 18)
 
 --AI/ML--
 	1.) |00%|	Abu-Mostafa - Learning From Data
