@@ -59,7 +59,7 @@ _________________________________________________________
 BOOKS
 --CS BASICS--
 	1.) |COMPLETE|	Sedgewick - Computer Science An Interdisciplinary Approach {Java}
-					Chap. 1-2 Assignments (total: 66)
+					Chap. 1-2 Assignments (total: 69)
 	2.) |COMPLETE|	Roberts - Programming Abstractions {C++}
 					Chap. 1-3 Assignments (total: 21)
 
@@ -72,8 +72,8 @@ BOOKS
 	2.) |COMPLETE|	Downey - Think OS {C}
 
 --LANG--
-	1.) |15%|	Lospinoso - C++ Crash Course {C++} (117)
-				Chap. 1 Assignments (total: 4)
+	1.) |15%|	Lospinoso - C++ Crash Course {C++} (125)
+				Chap. 1-2 Assignments (total: 8)
 	2.) |15%|	Shaw - Learn Python the Hard Way {Python}
 				Assignments (total: 18)
 

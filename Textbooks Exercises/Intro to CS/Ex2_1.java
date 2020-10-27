@@ -152,7 +152,16 @@ public class Ex2_1
 		//ex_2_1_14();
 
 		// normalize w/ max-min matching during input
-		ex_2_1_16();
+		//ex_2_1_16();
+
+		// reverse() & reverseInPlace() 
+		//ex_2_1_17();
+
+		// matrix multiplication 
+		//ex_2_1_21();
+
+		// any() & all()
+		ex_2_1_22();
 	}
 	
 	private static void ex_2_1_1()
@@ -350,5 +359,106 @@ public class Ex2_1
 	private static void scale(double[] arr, double min, double max)
 	{
 		for (int i = 0; i < arr.length; i++)	{ arr[i] = (arr[i] - min) / (max - min); }
+	}
+
+	private static void ex_2_1_17()
+	{
+		String[] arr_1 = { "a", "b", "c" };
+		String[] arr_2 = reverse(arr_1);
+		for (int i = 0; i < arr_1.length; i++)
+		{
+			System.out.println("ARR_1: " + arr_1[i]);
+			System.out.println("ARR_2: " + arr_2[i]);
+		}
+
+		reverseInPlace(arr_1);		
+		for (int i = 0; i < arr_1.length; i++)
+			System.out.print(arr_1[i] + " ");
+	}
+
+	private static String[] reverse(String[] arr)
+	{
+		String[] arr_rev = new String[arr.length];
+		for(int i = 0; i < arr.length; i++) { arr_rev[arr.length-1-i] = arr[i]; }
+		return arr_rev; 
+	}
+
+	private static void reverseInPlace(String[] arr)
+	{
+		for(int i = 0; i < arr.length/2; i++)
+		{
+			String tmp_str = arr[i];
+			arr[i] = arr[arr.length-1-i];
+			arr[arr.length-1-i] = tmp_str;
+		}
+	}
+
+	private static void ex_2_1_21()
+	{
+		// a x b 
+		//int[][] mat_1 = {{1, 2, 3}, {4, 5, 6}}; 
+		int[][] mat_1 = {{3, 4, 2}}; 
+		// b x c
+		//int[][] mat_2 = {{7, 8}, {9, 10}, {11, 12}}; 
+		int[][] mat_2 = {{13, 9, 7, 15}, {8, 7, 4, 6}, {6, 4, 0, 3}}; 
+
+		int[][] mat_3 = multiply(mat_1, mat_2);
+
+		if (mat_3 == null)	{ System.out.println("Invalid Input"); return; }
+
+		for(int r = 0; r < mat_3.length; r++)
+		{
+			for (int c = 0; c < mat_3[0].length; c++) { System.out.print(mat_3[r][c] + " "); }
+			System.out.println();
+		}
+	}
+
+	private static int[][] multiply(int[][] mat_1, int[][] mat_2)
+	{
+		// check for invalid matrices
+		if (mat_1[0].length != mat_2.length)	return null;
+
+		int[][] mat_result = new int[mat_1.length][mat_2[0].length];
+	
+		// mat_1's r by each of mat_2's c
+		// BUGGY
+		for (int r = 0; r < mat_1.length; r++)
+		{
+			for (int c = 0; c < mat_2[0].length; c++)
+			{
+				int sum = 0;
+				for (int x = 0; x < mat_1[0].length; x++)
+					sum += mat_1[r][x] * mat_2[x][c];
+				mat_result[r][c] = sum;
+			}
+		}
+
+		return mat_result;
+	}
+
+	private static void ex_2_1_22()
+	{
+		boolean[] arr_1 = { true, true };
+		boolean[] arr_2 = { true, false };
+		boolean[] arr_3 = { false, true };
+		boolean[] arr_4 = { false, false };
+		
+		// returns true if any element is true; false otherwise
+		System.out.println(any(arr_4));
+		// returns true if all elements are true; false otherwise
+		System.out.println(all(arr_4));
+
+	}
+
+	private static boolean any(boolean[] arr)
+	{
+		for (int i = 0; i < arr.length; i++) if (arr[i]) return true;
+		return false;
+	}	
+
+	private static boolean all(boolean[] arr)
+	{
+		for (int i = 0; i < arr.length; i++) if (!arr[i]) return false;
+		return true;
 	}
 }
