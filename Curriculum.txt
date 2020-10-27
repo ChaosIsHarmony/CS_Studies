@@ -12,7 +12,7 @@ COURSES
 --ALGORITHMS--
 	Princeton
 		1.) |COMPLETE|	Algorithms, Part I [https://www.coursera.org/learn/algorithms-part1]
-		2.) |50%|	Algorithms, Part II [https://www.coursera.org/learn/algorithms-part2]
+		2.) |65%|	Algorithms, Part II [https://www.coursera.org/learn/algorithms-part2]
 	MIT	[mit = https://ocw.mit.edu/courses/electrical-engineering-and-computer-science]
 		3.) |COMPLETE|	6.006 - Intro to Algorithms	[<mit>/6-006-introduction-to-algorithms-fall-2011/]
 
@@ -21,7 +21,7 @@ COURSES
 		1.) |COMPLETE|	Intro to Machine Learning	[https://www.kaggle.com/learn/intro-to-machine-learning]
 		2.) |36%|	Intermediate Machine Learning	[https://www.kaggle.com/learn/intermediate-machine-learning]
 	Harvard
-		3.) |5%|	CS50 - Intro to Artificial Intelligence with Python	[]
+		3.) |05%|	CS50 - Intro to Artificial Intelligence with Python	[]
 	MIT
 		4.) |COMPLETE|	6.S191 - MIT Intro to DL 2020	[https://www.youtube.com/watch?v=njKP3FqW3Sk&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI]
     Fast.ai
@@ -45,7 +45,7 @@ COURSES
 			4.) |COMPLETE|	Discrete Math [https://www.youtube.com/playlist?list=PLHXZ9OQGMqxersk8fUxiUMSIx0DBqsKZS]
 	-Statistics-
 		Khan Academy
-			5.) |46%|	AP Statistics
+			5.) |48%|	AP Statistics
 
 --MISC--
 	Khan Academy
@@ -64,7 +64,7 @@ BOOKS
 					Chap. 1-3 Assignments (total: 21)
 
 --ALGORITHMS--
-	1.) |80%|	Sedgewick - Algorithms {Java}
+	1.) |85%|	Sedgewick - Algorithms {Java}
 				Chap. 1 Assignments (total: 0)
 
 --OS--
@@ -82,6 +82,7 @@ BOOKS
 	2.) |20%|	Russell - Artificial Intelligence A Modern Approach
 	3.) |30%|	Kinsely - Neural Networks from Scratch {Python}
 	4.) |05%|	Gugger - Deep Learning for Coders {Python}
+				Chap. 1 Assignments (total: 30)
 
 --GAMES--
 	1.) |66%|	Godot - 3D FPS tutorial {GDScript}
@@ -91,7 +92,7 @@ BOOKS
 				Assignments (total: 0)
 	2.) |00%|	Rosen - Discrete Mathematics and Its Applications (27)
 				Assignments (total: 0)
-	3.) |5%|	Downey - Think Stats
+	3.) |05%|	Downey - Think Stats
 
 --MISC--
 	1.) |50%|	Chacon - Pro Git
