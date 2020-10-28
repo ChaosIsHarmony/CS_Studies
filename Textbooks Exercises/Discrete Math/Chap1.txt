@@ -19,4 +19,68 @@ Section 1.1
 	d.) T
 	e.) T
 
-9.) 
+9.)
+	a.) Sharks have not been spotted near the shore.
+	b.) Swimming at the New Jersey shore is allowed and sharks have been spotted near the shore
+	c.) Either swimming is not allowed at the NJ shore or sharks have been spotted near the shore
+	d.) If swimming is allowed at the NJ shore, then sharks have not been spotted near the shore
+	e.) If sharks have not been spotted near the shore, then swimming is allowed at the NJ shore
+	f.) If swimming is not allowed at the NJ shore, then sharks have not been spotted near the shore
+	g.) If and only if swimming is allowed at the NJ shore, then sharks have not been spotted near the shore
+	h.) Swimming is not allowed at the NJ shore and either swimming is allowed at the NJ shore or sharks have not been spotted near the shore
+
+11.) ¬ ∨ ∧ → ↔
+	a.) p ∧ q
+	b.) p ∧ ¬q
+	c.) ¬p ∧ ¬q
+	d.) q ∨ p
+	e.) p → q
+	f.) (p ∨ q) ∧ (p → ¬q)
+	g.) p ↔ q
+
+13.) ¬ ∨ ∧ → ↔
+	a.) ¬p 
+	b.) p ∧ ¬q 
+	c.) p → q
+	d.) ¬p → ¬q
+	e.) p ↔ q X p → q
+	f.) q ∧ ¬p
+	g.) q → p
+
+27.) 
+	a.)	base:		If it snows today, I will ski tomorrow				p → q
+		converse:	If I will ski tomorrow, then it snows today			q → p
+		contrapositive:	If I will not ski tomorrow, then it did not snow today		¬q → ¬p
+		inverse: 	If it does not snow today, then I will not ski tomorrow		¬p → ¬q 
+
+41.) (p ∨ q ∨ r) ∧ (¬p ∨ ¬q ∨ ¬r)
+	if all are true, then (¬p ∨ ¬q ∨ ¬r) can't be true, making the whole statement false
+	if all are false, then (p ∨ q ∨ r) can't be true, making the whole statement false
+
+
+
+43.)
+	a.) 	 0101 1110
+		 0010 0001
+	 	&0000 0000
+		|0111 1111
+	      XOR1000 0000		 
+	b.)	1111 0000
+		1010 1010
+	 	&1010 0000
+		|1111 1010
+	      XOR1010 01010	
+	c.)
+	d.)
+
+45.) 0.2; 0.6
+
+47.) 0.8; 0.6
+
+49.)
+	a.) If true, then n are false and 100-n are true; else if false, then the number of false statements is certainly not n
+	X: apparently it means n = 99 is true, the rest are false | e.g., with n = 50, then 51 statements are true (contradiction)
+	b.) If true, then [n,100] statements are false; if false, then fewer than 100-n statements are false
+	X: fifty-fofty split
+	c.) same, but replace 100 w/ 99
+	X: impossible
