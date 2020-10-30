@@ -1,4 +1,5 @@
-Section 1.1
+__________________________________
+SECTION 1.1 [13 problems]
 
 1.) a, b, c, d
 
@@ -29,7 +30,7 @@ Section 1.1
 	g.) If and only if swimming is allowed at the NJ shore, then sharks have not been spotted near the shore
 	h.) Swimming is not allowed at the NJ shore and either swimming is allowed at the NJ shore or sharks have not been spotted near the shore
 
-11.) ¬ ∨ ∧ → ↔
+11.)
 	a.) p ∧ q
 	b.) p ∧ ¬q
 	c.) ¬p ∧ ¬q
@@ -38,7 +39,7 @@ Section 1.1
 	f.) (p ∨ q) ∧ (p → ¬q)
 	g.) p ↔ q
 
-13.) ¬ ∨ ∧ → ↔
+13.)
 	a.) ¬p 
 	b.) p ∧ ¬q 
 	c.) p → q
@@ -60,18 +61,16 @@ Section 1.1
 
 
 43.)
-	a.) 	 0101 1110
+	a.)	 0101 1110
 		 0010 0001
 	 	&0000 0000
 		|0111 1111
-	      XOR1000 0000		 
+	  XOR1000 0000		 
 	b.)	1111 0000
 		1010 1010
 	 	&1010 0000
 		|1111 1010
-	      XOR1010 01010	
-	c.)
-	d.)
+	  XOR1010 01010
 
 45.) 0.2; 0.6
 
@@ -84,3 +83,63 @@ Section 1.1
 	X: fifty-fofty split
 	c.) same, but replace 100 w/ 99
 	X: impossible
+
+__________________________________
+SECTION 1.2 [10 problems]
+
+1.) ¬a → ¬e  |  ¬(¬a ∧ e)
+
+3.) g → (¬m ∧ r ∧ ¬b)
+
+5.) e → (a ∧ (b ∨ p) ∧ r)
+
+7.)
+	a.) q → p
+	b.) q ∧ ¬p
+	c.) q → p
+	d.) ¬q → ¬p
+	
+9.) Consistent? No, 1 implies ¬m, but 4 implies m; a contradiction
+	The system is in multiuser state	= m
+	The system is operating normally	= o
+	The kernel is functioning			= f
+	The system is in interrupt mode		= i
+	1.) m ↔ o	=> ¬o → ¬m
+	2.) o → f	=> ¬f → ¬o
+	3.) ¬f ∨ i	=> ¬f
+	4.) ¬m → i	=> ¬i → m
+	5.) ¬i
+
+11.) Consistent? Yes, no contradictions
+	 The router can send packets to the edge system	= r
+	 The router supports the new address space		= s
+	 The latest software release is installed		= i
+	 1.) s → r	=> ?
+	 2.) i ↔ s	=> ¬i
+	 3.) i → r	=> ?
+	 4.) ¬s
+
+13.) beaches AND "New Jersey"
+	 beaches AND "the isle of Jersey"
+
+15.) Which road leads back to the village and which of the two remaining roads lead to the Ruins?
+	 Book answer: If I were to ask you if the right path lead to the Ruins, would you answer yes?
+					- Nice because it asks the liar to lie about lying, leading to a double negative and thus the truth
+
+17.) The first two professors want coffee, but the last one doesn't.
+	 If the first had said 'No', then he would not want coffee
+	 Same with the second
+
+19.) A is a knight = a
+	 B is a knight = b
+	 1.) a → ¬b | b → ¬a
+	 2.) ¬a is impossible, because ¬a → ¬b | b → a, but then a is telling the truth and that implies a
+	 Thus: a ∧ ¬b
+	 
+21.)
+		¬ ∨ ∧ → ↔
+
+
+
+
+

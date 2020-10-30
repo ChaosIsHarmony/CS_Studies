@@ -12,7 +12,7 @@ COURSES
 --ALGORITHMS--
 	Princeton
 		1.) |COMPLETE|	Algorithms, Part I [https://www.coursera.org/learn/algorithms-part1]
-		2.) |65%|	Algorithms, Part II [https://www.coursera.org/learn/algorithms-part2]
+		2.) |70%|	Algorithms, Part II [https://www.coursera.org/learn/algorithms-part2]
 	MIT	[mit = https://ocw.mit.edu/courses/electrical-engineering-and-computer-science]
 		3.) |COMPLETE|	6.006 - Intro to Algorithms	[<mit>/6-006-introduction-to-algorithms-fall-2011/]
 
@@ -90,7 +90,7 @@ BOOKS
 --MATH--
 	1.) |00%|	Strang - Calculus I
 				Assignments (total: 0)
-	2.) |05%|	Rosen - Discrete Mathematics and Its Applications (41)
+	2.) |05%|	Rosen - Discrete Mathematics and Its Applications (46)
 				Chap. 1 Assignments (total: 13)
 	3.) |05%|	Downey - Think Stats
 
@@ -101,7 +101,7 @@ BOOKS
 	2.) |N/A|	Hackerrank {Java/C++}
 				Easy-Medium (total: 32)
 	3.) |65%|	Hunt - The Pragmatic Programmer (221)
-	4.) |33%|	Spraul - Think Like a Programmer {C++} (115)
+	4.) |60%|	Spraul - Think Like a Programmer {C++} (145)
 _________________________________________________________
 
 _________________________________________________________
