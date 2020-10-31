@@ -75,7 +75,7 @@ BOOKS
 	1.) |15%|	Lospinoso - C++ Crash Course {C++} (125)
 				Chap. 1-2 Assignments (total: 8)
 	2.) |15%|	Shaw - Learn Python the Hard Way {Python}
-				Assignments (total: 18)
+				Assignments (total: 22)
 
 --AI/ML--
 	1.) |00%|	Abu-Mostafa - Learning From Data
@@ -97,10 +97,10 @@ BOOKS
 --MISC--
 	1.) |50%|	Chacon - Pro Git
 	2.) |N/A|	CodeForces Ladders {C++}
-				Lv. 600-1300 (total: 65)
+				Lv. 600-1300 (total: 66)
 	2.) |N/A|	Hackerrank {Java/C++}
 				Easy-Medium (total: 32)
-	3.) |65%|	Hunt - The Pragmatic Programmer (221)
+	3.) |65%|	Hunt - The Pragmatic Programmer (234)
 	4.) |60%|	Spraul - Think Like a Programmer {C++} (145)
 _________________________________________________________
 
