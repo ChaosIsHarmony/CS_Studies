@@ -42,29 +42,45 @@ int main()
 	int num_diff_let;
 	std::cin >> num_diff_let;
 	
-	int word_len = 0;
+	int word_len = 0, unique_lets = 0;
 	int letters[26]{};
 	
 	// populate letters array
-	for (char c : word) { letters[c-'a']++; word_len++; }
-
-	// impossible by definition
-	if (num_diff_let > word_len)	{ std::cout << "impossible" << std::endl; return 0; }
-
-	// possible by definition
-	int z_ind = non_z_ind = 0;	
-	while(num_diff_let > 0)
+	for (char c : word)
 	{
-		// find first zero and non-zero ind
-		
-		// decrement non-zero ind and increase zero; and decrement num_diff_let
-
-		num_diff_let--;
-
-		// find new zero ind
-
-		// if non-zero is >1, repeat; else find next non-zero		
+		// increment if val at index is 0, i.e., is a unique letter
+		if (letters[c-'a'] == 0)	unique_lets++;
+		// update letter count for that letter
+		letters[c-'a']++;
+		// update word length
+		word_len++; 
 	}
 
+	// impossible
+	if (num_diff_let > word_len)		{ std::cout << "impossible" << std::endl; return 0; }
+	// already achieved, e.g., anonymous 6
+	if (unique_lets >= num_diff_let)	{ std::cout << 0 << std::endl; return 0; }
+
+	// possible
+	int z_ind = 0;
+	int non_z_ind = 0;
+	int num_changes = 0;
+	while(true)
+	{
+		// find first zero and non-zero ind
+		while(letters[z_ind] != 0 && !(z_ind > 25))		z_ind++;
+		while(letters[non_z_ind] < 2 && !(non_z_ind > 25))	non_z_ind++;	
+		if(z_ind > 25 || non_z_ind > 25)			break;
+		// decrement non-zero ind and increase zero
+		letters[non_z_ind]--;
+		letters[z_ind]++;
+		// update result
+		num_changes++;
+		unique_lets++;
+		// found min changes to satisfy 'at least' req.
+		if(unique_lets == num_diff_let)		break;
+	}
+	// output result
+	std::cout << num_changes << std::endl;
 	return 0;
 }
