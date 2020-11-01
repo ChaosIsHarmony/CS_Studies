@@ -115,6 +115,7 @@ struct Calculator
 
 void exercises()
 {
+	// brace initialization is equivalent using obj{ arg }; and obj = { arg };
 	Calculator c_a{ Operation::ADD };
 	Calculator c_s = { Operation::SUBTRACT };
 	Calculator c_m{ Operation::MULTIPLY };
@@ -161,7 +162,7 @@ int main()
 	}
 	
 	// pg 110 mentions structs
-	Acct acct;
+	Acct acct{};	// braces ensure zeroing for all fields; equivalent to Acct acct = {};
 	acct.acct_num = 1000;
 	acct.users[0] = "Bobo";
 	acct.users[1] = "";
