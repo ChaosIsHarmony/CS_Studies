@@ -46,11 +46,11 @@ public class Scheduler
 				fixed_events_obj[i] = new FixedEvent(components[0],components[1],components[2],Integer.parseInt(components[3]),Integer.parseInt(components[4]),Integer.parseInt(components[5]));
 				//System.out.println(fixed_events_obj[i]);
 			}
-			
+		
 			// create schedule
-			return schedule(skill_events_obj, fixed_events_obj, skip);			
-			
-		} catch (Exception e) { System.out.println(filepath + " not found"); }
+			return schedule(skill_events_obj, fixed_events_obj, skip);
+
+		} catch (Exception e) { System.out.println("Process failed when attempting to use: " + filepath); }
 		
 		return null;
 	}
@@ -118,7 +118,7 @@ public class Scheduler
 				System.out.println(e.getType() + " has " + freq + " unaccounted for times.");	
 			}
 		}
-		
+	
 		return schedule;
 	}
 }

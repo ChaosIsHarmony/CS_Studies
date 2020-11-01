@@ -9,17 +9,17 @@
 7H   Sleep     Sleep     Sleep     Sleep     Sleep     Sleep     Sleep     
 8H   Sleep     Sleep     Sleep     Sleep     Sleep     Sleep     Sleep     
 9H   Bfast     Bfast     Bfast     Bfast     Bfast     Bfast     Bfast     
-10H  ML        AIT       ML        Calculus  ML        Discrete  ML        
-11H  C++       AIT       C++       Discrete  C++       Physics   Python    
-12H  Dr._G     AIT       On_Call   On_Call   On_Call   On_Call   On_Call   
-13H  Dr._G     Violin    Violin    Violin    Violin    Piano     Violin    
-14H  Dr._G     Piano     Piano     Piano     Piano     Violin    Dr._G     
-15H  Dr._G     On_Call   On_Call   Dr._G     On_Call   On_Call   Dr._G     
-16H  Dr._G     StatisticsPython    Dr._G     MMA       Compose   Dr._G     
-17H  Consc.    Calculus  StatisticsDr._G     MMA       Dr._G     Dr._G     
-18H  MMA       On_Call   On_Call   Dr._G     MMA       Dr._G     Dr._G     
-19H  MMA       MMA       Java      Physics   MMA       Dr._G     Dr._G     
-20H  MMA       MMA       Calculus  Consc.    MMA       Dr._G     Dr._G     
-21H  MMA       MMA       Discrete  Compose   MMA       Dr._G     Statistics
+10H  ML        Calculus  ML        Physics   ML        Calculus  ML        
+11H  C++       Discrete  C++       Compose   C++       Python    C++       
+12H  Dr._G     On_Call   On_Call   On_Call   On_Call   On_Call   On_Call   
+13H  Dr._G     Violin    Violin    Violin    Violin    Violin    Physics   
+14H  Dr._G     Piano     Piano     Piano     Piano     Piano     Dr._G     
+15H  Dr._G     On_Call   On_Call   Dr._G     On_Call   Dr._G     Dr._G     
+16H  Dr._G     Python    Python    Dr._G     MMA       Dr._G     Dr._G     
+17H  Dr._G     Physics   StatisticsDr._G     MMA       Dr._G     Dr._G     
+18H  Dr._G     On_Call   On_Call   Dr._G     MMA       Dr._G     Dr._G     
+19H  Dr._G     MMA       Java      Dr._G     MMA       Dr._G     Dr._G     
+20H  Violin    MMA       Calculus  Dr._G     MMA       Dr._G     Dr._G     
+21H  Discrete  MMA       Discrete  Python    MMA       Dr._G     Dr._G     
 22H  Bath      MMA       Bath      Bath      MMA       Bath      Bath      
-23H  Python    MMA       Physics             MMA                 Java      
+23H  StatisticsMMA                           MMA       StatisticsJava      
