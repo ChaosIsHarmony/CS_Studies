@@ -24,8 +24,10 @@ COURSES
 		3.) |05%|	CS50 - Intro to Artificial Intelligence with Python	[]
 	MIT
 		4.) |COMPLETE|	6.S191 - MIT Intro to DL 2020	[https://www.youtube.com/watch?v=njKP3FqW3Sk&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI]
-    Fast.ai
+	Fast.ai
 		5.) |COMPLETE|	Practical Deep Learning for Coders	[https://course.fast.ai/]
+	Practicum
+		6.) |05%|	Practicum - Data Science Course	[https://practicum.yandex.com/profile/data-scientist/]
 
 --GAMES--
 	Games
@@ -75,9 +77,7 @@ BOOKS
 	1.) |15%|	Lospinoso - C++ Crash Course {C++} (130)
 				Chap. 1-2 Assignments (total: 8)
 	2.) |15%|	Shaw - Learn Python the Hard Way {Python}
-				Assignments (total: 22)
-
---AI/ML--
+				Assignments (total: 24444--AI/ML--
 	1.) |00%|	Abu-Mostafa - Learning From Data
 	2.) |20%|	Russell - Artificial Intelligence A Modern Approach
 	3.) |30%|	Kinsely - Neural Networks from Scratch {Python}
