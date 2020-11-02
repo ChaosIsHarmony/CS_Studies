@@ -129,16 +129,116 @@ SECTION 1.2 [10 problems]
 17.) The first two professors want coffee, but the last one doesn't.
 	 If the first had said 'No', then he would not want coffee
 	 Same with the second
-
-19.) A is a knight = a
-	 B is a knight = b
+ 
+A is a knight = a
+B is a knight = b
+19.) 
 	 1.) a → ¬b | b → ¬a
 	 2.) ¬a is impossible, because ¬a → ¬b | b → a, but then a is telling the truth and that implies a
 	 Thus: a ∧ ¬b
 	 
-21.)
-		¬ ∨ ∧ → ↔
+21.) 
+	1.) ¬a ∨ b
+	2.) ¬a is impossible (because a knave could not admit to being a knave)
+	Thus: a ∧ b
 
+22.)
+	1.) a
+	2.) b
+	Thus: impossible to tell, because both could be knights, both could be knaves, or some combination of both 
+
+23.)
+	1.) ¬a ∧ ¬b 
+	2.) A has to be lying because knaves wouldn't admit, and this implies ¬¬b, or b
+	Thus: ¬a ∧ b
+
+A is a knight = a(k) → (¬a(n) ∧ ¬a(s))
+A is a knave = a(n) → (¬a(k) ∧ ¬a(s))
+A is a spy = a(s) → (¬a(k) ∧ ¬a(n))
+etc.
+25.)
+	1.) a(k) ∧ ¬a(n) ∧ ¬a(s)
+	2.) b(n) ∧ ¬a(n) | b(n) is false by definition, because B for never call themselves a knave, ergo b(s)
+	3.) b(k) ∧ ¬a(k) | b(k) is a lie because B is a liar, ergo c(n)
+	Thus: a(k) ∧ b(s) ∧ c(n)
+
+26.) Wrong by definition; the knight would never claim to be a knave and yet A, B, and C all claim to be kanves...
+
+27.)
+	1.) a(k)
+	2.) a(k) | if 1. is false, then 2. & 3. are false, so 1. must be true
+	3.) c(s)
+	Thus: a(k) ∧ b(s) ∧ c(n)
+
+32.) Suspects in the murder of Mr. C: Mr. S, Mr. J, Mr. W
+	k(x, y) = x killed y
+	f(x, y) = x is friend of y
+	d(x, y) = x disliked y
+	t(x, y) = x was with y
+	g(x)    = x was out of town
+	Mr. S's testimony: ¬k(s, c) ∧ f(j, c) ∧ d(w, c)
+	Mr. J's testimony: ¬k(j, c) ∧ ¬f(j, c) ∧ g(x)
+	Mr. W's testimony: ¬k(w, c) ∧ t(j, c) ∧ t(s, c)
+	a.) the two innocent ones aren't lying, but the guilty one may be lying
+	b.) one of the three is guilty
+	
+	1.) Since S and J contradict each other for f(j, c), one of them must be lying, and thus guilty
+	2.) J says he was out of town, and W says he saw him with C; a contradiction between J & W
+	3.) No contradictions between S & W
+	4.) Thus: k(j, c)
+
+33.) 	
+	1.) ¬h(f) → h(j)
+	2.) ¬l(j) → h(m)
+	3.) ¬h(j) → h(f) 	| 1. contrapositive
+	4.) ¬h(m) → l(j) 	| 2. contrapositive
+	5.)	a.) ¬h(f) 	| assumption for conditional
+		b.) h(j) 	| 1. implication
+		c.) h(j) → ¬l(j)| cannot be highest and lowest simulatneously, unless all three make the same  
+		d.) ¬h(m)	| 2. implication
+		e.) l(j)	| 4. implication
+		e.) l(j) ∧ ¬l(j)| contradiction
+	6.) h(f)		| by conditional proof
+	7.) h(f) → ¬h(j) ∧ ¬h(m)| can't all be highest, unless all paid the same
+	8.) l(j)		| 4. implication
+	Thus: Fred is highest, Maggie is mid, Janice is lowest; or all are paid the same
+		
+35.)
+	1.) b → c
+	2.) ¬(c ∧ g)
+	3.) ¬(¬g ∧ ¬h)
+	4.) h → ¬c
+	5.) ¬c → ¬b		| 1. contrapositive
+	6.) c → ¬h		| 4. contrapositive
+	7.) ¬c ∨ ¬g		| 2. DeMorgan
+	8.) g ∨ h		| 3. DeMorgan
+	9.)	a.) c		| assumption for conditional (cook)
+		b.) ¬h		| 6. implication
+		c.) g		| 8. disjunction
+		d.) ¬c		| 7. disjunction
+		e.) contradiction
+	10.) ¬c			| by conditional proof
+	11.)	a.) b		| assumption for conditional (bulter)
+		b.) c		| 1. implication
+		c.) contradiction 
+	12.) ¬b			| by conditional proof
+	13.)	a.) g		| assumption for conditional (gardener)
+		b.) ¬c		| 7. disjunction
+		c.) can't derive contradiction
+	14.)	a.) ¬g		| assumption for conditional (gardener)
+		b.) h		| 8. disjunction
+		c.) ¬c		| 4. implication
+		d.) can't derive contradiction
+	15.)	a.) h		| assumption for conditional (handyman)
+		b.) ¬c		| 4. implication
+		c.) can't derive contradiction
+	16.)	a.) ¬h		| assumption for conditional (handyman)
+		b.) g		| 8. disjunction
+		c.) ¬c		| 7. disjunction
+		d.) can't derive contradiction
+	Thus: Cook lies; Butler lies; Gardener unknown; Handyman unknown
+
+		¬ ∨ ∧ → ↔
 
 
 

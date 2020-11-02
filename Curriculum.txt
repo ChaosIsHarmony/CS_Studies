@@ -45,7 +45,7 @@ COURSES
 			4.) |COMPLETE|	Discrete Math [https://www.youtube.com/playlist?list=PLHXZ9OQGMqxersk8fUxiUMSIx0DBqsKZS]
 	-Statistics-
 		Khan Academy
-			5.) |48%|	AP Statistics
+			5.) |50%|	AP Statistics
 
 --MISC--
 	Khan Academy
@@ -91,7 +91,7 @@ BOOKS
 	1.) |00%|	Strang - Calculus I
 				Assignments (total: 0)
 	2.) |05%|	Rosen - Discrete Mathematics and Its Applications (46)
-				Chap. 1 Assignments (total: 13)
+				Chap. 1 Assignments (total: 22)
 	3.) |05%|	Downey - Think Stats
 
 --MISC--
