@@ -197,12 +197,46 @@ etc.
 		c.) h(j) → ¬l(j)| cannot be highest and lowest simulatneously, unless all three make the same  
 		d.) ¬h(m)	| 2. implication
 		e.) l(j)	| 4. implication
-		e.) l(j) ∧ ¬l(j)| contradiction
+		f.) l(j) ∧ ¬l(j)| c. & e. contradiction
 	6.) h(f)		| by conditional proof
 	7.) h(f) → ¬h(j) ∧ ¬h(m)| can't all be highest, unless all paid the same
 	8.) l(j)		| 4. implication
 	Thus: Fred is highest, Maggie is mid, Janice is lowest; or all are paid the same
-		
+
+34.)
+	1.) k ∨ h
+	2.) r ∨ v
+	3.) ¬(r ∧ v)
+	4.) a → r
+	5.) (v ∧ k) ∨ ¬(v ∨ k)
+	6.) h → (a ∧ k)
+	7.)	a.) a		| assumption for conditional (Abby)
+		b.) r		| 4. implication
+		c.) ¬v		| 3. DeM & disjunction
+		d.) ¬k		| 5. disjunction & DeM
+		e.) h		| 1. disjunction
+		f.) k		| 6. implication & conjunction
+		g.) ¬k ∧ k	| d. & f. contradiction
+	8.) ¬a			| by conditional proof
+	9.)	a.) h		| assumption for conditional (Heather)
+		b.) a ∧ k	| 6. by implication
+		c.) a ∧ ¬a	| 8. & b. contradiction
+	10.) ¬h			| by conditional proof
+	11.)	a.) ¬k		| assumption for conditional (Kevin)
+		b.) h		| 1. disjunction
+		c.) h ∧ ¬h	| 10. & b. contradiction
+	12.) k			| by conditional proof
+	13.)	a.) ¬v		| assumption for conditional (Vijay)
+		b.) r		| 2. disjunction
+		c.) ¬h 		| 8. & 6. contrapositive
+		d.) k		| 1. disjunction
+		e.) k ∧ ¬k	| 5. & a. & d. contradiction
+	14.) v			| by conditional proof
+	15.)	a.) r		| assumption for conditional (Randy)
+		b.) r ∧ ¬r	| 3. & 14. & a. contradiction
+	16.) ¬r			| by conditional proof
+	This: only Kevin and Vijay are chatting
+
 35.)
 	1.) b → c
 	2.) ¬(c ∧ g)
@@ -237,6 +271,8 @@ etc.
 		c.) ¬c		| 7. disjunction
 		d.) can't derive contradiction
 	Thus: Cook lies; Butler lies; Gardener unknown; Handyman unknown
+
+36.) 
 
 		¬ ∨ ∧ → ↔
 

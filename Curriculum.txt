@@ -74,7 +74,7 @@ BOOKS
 	2.) |COMPLETE|	Downey - Think OS {C}
 
 --LANG--
-	1.) |15%|	Lospinoso - C++ Crash Course {C++} (130)
+	1.) |15%|	Lospinoso - C++ Crash Course {C++} (135)
 				Chap. 1-2 Assignments (total: 8)
 	2.) |15%|	Shaw - Learn Python the Hard Way {Python}
 				Assignments (total: 24444--AI/ML--
@@ -101,7 +101,7 @@ BOOKS
 	3.) |N/A|	Hackerrank {Java/C++}
 				Easy-Medium (total: 32)
 	4.) |65%|	Hunt - The Pragmatic Programmer (234)
-	5.) |60%|	Spraul - Think Like a Programmer {C++} (163)
+	5.) |60%|	Spraul - Think Like a Programmer {C++} (185)
 _________________________________________________________
 
 _________________________________________________________
