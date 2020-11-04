@@ -59,3 +59,7 @@ LESSONS:
 
 - Don't program by coincidence [pg. 198]
 	- Understand how your code works, inlcuding every call it relies upon to other libraries (relying only on documented behavior from library methods) 
+
+- Understand the 'real' constraints of a problem, not its 'imagined' ones [pg. 237]
+	- Think of the Gordian Knot
+	- Don't think outside the box; find the limits of the actual box instead

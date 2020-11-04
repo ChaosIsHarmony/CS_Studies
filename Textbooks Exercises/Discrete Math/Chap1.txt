@@ -273,9 +273,41 @@ etc.
 	Thus: Cook lies; Butler lies; Gardener unknown; Handyman unknown
 
 36.) 
+	a.)	- If Alice tells the truth, then John and Carlos did it; a contradiction
+		- If John tells the truth, then Diana did it and didn't do it; a contradiction
+		- If Carlos tells the truth, then John and Diana did it; a contradiction
+		- If Diana tells the truth, then John did it
+	b.)	- If Alice lies, then Diana did it and didn't do it; a contradiction
+		- If John lies, then he, Carlos, and Diana all did it; a contradiction
+		- If Carlos lies, Carlos did it
+		- If Diana lies, then Diana and Carlos did it; a contradiction 
 
-		¬ ∨ ∧ → ↔
+37.) 
+	p = lady in room 1 and tiger in room 2
+	q = there is a lady and a tiger each in separate rooms
+	1.) p → q
+	2.) ¬(p ∧ q)  
+	3.) ¬q → ¬p		| 1. contrapositive
+	4.) ¬q ∨ ¬p		| 2. DeM
+	5.)	a.) p		| assumption
+		b.) q		| 1. implication
+		c.)		| 2. & a. & b. contradiction
+	6.) ¬p			| by conditional proof
+	7.)	a.) ¬q		| assumption
+		b.) 		| 4. & a. contradiction
+	8.) q			| by conditional proof
+	Thus: The lady is behind the second door
+			
+39.)	
+	1.) A senator is either honest or corrupt
+	2.) There's at least one honest senator
+	3.) Given any two senators, at least one is corrupt
+		a.) This demands that there be at most 1 honest senator, otherwise cannot guarantee this
+	4.) There are 50 senators
+	Thus: There are 49 corrupt senators and 1 honest senator
 
-
-
-
+40.)
+	a.) ¬p ∨ ¬q
+	b.) ¬(p ∨ (¬p ∧ q))
+ 
+¬ ∨ ∧ → ↔
