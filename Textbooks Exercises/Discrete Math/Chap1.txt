@@ -85,7 +85,7 @@ SECTION 1.1 [13 problems]
 	X: impossible
 
 __________________________________
-SECTION 1.2 [10 problems]
+SECTION 1.2 [24 problems]
 
 1.) ¬a → ¬e  |  ¬(¬a ∧ e)
 

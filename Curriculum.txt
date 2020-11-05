@@ -93,7 +93,7 @@ BOOKS
 	1.) |00%|	Strang - Calculus I
 				Assignments (total: 0)
 	2.) |05%|	Rosen - Discrete Mathematics and Its Applications (55)
-				Chap. 1 Assignments (total: 27)
+				Chap. 1 Assignments (total: 37)
 	3.) |05%|	Downey - Think Stats
 	4.) |50%|	Byers - How Mathematicians Think (208)
 
