@@ -100,7 +100,7 @@ BOOKS
 --MISC--
 	1.) |50%|	Chacon - Pro Git
 	2.) |N/A|	CodeForces Ladders {C++}
-				Lv. 600-1300 (total: 67)
+				Lv. 600-1300 (total: 68)
 	3.) |N/A|	Hackerrank {Java/C++}
 				Easy-Medium (total: 32)
 	4.) |65%|	Hunt - The Pragmatic Programmer (245)
