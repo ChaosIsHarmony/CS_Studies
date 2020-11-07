@@ -103,7 +103,7 @@ BOOKS
 				Lv. 600-1300 (total: 68)
 	3.) |N/A|	Hackerrank {Java/C++}
 				Easy-Medium (total: 32)
-	4.) |65%|	Hunt - The Pragmatic Programmer (245)
+	4.) |65%|	Hunt - The Pragmatic Programmer (271)
 	5.) |80%|	Spraul - Think Like a Programmer {C++} (196)
 _________________________________________________________
 

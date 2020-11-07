@@ -2,16 +2,19 @@
 # Use: python3 CPFileGenerator.py > CodeForces/900/Example.cpp
 
 from sys import argv
+from pathlib import Path
 
 script, filename = argv
+
+path = script[0:script.find('CPFile')]
 
 # Open template file
 content = ""
 if '.cpp' in filename:
-	content = open('CPPtemplate.txt').read()
+	filepath = Path(path + 'CPPtemplate.txt')
+	content = open(filepath).read()
+	print(content) # prints to standard input
 else:
-	content = open('JavaTemplate.txt').read()
-
-# Create new file w/ name passed as command line arg
-new_file = open(filename, 'w')
-new_file.write(content)
+	filepath = Path(path + 'JavaTemplate.txt')
+	content = open(filepath).read()
+	print(content) # prints to standard input

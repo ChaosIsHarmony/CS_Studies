@@ -69,3 +69,11 @@ LESSONS:
 - Understand the 'real' constraints of a problem, not its 'imagined' ones [pg. 237]
 	- Think of the Gordian Knot
 	- Don't think outside the box; find the limits of the actual box instead
+
+- Test your tests [pg. 269]
+	- Deliberately cause the bug that your tests are testing for (e.g., by feeding bad inputs); this helps show the test will actually catch the bugs it's testing for
+
+- Focus on states tested, not % of code base tested [pg. 270]
+	- The edge cases can present problems
+	- The order in which input is fed can present problems
+
