@@ -77,3 +77,8 @@ LESSONS:
 	- The edge cases can present problems
 	- The order in which input is fed can present problems
 
+- Test early, test often [pg. 271]
+	- Test regularly, not just before a deadline
+
+- You should only have to find a bug once [pg. 272]
+	- Make sure all tests henceforth check for that particular bug

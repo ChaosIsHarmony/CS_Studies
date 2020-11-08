@@ -1,0 +1,21 @@
+Sort
+	- Insertion
+	- Merge
+	- Quick (3-way partition)
+	- Radix
+
+Search
+	- Linear
+	- Binary
+	- Hashing
+
+Graph
+	- DFS
+	- BFS
+
+String
+	-
+
+Compression
+	- Huffman
+	- LZW

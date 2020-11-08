@@ -95,15 +95,16 @@ BOOKS
 	2.) |05%|	Rosen - Discrete Mathematics and Its Applications (55)
 				Chap. 1 Assignments (total: 37)
 	3.) |05%|	Downey - Think Stats
+				Chap. 1 Assigments (total: 0)
 	4.) |50%|	Byers - How Mathematicians Think (208)
 
 --MISC--
 	1.) |50%|	Chacon - Pro Git
 	2.) |N/A|	CodeForces Ladders {C++}
-				Lv. 600-1300 (total: 68)
+				Lv. 600-1300 (total: 69)
 	3.) |N/A|	Hackerrank {Java/C++}
 				Easy-Medium (total: 32)
-	4.) |65%|	Hunt - The Pragmatic Programmer (271)
+	4.) |65%|	Hunt - The Pragmatic Programmer (274)
 	5.) |80%|	Spraul - Think Like a Programmer {C++} (196)
 _________________________________________________________
 
