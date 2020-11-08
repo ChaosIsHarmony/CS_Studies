@@ -9,17 +9,17 @@
 7H   Sleep     Sleep     Sleep     Sleep     Sleep     Sleep     Sleep     
 8H   Sleep     Sleep     Sleep     Sleep     Sleep     Sleep     Sleep     
 9H   Bfast     Bfast     Bfast     Bfast     Bfast     Bfast     Bfast     
-10H  ML        Calculus  ML        Physics   ML        Calculus  ML        
-11H  C++       Discrete  C++       Compose   C++       Python    C++       
+10H  ML        ML        ML        StatisticsML        Discrete  ML        
+11H  C++       Discrete  C++       Discrete  C++       Calculus  C++       
 12H  Dr._G     On_Call   On_Call   On_Call   On_Call   On_Call   On_Call   
-13H  Dr._G     Violin    Violin    Violin    Violin    Violin    Physics   
-14H  Dr._G     Piano     Piano     Piano     Piano     Piano     Dr._G     
-15H  Dr._G     On_Call   On_Call   Dr._G     On_Call   Dr._G     Dr._G     
-16H  Dr._G     Python    Python    Dr._G     MMA       Dr._G     Dr._G     
-17H  Dr._G     Physics   StatisticsDr._G     MMA       Dr._G     Dr._G     
+13H  Dr._G     Violin    Violin    Violin    Violin    Piano     Violin    
+14H  Dr._G     Piano     Piano     Piano     Piano     Physics   Dr._G     
+15H  Dr._G     On_Call   On_Call   Dr._G     On_Call   On_Call   Dr._G     
+16H  Dr._G               Python    Dr._G     MMA       StatisticsDr._G     
+17H  Dr._G     Java      StatisticsDr._G     MMA       Dr._G     Dr._G     
 18H  Dr._G     On_Call   On_Call   Dr._G     MMA       Dr._G     Dr._G     
-19H  Dr._G     MMA       Java      Dr._G     MMA       Dr._G     Dr._G     
-20H  Violin    MMA       Calculus  Dr._G     MMA       Dr._G     Dr._G     
-21H  Discrete  MMA       Discrete  Python    MMA       Dr._G     Dr._G     
+19H  Dr._G     MMA       Java      CodeInter MMA       Dr._G     Dr._G     
+20H  Violin    MMA       Discrete  CodeInter MMA       Dr._G     Dr._G     
+21H  Python    MMA       Calculus  CodeInter MMA                 Dr._G     
 22H  Bath      MMA       Bath      Bath      MMA       Bath      Bath      
-23H  StatisticsMMA                           MMA       StatisticsJava      
+23H  StatisticsMMA       Physics   Calculus  MMA       Python    Python    

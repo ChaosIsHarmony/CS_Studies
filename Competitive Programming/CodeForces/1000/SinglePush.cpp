@@ -53,7 +53,13 @@ You can print each letter in any case (upper or lower).
 
 
 	OBSERVATIONS:
-
+		- Loop through arrays looking for first difference and last difference
+		- If differences are not consecutive, then 'NO' by definition
+		- If magnitude of any difference varies, then 'NO' by definition
+		- Else, 'YES'
+		- Two dumb things I did:
+			- Initialized first_diff, second_diff, and diff_mag outside of main loop, which cause many tests to fail that shouldn't have
+			- Didn't follow specification that k > 0
 */
 #include <iostream>
 
@@ -62,11 +68,47 @@ void print(T t) { std::cout << t << std::endl; }
 
 int main()
 {
-	// Input
+	// Setup 
+	int num_tests;
+	std::cin >> num_tests;
 
-	// Process
-
-	// Output
+	// Process & Output
+	for (int i = 0; i < num_tests; i++)
+	{
+		// populate arrays
+		int first_diff = -1, second_diff = -1, diff_mag = 0;
+		int arr_len;
+		std::cin >> arr_len;
+		int a[arr_len], b[arr_len];
+		for (int j = 0; j < 2 * arr_len; j++)
+			if (j < arr_len)	std::cin >> a[j];
+			else			std::cin >> b[j%arr_len]; 
+		// check for diff
+		bool possible = true;
+		for (int k = 0; k < arr_len; k++)
+		{
+			// found first diff, anchored diff magnitude
+			if (a[k] != b[k] && first_diff == -1)
+			{ 
+				first_diff = k; 
+				diff_mag = a[k] - b[k]; 
+				if (diff_mag > 0) { possible = false; break; }
+			}
+			// diff mag differs
+			else if (a[k] != b[k] && (a[k] - b[k]) != diff_mag)
+			{ possible = false; break; }
+			// found end of diff seq, set boundary
+			else if (a[k] == b[k] && first_diff != -1 && second_diff == -1)
+			{ second_diff = k - 1; }
+			// found second diff seq 
+			else if (a[k] != b[k] && second_diff != -1)
+			{ possible = false; break; }
+			
+		}
+		// determine if possible
+		if (possible)	print("YES");
+		else		print("NO");
+	}
 
 	return 0;
 }
