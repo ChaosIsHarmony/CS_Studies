@@ -4,8 +4,8 @@
 *	Ex 2.3.1
 *	What happens if you call factorial() with a negative value of n?
 *	With a large value of, say, 35?
-*		- if n < 0, then it goes into an inifinite loop and ends in stackoverflow
-*		- if n is large, then long overflow; if n > 65, then 0, until it reaches 39525
+*		[- if n < 0, then it goes into an inifinite loop and ends in stackoverflow]
+*		[- if n is large, then long overflow; if n > 65, then 0, until it reaches 39525]
 *
 *	Ex 2.3.3
 *	Give the sequence of integers printed by a call to ex233(6):
@@ -19,17 +19,58 @@
 *		}
 *
 *	Ex 2.3.4
+*	Give the value of ex234(6) :
+*		public static String ex234(int n)
+*		{
+*			if (n <= 0) return "";
+*			return ex234(n-3) + n + ex234(n-2) + n;
+*		}
+*	[Note: it returns a String, not an int...]
 *
 *	Ex 2.3.8
+*	Consider the following recursive function:
+*		public static int mystery(int a, int b)
+*		{
+*			if (b == 0) return 0;
+*			if (b % 2 == 0) return mystery(a+a, b/2);
+*			return mystery(a+a, b/2) + a;
+*		}
+*
+*	What are the values of mystery(2, 25) and mystery(3, 11)? Given positive
+*	integers a and b, describe what value mystery(a, b) computes. Then answer the
+*	same question, but replace + with * and return 0 with return 1.
 *
 *	Ex 2.3.15
+*	Binary representation. Write a program that takes a positive integer n (in
+*	decimal) as a command-line argument and prints its binary representation. Recall,
+*	in Program 1.3.7, that we used the method of subtracting out powers of 2. Now, use
+*	the following simpler method: repeatedly divide 2 into n and read the remainders
+*	backward. First, write a while loop to carry out this computation and print the bits
+*	in the wrong order. Then, use recursion to print the bits in the correct order.
 *
 *	Ex 2.3.17
+*	Permutations. Write a program Permutations that takes an integer command-line argument
+*	n and prints all n! permutations of the n letters starting at a (assume that n is no
+*	greater than 26). A permutation of n elements is one of the n! possible orderings of the 
+*	elements. As an example, when n = 3, you should get the following output (but do not 
+*	worry about the order in which you enumerate them):
+*		bca cba cab acb bac ab
 *
 *	Ex 2.3.18
+*	Permutations of size k. Modify Permutations from the previous exercise so that it takes 
+*	two command-line arguments n and k, and prints all P(n, k) = n!/ (n-k)! permutations 
+*	that contain exactly k of the n elements. Below is the desired output when k = 2 and n = 4 
+*	(again, do not worry about the order):
+*		ab ac ad ba bc bd ca cb cd da db dc
 *
 *	Ex 2.3.21
-*
+*	Hamming distance. The Hamming distance between two bit strings of length n is equal to 
+*	the number of bits in which the two strings differ. Write a program that reads in an 
+*	integer k and a bit string s from the command line, and prints all bit strings that have 
+*	Hamming distance at most k from s. For example, if k is 2 and s is 0000, then your program 
+*	should print:
+*		0011 0101 0110 1001 1010 1100
+*	Hint : Choose k of the bits in s to flip.
 *
 *************************************************/
 import java.util.Scanner;
@@ -46,7 +87,23 @@ public class Ex2_3
 		//ex_2_3_1();
 
 		// recursion trace
-		ex_2_3_3();
+		//ex_2_3_3();
+
+		// recursion trace rd. 2
+		//ex_2_3_4();
+
+		// more recursion
+		//ex_2_3_8();
+
+		// binary representation
+		ex_2_3_15();
+		
+		//
+		//ex_2_3_17();
+		//
+		//ex_2_3_18();
+		//
+		//ex_2_3_21();
 	}
 
 	private static void ex_2_3_1()
@@ -58,18 +115,18 @@ public class Ex2_3
 			System.out.println(i + ": " + factorial(i));
 	}
 
-	public static long factorial(int n)
+	private static long factorial(int n)
 	{
 		if (n == 1)	return 1;
 		return n * factorial(n-1);
 	}
 
-	public static void ex_2_3_3()
+	private static void ex_2_3_3()
 	{
 		ex233(6);
 	}
 
-	public static void ex233(int n)
+	private static void ex233(int n)
 	{
 		if (n <= 0) return;
 		System.out.println(n);
@@ -78,4 +135,71 @@ public class Ex2_3
 		System.out.println(n);
 	}
 
+	private static void ex_2_3_4()
+	{
+		System.out.println(ex234(6));
+	}
+
+	/*
+		ex234(3) + 6 + ex234(4) + 6
+		ex234(0) + 3 + ex234(1) + 3 + 6 + ex234(1) + 4 + ex234(2) + 4 + 6
+		etc.
+		311361142246	
+	*/
+	private static String ex234(int n)
+	{
+		if (n <= 0) return "";
+		return ex234(n-3) + n + ex234(n-2) + n;
+	}
+
+	private static void ex_2_3_8()
+	{
+		System.out.println(mystery(2, 25));
+		System.out.println(mystery(3, 11));
+		System.out.println(mystery_two(2, 25));
+		System.out.println(mystery_two(3, 11));
+		
+	}
+	
+	/*
+		2, 25 -> 50
+		return (4, 12) + 2
+		return (8, 6)
+		return (16, 3)
+		return (32, 1) + 16
+		return 32
+
+		3, 11 -> 33
+		return (6, 5) + 3
+		return (12, 2) + 6
+		return (24, 1)
+		return 24
+	*/
+	private static int mystery(int a, int b)
+	{
+		if (b == 0) return 0;
+		if (b % 2 == 0) return mystery(a+a, b/2);
+		return mystery(a+a, b/2) + a;
+	}
+	
+	private static int mystery_two(int a, int b)
+	{
+		if (b == 0) return 1;
+		if (b % 2 == 0) return mystery(a*a, b/2);
+		return mystery(a*a, b/2) * a;
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

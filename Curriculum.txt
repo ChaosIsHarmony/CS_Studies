@@ -61,7 +61,7 @@ _________________________________________________________
 BOOKS
 --CS BASICS--
 	1.) |COMPLETE|	Sedgewick - Computer Science: An Interdisciplinary Approach {Java}
-					Chap. 1-2 Assignments (total: 71)
+					Chap. 1-2 Assignments (total: 73)
 	2.) |COMPLETE|	Roberts - Programming Abstractions {C++}
 					Chap. 1-3 Assignments (total: 21)
 
