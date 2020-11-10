@@ -135,6 +135,7 @@ public class MaxPQ<T extends Comparable<T>>
 		while(!pq.isEmpty()) { System.out.println(pq.delMax().arr[1]); }
 	}
 	
+	// for tests 
 	private static class Node implements Comparable<Node>
 	{
 		int[] arr;

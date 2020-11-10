@@ -14,17 +14,16 @@ public class Stack<T>
 
 	private Node<T> first;
 	
-	public Stack() { }
+	public Stack() { first = null; }
 	
+	// modification methods
 	public T pop()
 	{
 		T priorFirst = first.data;
 		first = first.next;
 		return priorFirst;
 	}
-	
-	public T peek() { return first.data; }
-	
+		
 	public void push(T val)
 	{
 		Node newFirst = new Node();
@@ -32,6 +31,11 @@ public class Stack<T>
 		newFirst.next = first;
 		first = newFirst;
 	}
+	
+	// inspection methods
+	public T peek() { return first.data; }
+
+	public boolean isEmpty() { return first == null; }
 	
 	public void iterate()
 	{
