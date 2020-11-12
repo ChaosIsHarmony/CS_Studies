@@ -52,6 +52,49 @@ bool greater_than(const ConstExample& a, const ConstExample& b)
 
 // const Correctness [end]
 
+// auto [begin]
+struct Dwarf
+{
+	char* name;
+	int age;
+};
+
+Dwarf dwarves[1]; // <-- when does this get populated?
+
+struct Contract
+{
+	void add(const Dwarf&);	//<-- add to what? or did author leave unimplemented?
+private:
+	Dwarf employees[13];	//<-- shouldn't we add this to store the added dwarves?
+	int ind = 0;
+};
+void Contract::add(const Dwarf& d) { this->employees[ind++]; }
+
+void form_company(Contract& contract)
+{
+	for (const auto& dwarf : dwarves)
+	{ contract.add(dwarf); }
+}
+
+// auto [end]
+
+// EXERCISES [begin]
+// 3_2
+void read_from(const char* arr, int size)
+{
+	for (int i = 0; i < size; i++) 
+	{ std::cout << arr[i]; }
+	
+	std::cout << std::endl;
+}
+
+void write_to(char* arr, int ind, char c)
+{
+	arr[ind] = c;
+}
+
+// EXERCISES [end]
+
 int main()
 {
 	int sample_int = {};	// sets to zero
@@ -120,8 +163,44 @@ int main()
 	ConstExample a, b;
 	a.data = 1;
 	b.data = 2;
-	printf("\nA = %d & B = %d, therefore A > B is %d", a.get_data(), b.get_data(), greater_than(a, b)); 
+	printf("\nA = %d & B = %d, therefore A > B is %d\n", a.get_data(), b.get_data(), greater_than(a, b)); 
 	
+	// auto type divination pg. 84
+	//	- "Alone, all of this simple initialization help doesn’t buy you much; however, 
+	//	when types become more complicated—for example, dealing with iterators from stdlib 
+	//	containers—it really saves quite a bit of typing. It also makes your code more 
+	//	resilient to refactoring."
+	//	- can use with &, * and const
+	auto year { 2019 };		// int
+	auto& year_ref = year;		// int&
+	const auto& year_cref = year;	// const int&
+	auto* year_ptr = &year;		// int*
+	const auto* year_cptr = &year;	// const int*
+
+	// EXERCISES
+	// 3_2
+	char lower[] = "abc?e";
+	char upper[] = "ABC?E";
+	char* upper_ptr = upper;// Equivalent: &upper[0]
+	lower[3] = 'd';		// lower now contains a b c d e \0
+	upper_ptr[3] = 'D';	// upper now contains A B C D E \0
+
+	char letter_d = lower[3];	// letter_d equals 'd'
+	char letter_D = upper_ptr[3];	// letter_D equals 'D'
+
+	//printf("lower: %s\nupper: %s", lower, upper); x
+	//lower[7] = 'g';	// Super bad. You must never do this.
+	int size = sizeof(lower)/sizeof(lower[0]);
+	read_from(lower, size);
+	read_from(upper, size);
+	
+	write_to(lower, 1, 'x');
+	write_to(upper, 1, 'X');
+
+	read_from(lower, size);
+	read_from(upper, size);
+	
+
 	return 0;
 }
 
