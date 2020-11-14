@@ -10,7 +10,12 @@
 	SAMPLES:
 
 	OBSERVATIONS:
+		NOTABLE CONSTRAINTS
 
+		EDGE CASES
+		
+		POSS ALGOS
+		
 */
 #include <iostream>
 
