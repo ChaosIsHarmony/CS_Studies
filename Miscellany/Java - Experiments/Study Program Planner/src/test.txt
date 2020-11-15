@@ -9,17 +9,17 @@
 7H   Sleep     Sleep     Sleep     Sleep     Sleep     Sleep     Sleep     
 8H   Sleep     Sleep     Sleep     Sleep     Sleep     Sleep     Sleep     
 9H   Bfast     Bfast     Bfast     Bfast     Bfast     Bfast     Bfast     
-10H  ML        ML        ML        StatisticsML        Discrete  ML        
-11H  C++       Discrete  C++       Discrete  C++       Calculus  C++       
-12H  Dr._G     On_Call   On_Call   On_Call   On_Call   On_Call   On_Call   
-13H  Dr._G     Violin    Violin    Violin    Violin    Piano     Violin    
-14H  Dr._G     Piano     Piano     Piano     Piano     Physics   Dr._G     
-15H  Dr._G     On_Call   On_Call   Dr._G     On_Call   On_Call   Dr._G     
-16H  Dr._G               Python    Dr._G     MMA       StatisticsDr._G     
-17H  Dr._G     Java      StatisticsDr._G     MMA       Dr._G     Dr._G     
-18H  Dr._G     On_Call   On_Call   Dr._G     MMA       Dr._G     Dr._G     
-19H  Dr._G     MMA       Java      CodeInter MMA       Dr._G     Dr._G     
-20H  Violin    MMA       Discrete  CodeInter MMA       Dr._G     Dr._G     
-21H  Python    MMA       Calculus  CodeInter MMA                 Dr._G     
+10H  ML        ML        ML        C++       ML        Discrete  ML        
+11H  Python    Calculus  Python    Java      Python    StatisticsPython    
+12H  On_Call   On_Call   On_Call   On_Call   On_Call   On_Call   On_Call   
+13H  Violin    Violin    Violin    Violin    Violin    Violin    Violin    
+14H  Dr._G     Piano     Piano     Discrete  Piano               Piano     
+15H  Dr._G     On_Call   On_Call   Dr._G     On_Call   Dr._G     On_Call   
+16H  Dr._G     C++       CodeInter Dr._G     MMA       Dr._G     Dr._G     
+17H  Dr._G     Discrete  CodeInter Dr._G     MMA       Dr._G     Dr._G     
+18H  Piano     On_Call   CodeInter Dr._G     MMA       Dr._G     Dr._G     
+19H  StatisticsMMA       CodeInter Calculus  MMA       Dr._G     Dr._G     
+20H  On_Call   MMA       CodeInter Java      MMA       Dr._G     Dr._G     
+21H  C++       MMA       CodeInter           MMA       Dr._G     Statistics
 22H  Bath      MMA       Bath      Bath      MMA       Bath      Bath      
-23H  StatisticsMMA       Physics   Calculus  MMA       Python    Python    
+23H  Java      MMA       Statistics          MMA       Calculus  C++       

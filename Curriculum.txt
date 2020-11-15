@@ -99,15 +99,19 @@ BOOKS
 				Chap. 1 Assigments (total: 1)
 	4.) |65%|	Byers - How Mathematicians Think (265)
 
+--PROGRAMMING CHALLENGES--
+	1.) CodeForces Ladders {C++}
+		Lv. 600-1300 (total: 71)
+	2.) Hackerrank {Java/C++}
+		Easy-Medium (total: 32)
+	3.) Project Euler {Python/C++}
+		5% (total: 4)	
+
 --MISC--
 	1.) |50%|	Chacon - Pro Git
-	2.) |N/A|	CodeForces Ladders {C++}
-				Lv. 600-1300 (total: 71)
-	3.) |N/A|	Hackerrank {Java/C++}
-				Easy-Medium (total: 32)
-	4.) |COMPLETE|	Hunt - The Pragmatic Programmer
-	5.) |COMPLETE|	Spraul - Think Like a Programmer {C++}
-	6.) |05%|	Steinhart - The Secret Life of Programs (30) 
+	2.) |COMPLETE|	Hunt - The Pragmatic Programmer
+	3.) |COMPLETE|	Spraul - Think Like a Programmer {C++}
+	4.) |05%|	Steinhart - The Secret Life of Programs (30) 
 _________________________________________________________
 
 _________________________________________________________
