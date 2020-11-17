@@ -12,7 +12,7 @@ COURSES
 --ALGORITHMS--
 	Princeton
 		1.) |COMPLETE|	Algorithms, Part I [https://www.coursera.org/learn/algorithms-part1]
-		2.) |85%|	Algorithms, Part II [https://www.coursera.org/learn/algorithms-part2]
+		2.) |COMPLETE|	Algorithms, Part II [https://www.coursera.org/learn/algorithms-part2]
 	MIT	[mit = https://ocw.mit.edu/courses/electrical-engineering-and-computer-science]
 		3.) |COMPLETE|	6.006 - Intro to Algorithms	[<mit>/6-006-introduction-to-algorithms-fall-2011/]
 
@@ -47,7 +47,7 @@ COURSES
 			4.) |COMPLETE|	Discrete Math [https://www.youtube.com/playlist?list=PLHXZ9OQGMqxersk8fUxiUMSIx0DBqsKZS]
 	-Statistics-
 		Khan Academy
-			5.) |50%|	AP Statistics
+			5.) |54%|	AP Statistics
 
 --MISC--
 	Khan Academy
@@ -61,14 +61,14 @@ _________________________________________________________
 BOOKS
 --CS BASICS--
 	1.) |COMPLETE|	Sedgewick - Computer Science: An Interdisciplinary Approach {Java}
-					Chap. 1-2 Assignments (total: 73)
+					Chap. 1-2 Assignments (total: 75)
 	2.) |COMPLETE|	Roberts - Programming Abstractions {C++}
 					Chap. 1-3 Assignments (total: 21)
 
 --ALGORITHMS--
 	1.) |COMPLETE|	Sedgewick - Algorithms {Java}
 				Chap. 1 Assignments (total: 0)
-	2.) |00%|	Heineman - Algorithms in a Nutshell {C/C++/Java}
+	2.) |20%|	Heineman - Algorithms in a Nutshell {C/C++/Java} (76)
 
 --OS--
 	1.) |60%|	Silberschatz - Operating System Concepts {C}
@@ -83,7 +83,7 @@ BOOKS
 --AI/ML--
 	1.) |00%|	Abu-Mostafa - Learning From Data
 	2.) |20%|	Russell - Artificial Intelligence A Modern Approach
-	3.) |30%|	Kinsely - Neural Networks from Scratch {Python}
+	3.) |10%|	Kinsely - Neural Networks from Scratch {Python} (58)
 	4.) |05%|	Gugger - Deep Learning for Coders {Python}
 				Chap. 1 Assignments (total: 30)
 
@@ -93,11 +93,11 @@ BOOKS
 --MATH--
 	1.) |00%|	Strang - Calculus I
 				Assignments (total: 0)
-	2.) |05%|	Rosen - Discrete Mathematics and Its Applications (78)
+	2.) |05%|	Rosen - Discrete Mathematics and Its Applications (92)
 				Chap. 1 Assignments (total: 41)
 	3.) |15%|	Downey - Think Stats (34)
 				Chap. 1 Assigments (total: 1)
-	4.) |65%|	Byers - How Mathematicians Think (265)
+	4.) |75%|	Byers - How Mathematicians Think (319)
 
 --PROGRAMMING CHALLENGES--
 	1.) CodeForces Ladders {C++}
@@ -105,13 +105,14 @@ BOOKS
 	2.) Hackerrank {Java/C++}
 		Easy-Medium (total: 32)
 	3.) Project Euler {Python/C++}
-		5% (total: 4)	
+		5% (total: 7)	
 
 --MISC--
 	1.) |50%|	Chacon - Pro Git
 	2.) |COMPLETE|	Hunt - The Pragmatic Programmer
 	3.) |COMPLETE|	Spraul - Think Like a Programmer {C++}
-	4.) |05%|	Steinhart - The Secret Life of Programs (30) 
+	4.) |25%|	Steinhart - The Secret Life of Programs (125)
+	6.) |05%|	Martin - Clean Code (31)
 _________________________________________________________
 
 _________________________________________________________

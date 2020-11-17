@@ -54,7 +54,7 @@
 *	greater than 26). A permutation of n elements is one of the n! possible orderings of the 
 *	elements. As an example, when n = 3, you should get the following output (but do not 
 *	worry about the order in which you enumerate them):
-*		bca cba cab acb bac ab
+*		bca cba cab acb bac abc
 *
 *	Ex 2.3.18
 *	Permutations of size k. Modify Permutations from the previous exercise so that it takes 
@@ -98,10 +98,12 @@ public class Ex2_3
 		// binary representation
 		ex_2_3_15();
 		
-		//
+		// permute alpha up to n
 		//ex_2_3_17();
+		
 		//
 		//ex_2_3_18();
+		
 		//
 		//ex_2_3_21();
 	}
@@ -188,6 +190,94 @@ public class Ex2_3
 		if (b % 2 == 0) return mystery(a*a, b/2);
 		return mystery(a*a, b/2) * a;
 	}
+
+	private static void ex_2_3_15()
+	{
+		int n = sc.nextInt();
+
+		String bin_equivalent = "";
+
+		while(n > 0) { bin_equivalent += n%2; n /= 2; }
+
+		// reverse order
+		System.out.println(bin_equivalent);
+
+		// correct order
+		reverse_str(bin_equivalent);
+		System.out.println();
+	}
+
+	private static void reverse_str(String s)
+	{
+		if (s.length() == 0)	return;
+		reverse_str(s.substring(1));
+		System.out.print(s.substring(0,1));
+
+	}
+
+	private static void ex_2_3_17()
+	{
+		// highest letter
+		// practical limit is n=10, any larger and heap runs out or integer overflow on fact
+		int n = sc.nextInt();
+		
+		// create collection of useable letters
+		char[] letters = new char[n];
+		for (int i = 0; i < n; i++) { letters[i] = (char) ('a' + i); }
+
+		// get perms
+		String[] perms = get_perms("", letters);
+
+		// print results
+		for (String s : perms)	System.out.println(s);
+	}
+
+	private static String[] get_perms(String head, char[] letters)
+	{
+		// base case if letters array is null
+		// returns head, which is a string built up from the letters of the array
+		// 	on the way down the recursive call stack
+		if (letters.length == 0)	return new String[]{ head }; 
+
+		// allocate memory for an array of appropriate length
+		// 	i.e., letters.length!
+		String[] perms = new String[fact(letters.length)];
+		// indexer for place in permutation array
+		int ind = 0;
+		// for each character in the array, add it to the head and get the permutations
+		//	of the array minus that character
+		for (int i = 0; i < letters.length; i++)
+		{
+			// the recursive call with new extended head and minus the letter added to the head
+			String[] char_perms = get_perms(""+head+letters[i], remove_head(letters[i], letters));
+			// add to list of perms for all characters in letters array
+			for (String s : char_perms)	perms[ind++] = s;
+		}
+		return perms;
+	}
+
+	// remove specific character from letters array, return new array
+	private static char[] remove_head(char head, char[] letters)
+	{
+		char[] new_arr = new char[letters.length-1];
+		int ind = 0;
+		for (char c : letters)
+			if (c != head)	new_arr[ind++] = c;
+		return new_arr;
+	}
+
+	// calculate factorial
+	private static int fact(int n)
+	{
+		if (n < 2)	return 1;
+		else		return n * fact(n-1);
+	}
+
+	private static void ex_2_3_18()
+	{}
+
+	private static void ex_2_3_21()
+	{}
 }
 
 

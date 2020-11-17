@@ -1,5 +1,5 @@
 /*
-	./largest_prime < primes.txt
+	./largest_prime < largest_prime.txt
 */
 
 #include <iostream>
