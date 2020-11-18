@@ -200,6 +200,17 @@ int main()
 	read_from(lower, size);
 	read_from(upper, size);
 	
+	// 3_4
+	auto orig = 100;
+	auto& orig_ref = orig;
+	printf("Original: %d\n", orig);
+	printf("Reference: %d\n", orig_ref);
+	
+	auto new_val = 200;
+	original_ref = new_val;
+	printf("Original: %d\n", orig);
+	printf("New Value: %d\n", new_val);
+	printf("Reference: %d\n", orig_ref);
 
 	return 0;
 }
