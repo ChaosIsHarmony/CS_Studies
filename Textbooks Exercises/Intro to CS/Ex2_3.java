@@ -96,16 +96,16 @@ public class Ex2_3
 		//ex_2_3_8();
 
 		// binary representation
-		ex_2_3_15();
+		//ex_2_3_15();
 		
 		// permute alpha up to n
 		//ex_2_3_17();
 		
-		//
+		// permute k alpha from n
 		//ex_2_3_18();
 		
-		//
-		//ex_2_3_21();
+		// hamming distance
+		ex_2_3_21();
 	}
 
 	private static void ex_2_3_1()
@@ -225,23 +225,22 @@ public class Ex2_3
 		char[] letters = new char[n];
 		for (int i = 0; i < n; i++) { letters[i] = (char) ('a' + i); }
 
-		// get perms
-		String[] perms = get_perms("", letters);
+		String[] perms = get_perms("", letters, 0);
 
-		// print results
 		for (String s : perms)	System.out.println(s);
 	}
 
-	private static String[] get_perms(String head, char[] letters)
+	// k parameter allows for P(n,k), but k is actually n-k
+	private static String[] get_perms(String head, char[] letters, int k)
 	{
-		// base case if letters array is null
+		// base case if letters array is of size 0
 		// returns head, which is a string built up from the letters of the array
 		// 	on the way down the recursive call stack
-		if (letters.length == 0)	return new String[]{ head }; 
+		if (letters.length == k)	return new String[]{ head }; 
 
 		// allocate memory for an array of appropriate length
 		// 	i.e., letters.length!
-		String[] perms = new String[fact(letters.length)];
+		String[] perms = new String[fact(letters.length, k)];
 		// indexer for place in permutation array
 		int ind = 0;
 		// for each character in the array, add it to the head and get the permutations
@@ -249,7 +248,7 @@ public class Ex2_3
 		for (int i = 0; i < letters.length; i++)
 		{
 			// the recursive call with new extended head and minus the letter added to the head
-			String[] char_perms = get_perms(""+head+letters[i], remove_head(letters[i], letters));
+			String[] char_perms = get_perms(""+head+letters[i], remove_head(letters[i], letters), k);
 			// add to list of perms for all characters in letters array
 			for (String s : char_perms)	perms[ind++] = s;
 		}
@@ -267,14 +266,26 @@ public class Ex2_3
 	}
 
 	// calculate factorial
-	private static int fact(int n)
+	private static int fact(int n, int k)
 	{
 		if (n < 2)	return 1;
-		else		return n * fact(n-1);
+		else if (n==k)	return 1;
+		else		return n * fact(n-1, k);
 	}
 
 	private static void ex_2_3_18()
-	{}
+	{
+		int n = sc.nextInt();
+		int k = sc.nextInt();
+
+		// create collection of useable letters
+		char[] letters = new char[n];
+		for (int i = 0; i < n; i++) { letters[i] = (char) ('a' + i); }
+
+		String[] perms = get_perms("", letters, n-k);
+
+		for (String s : perms)	System.out.println(s);
+	}
 
 	private static void ex_2_3_21()
 	{}
