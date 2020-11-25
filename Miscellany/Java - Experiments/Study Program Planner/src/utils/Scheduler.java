@@ -68,10 +68,10 @@ public class Scheduler
 			while (duration > 0)	{ schedule[start_time+(--duration)][day] = e; }
 		}
 		// Take care of Aidos every 2 hour block [if the two hours prior are reserved for skills]
-		for (int day = 0; day < 7; day++)
-			for (int hour = 11; hour < 21; hour++)
-				if (schedule[hour][day] == null && schedule[hour-1][day] == null && schedule[hour-2][day] == null)
-				{ schedule[hour][day] = new FixedEvent("Aidos","Duty","On_Call",day,hour,1); continue; } // must use underscore
+		//for (int day = 0; day < 7; day++)
+		//	for (int hour = 11; hour < 21; hour++)
+		//		if (schedule[hour][day] == null && schedule[hour-1][day] == null && schedule[hour-2][day] == null)
+		//		{ schedule[hour][day] = new FixedEvent("Aidos","Duty","On_Call",day,hour,1); continue; } // must use underscore
 			
 		// Find space for skill events
 		MaxPQ<SkillEvent> pq = new MaxPQ<SkillEvent>(skills.length);

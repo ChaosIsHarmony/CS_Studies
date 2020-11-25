@@ -38,7 +38,7 @@ public class Main
 		while (!(input = sc.nextLine()).toLowerCase().equals("x"))
 			if (input.toLowerCase().equals("c"))		createNewSchedule(1);
 			else if (input.toLowerCase().equals("v"))	viewOldSchedule();
-			else										System.out.println("Invalid Input [Main]");
+			else						System.out.println("Invalid Input [Main]");
 		
 		sc.close();
 	}
@@ -147,7 +147,7 @@ public class Main
 				}
 				// print out activity at correct timeslot on correct day
 				if (schedule[i][j] != null)	System.out.printf("%-10s", schedule[i][j].getType());
-				else						System.out.printf("%-10s", "");
+				else				System.out.printf("%-10s", "");
 			}
 			System.out.println();
 		}
