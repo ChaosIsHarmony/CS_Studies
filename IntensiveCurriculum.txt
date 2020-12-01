@@ -10,6 +10,7 @@
 	- Tools		1 hr	x 4 days = 4
 		- Docker
 		- Spring Boot
+		- Hadoop/Spark
 4.) Algos
 	- Sedgewick	1 hr	x 3 days = 3
 	- CF/HR/PE/etc.	1 hr	x 4 days = 4

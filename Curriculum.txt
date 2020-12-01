@@ -68,7 +68,7 @@ BOOKS
 --ALGORITHMS--
 	1.) |COMPLETE|	Sedgewick - Algorithms {Java}
 				Chap. 1 Assignments (total: 0)
-	2.) |50%|	Heineman - Algorithms in a Nutshell {C/C++/Java} (155)
+	2.) |65%|	Heineman - Algorithms in a Nutshell {C/C++/Java} (217)
 
 --OS--
 	1.) |60%|	Silberschatz - Operating System Concepts {C}
@@ -79,11 +79,12 @@ BOOKS
 				Chap. 1-3 Assignments (total: 10)
 	2.) |15%|	Shaw - Learn Python the Hard Way {Python} (154)
 				Assignments (total: 25)
+	3.) |10%|	Beaulieu - Learning SQL (29)
 
 --AI/ML--
 	1.) |00%|	Abu-Mostafa - Learning From Data
 	2.) |20%|	Russell - Artificial Intelligence A Modern Approach
-	3.) |10%|	Kinsely - Neural Networks from Scratch {Python} (104)
+	3.) |20%|	Kinsely - Neural Networks from Scratch {Python} (131)
 	4.) |05%|	Gugger - Deep Learning for Coders {Python}
 				Chap. 1 Assignments (total: 30)
 
@@ -97,7 +98,7 @@ BOOKS
 				Chap. 1 Assignments (total: 41)
 	3.) |15%|	Downey - Think Stats (34)
 				Chap. 1 Assigments (total: 1)
-	4.) |90%|	Byers - How Mathematicians Think (377)
+	4.) |COMPLETE|	Byers - How Mathematicians Think
 
 --PROGRAMMING CHALLENGES--
 	1.) CodeForces Ladders {C++}
@@ -111,8 +112,8 @@ BOOKS
 	1.) |50%|	Chacon - Pro Git
 	2.) |COMPLETE|	Hunt - The Pragmatic Programmer
 	3.) |COMPLETE|	Spraul - Think Like a Programmer {C++}
-	4.) |50%|	Steinhart - The Secret Life of Programs (196)
-	6.) |05%|	Martin - Clean Code (64)
+	4.) |60%|	Steinhart - The Secret Life of Programs (264)
+	5.) |10%|	Martin - Clean Code (84)
 _________________________________________________________
 
 _________________________________________________________
