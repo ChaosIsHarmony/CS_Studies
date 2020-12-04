@@ -82,3 +82,9 @@ best_dense2_biases = layer_2.biases.copy()
 # CHAP 7 DERIVATIVES
 # ------------------
 # Basic calculus rule for derivatives
+
+
+# CHAP 8 PARTIAL DERIVATIVES/GRADIENTS
+# ------------------------------------
+# A partial derivative assumes all other variables are constants and takes the derivative only with respect to a single variable
+# Gradient is a vector containing all partial derivatives
