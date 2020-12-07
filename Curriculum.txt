@@ -84,7 +84,7 @@ BOOKS
 --AI/ML--
 	1.) |00%|	Abu-Mostafa - Learning From Data
 	2.) |20%|	Russell - Artificial Intelligence A Modern Approach
-	3.) |20%|	Kinsely - Neural Networks from Scratch {Python} (180)
+	3.) |33%|	Kinsely - Neural Networks from Scratch {Python} (249)
 	4.) |05%|	Gugger - Deep Learning for Coders {Python}
 				Chap. 1 Assignments (total: 30)
 
@@ -112,8 +112,8 @@ BOOKS
 	1.) |50%|	Chacon - Pro Git
 	2.) |COMPLETE|	Hunt - The Pragmatic Programmer
 	3.) |COMPLETE|	Spraul - Think Like a Programmer {C++}
-	4.) |60%|	Steinhart - The Secret Life of Programs (294)
-	5.) |10%|	Martin - Clean Code (102)
+	4.) |70%|	Steinhart - The Secret Life of Programs (324)
+	5.) |15%|	Martin - Clean Code (122)
 _________________________________________________________
 
 _________________________________________________________
