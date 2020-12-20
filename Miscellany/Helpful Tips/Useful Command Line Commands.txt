@@ -14,6 +14,8 @@ $ cp file dir 		// copies file from current directory into destination directory
 $ cp * dir 		// copies all files from current dir into destination dir
 $ cp *.txt dir 		// copies all files of given extension from curr dir into dest dir
 $ mv file dir 		// moves file into dir
+$ df 				// shows how much free disk space there is
+$ du 				// shows how much used disk space there is
 $ du -sh dirName 	// see disk usage of given directory (how much space it takes up on disk)
 $ ls | wc -l		// shows number of files in a given dir wc counts words; -l tells it to count lines (the output of ls) 
 

@@ -7,3 +7,8 @@ $ java <Filename>
 // C++
 $ g++ <Filename>.cpp -o <OutputBinary>
 $ ./<OutputBinary>
+
+// C#
+$ csc <Filename>.cs
+$ chmod a+x <Filename>.exe // grants execution permission to all users for this file
+$ ./<Filename>.exe

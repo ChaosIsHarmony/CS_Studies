@@ -287,9 +287,56 @@ public class Ex2_3
 		for (String s : perms)	System.out.println(s);
 	}
 
+	/*
+	Hamming distance. The Hamming distance between two bit strings of length n is equal to 
+*	the number of bits in which the two strings differ. Write a program that reads in an 
+*	integer k and a bit string s from the command line, and prints all bit strings that have 
+*	Hamming distance at most k from s. For example, if k is 2 and s is 0000, then your program 
+*	should print:
+*		0011 0101 0110 1001 1010 1100
+	*/
 	private static void ex_2_3_21()
-	{}
+	{
+		int hamming_dist = sc.nextInt();
+		String seq = sc.next();
+		
+		// impossible
+		if (hamming_dist >= seq.length())	System.out.println("No such sequence.");
+		
+		// flip k bits
+		for (int i = 0; i <= seq.length()-hamming_dist; i++)	flip_k_bits(seq, hamming_dist, i);
+	}
+	
+	private static void flip_k_bits(String seq, int hamming_dist, int start_ind)
+	{
+		// base case
+		if (hamming_dist == 0)	{ System.out.println(seq); return; }
+		
+		// flip bit and recurse 
+		
+	}
 }
+/*
+2 0000
+
+flip(String new_seq, int hamming_dist, int start_ind) 
+flip(0000, 2, 0)
+	flip(1000, 1, 1)
+		flip(1100, 0, 2)
+			1100
+	flip(1000, 1, 2)
+		flip(1010, 0, 3)
+			1010
+	flip(1000, 1, 3)
+		flip(1001, 0, 4)
+			1001
+flip(0000, 2, 1)
+	flip(0100, 1, 2)
+		flip(0110, 0, 3)
+			0110
+flip(0000, 2, 2)
+
+*/
 
 
 
