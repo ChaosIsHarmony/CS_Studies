@@ -117,22 +117,96 @@ class Activation_Softmax_Loss_CategoricalCrossentropy():
 		# Normalize gradient
 		self.dinputs = self.dinputs / n_samples
 
+
+# The optimizer manipulates the learning rate
+# Then it updates weights and biases per layer
 class Optimizer_SGD:
 	
-	def __init__(self, learning_rate=1.0, decay_rate=0.001):
+	def __init__(self, starting_learning_rate=1.0, decay_rate=0.0001, momentum=0.0):
+		self.learning_rate = starting_learning_rate
 		self.decay_rate = decay_rate
-		self.learning_rate = learning_rate
+		self.momentum = momentum
 
 	def update_params(self, layer):
-		layer.weights += -self.learning_rate * layer.dweights
-		layer.biases += - self.learning_rate * layer.dbiases
+		if self.momentum:
+			# create weights momenta if they don't already exist
+			if not hasattr(layer, 'weights_momenta'):
+				layer.weights_momenta = np.zeros_like(layer.weights)
+				layer.biases_momenta = np.zeros_like(layer.biases)
+
+			updated_weights = self.momentum * layer.weights_momenta - self.learning_rate * layer.dweights
+			updated_biases = self.momentum * layer.biases_momenta - self.learning_rate * layer.dbiases
+		else:
+			updated_weights = -self.learning_rate * layer.dweights
+			updated_biases = -self.learning_rate * layer.dbiases
+		
+		layer.weights += updated_weights
+		layer.biases += updated_biases
 
 	def decay_learning_rate(self):
 		# decays by fixed amt each iteration
+		# also possible to decay by ever decreasing amt
 		if self.learning_rate - self.decay_rate > 0:
 			self.learning_rate -= self.decay_rate
 
-	
+# Adaptive Gradient - changes gradient based on normalized squared sum of previous gradients
+class Optimizer_AdaGrad():
+
+	def __init__(self, starting_learning_rate=1.0, decay_rate=0.0001, epsilon=1e-7):
+		self.learning_rate = starting_learning_rate
+		self.decay_rate = decay_rate
+		self.epsilon = epsilon
+
+	def update_params(self, layer):
+		# create weights cache if they don't exist
+		if not hasattr(layer, 'weights_cache'):
+			layer.weights_cache = np.zeros_like(layer.weights)
+			layer.biases_cache = np.zeros_like(layer.biases)
+
+		layer.weights_cache += layer.dweights**2
+		layer.biases_cache += layer.dbiases**2
+
+		layer.weights += -self.learning_rate * layer.dweights / (np.sqrt(layer.weights_cache) + self.epsilon)
+		layer.biases += -self.learning_rate * layer.dbiases / (np.sqrt(layer.biases_cache) + self.epsilon)
+		
+	def decay_learning_rate(self):
+		# decays by fixed amt each iteration
+		# also possible to decay by ever decreasing amt
+		if self.learning_rate - self.decay_rate > 0:
+			self.learning_rate -= self.decay_rate
+
+
+# cache is not the squared sum of previous gradients, but a fluctuating average
+class Optimizer_RMSProp:
+
+	def __init__(self, learning_rate=0.001, decay_rate=0.0, epsilon=1e-7, rho=0.9):
+		self.learning_rate = learning_rate
+		self.curr_learning_rate = learning_rate
+		self.iterations = 0
+		self.decay_rate = decay_rate
+		self.epsilon = epsilon
+		self.rho = rho
+
+	def update_params(self, layer):
+		# create weights cache if they don't exist
+		if not hasattr(layer, 'weights_cache'):
+			layer.weights_cache = np.zeros_like(layer.weights)
+			layer.biases_cache = np.zeros_like(layer.biases)
+
+		layer.weights_cache = self.rho * layer.weights_cache + (1 - self.rho) * layer.dweights ** 2
+		layer.biases_cache = self.rho * layer.biases_cache + (1 - self.rho) * layer.dbiases ** 2
+
+		layer.weights += -self.learning_rate * layer.dweights / (np.sqrt(layer.weights_cache) + self.epsilon)
+		layer.biases += -self.learning_rate * layer.dbiases / (np.sqrt(layer.biases_cache) + self.epsilon)
+		
+	def decay_learning_rate(self):
+		# decays by fixed amt each iteration
+		# also possible to decay by ever decreasing amt
+		if self.decay_rate:
+			self.curr_learning_rate = self.learning_rate * (1.0 / (1.0 + self.decay_rate * self.iterations))
+			self.iterations += 1
+
+
 # -------------------------------------
 # create network
 X, y = spiral_data(samples=1000, classes=3)
@@ -143,7 +217,9 @@ layer_2 = Layer_Dense(64, 32)
 act_func_2 = Activation_ReLU()
 layer_3 = Layer_Dense(32, 3)
 act_loss_func = Activation_Softmax_Loss_CategoricalCrossentropy()
-optimizer = Optimizer_SGD(1, 0.0001)
+#optimizer = Optimizer_SGD(momentum=0.9)
+#optimizer = Optimizer_AdaGrad()
+optimizer = Optimizer_RMSProp(learning_rate=0.02, decay_rate=1e-5, rho=0.999)
 
 for epoch in range(10001):
 	# forward pass

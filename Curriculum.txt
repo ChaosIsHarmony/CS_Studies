@@ -85,7 +85,7 @@ BOOKS
 --AI/ML--
 	1.) |00%|	Abu-Mostafa - Learning From Data
 	2.) |20%|	Russell - Artificial Intelligence A Modern Approach
-	3.) |40%|	Kinsely - Neural Networks from Scratch {Python} (280)
+	3.) |45%|	Kinsely - Neural Networks from Scratch {Python} (304)
 	4.) |05%|	Gugger - Deep Learning for Coders {Python}
 				Chap. 1 Assignments (total: 30)
 
