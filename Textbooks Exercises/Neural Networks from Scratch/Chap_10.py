@@ -207,6 +207,45 @@ class Optimizer_RMSProp:
 			self.iterations += 1
 
 
+class Optimizer_Adam:
+
+    def __init__(self, learning_rate=0.001, decay_rate=0.0, epsilon=1e-7, beta_1=0.9, beta_2=0.999):
+        self.learning_rate = learning_rate
+        self.current_learning_rate = learning_rate
+        self.decay_rate = decay_rate
+        self.iterations = 0
+        self.epsilon = epsilon
+        self.beta_1 = beta_1
+        self.beta_2 = beta_2
+        
+    def update_params(self, layer):
+        if not hasattr(layer, 'weights_cache'):
+            layer.weights_momenta = np.zeros_like(layer.weights)
+            layer.weights_cache = np.zeros_like(layer.weights)
+            layer.biases_momenta = np.zeros_like(layer.biases)
+            layer.biases_cache = np.zeros_like(layer.biases)
+            
+        layer.weights_momenta = self.beta_1 * layer.weights_momenta + (1 - self.beta_1) * layer.dweights
+        layer.biases_momenta = self.beta_1 * layer.biases_momenta + (1 - self.beta_1) * layer.dbiases
+        
+        weights_momenta_corrected = layer.weights_momenta / (1 - self.beta_1 ** (self.iterations+1))
+        biases_momenta_corrected = layer.biases_momenta / (1 - self.beta_1 ** (self.iterations+1))
+        
+        layer.weights_cache = self.beta_2 * layer.weights_cache + (1 - self.beta_2) * layer.dweights**2
+        layer.biases_cache = self.beta_2 * layer.biases_cache + (1 - self.beta_2) * layer.dbiases**2
+        
+        weights_cache_corrected = layer.weights_cache / (1 - self.beta_2 ** (self.iterations+1))
+        biases_cache_corrected = layer.biases_cache / (1 - self.beta_2 ** (self.iterations+1))
+        
+        layer.weights += -self.learning_rate * weights_momenta_corrected / (np.sqrt(weights_cache_corrected) + self.epsilon)
+        layer.biases += -self.learning_rate * biases_momenta_corrected / (np.sqrt(biases_cache_corrected) + self.epsilon)
+        
+    def decay_learning_rate(self):
+        if self.decay_rate:
+            self.curr_learning_rate = self.learning_rate * (1.0 / (1.0 + self.decay_rate * self.iterations))
+            self.iterations += 1
+
+
 # -------------------------------------
 # create network
 X, y = spiral_data(samples=1000, classes=3)
@@ -219,7 +258,8 @@ layer_3 = Layer_Dense(32, 3)
 act_loss_func = Activation_Softmax_Loss_CategoricalCrossentropy()
 #optimizer = Optimizer_SGD(momentum=0.9)
 #optimizer = Optimizer_AdaGrad()
-optimizer = Optimizer_RMSProp(learning_rate=0.02, decay_rate=1e-5, rho=0.999)
+#optimizer = Optimizer_RMSProp(learning_rate=0.02, decay_rate=1e-5, rho=0.999)
+optimizer = Optimizer_Adam(learning_rate=0.05, decay_rate=5e-7)
 
 for epoch in range(10001):
 	# forward pass

@@ -299,21 +299,27 @@ public class Ex2_3
 	{
 		int hamming_dist = sc.nextInt();
 		String seq = sc.next();
+		StringBuilder new_seq;
 		
 		// impossible
 		if (hamming_dist >= seq.length())	System.out.println("No such sequence.");
 		
 		// flip k bits
-		for (int i = 0; i <= seq.length()-hamming_dist; i++)	flip_k_bits(seq, hamming_dist, i);
+		for (int i = 0; i <= seq.length()-hamming_dist; i++)
+		{
+			new_seq = new StringBuilder(seq);
+			flip_k_bits(new_seq, hamming_dist, i);
+		}
 	}
 	
-	private static void flip_k_bits(String seq, int hamming_dist, int start_ind)
+	private static void flip_k_bits(StringBuilder seq, int hamming_dist, int start_ind)
 	{
 		// base case
 		if (hamming_dist == 0)	{ System.out.println(seq); return; }
 		
-		// flip bit and recurse 
-		
+		// flip bit
+		seq.setCharAt(start_ind, (seq.charAt(start_ind)=='0' ? '1' : '0'));
+		for (int i = start_ind+1; i < seq.length(); i++)	flip_k_bits(seq, hamming_dist-1, start_ind+1);
 	}
 }
 /*
@@ -335,19 +341,4 @@ flip(0000, 2, 1)
 		flip(0110, 0, 3)
 			0110
 flip(0000, 2, 2)
-
 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
