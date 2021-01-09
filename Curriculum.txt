@@ -77,28 +77,28 @@ BOOKS
 				Chap. 1-3 Assignments (total: 10)
 	2.) |15%|	Shaw - Learn Python the Hard Way {Python} (159)
 				Assignments (total: 25)
-	3.) |50%|	Beaulieu - Learning SQL (162)
-	4.) |25%|	Hermes - Building Xamarin.Forms Mobile Apps (119)
+	3.) |70%|	Beaulieu - Learning SQL (250)
+	4.) |30%|	Hermes - Building Xamarin.Forms Mobile Apps (150)
+	5.) |05%|	Troelsen - Pro C# 7 (75)
 
 --AI/ML--
 	1.) |00%|	Abu-Mostafa - Learning From Data
 	2.) |20%|	Russell - Artificial Intelligence A Modern Approach
-	3.) |55%|	Kinsely - Neural Networks from Scratch {Python} (344)
+	3.) |60%|	Kinsely - Neural Networks from Scratch {Python} (361)
 	4.) |05%|	Gugger - Deep Learning for Coders {Python}
 				Chap. 1 Assignments (total: 30)
-	5.) |25%|	Grus - Data Science from Scratch First Principles (83)
+	5.) |40%|	Grus - Data Science from Scratch First Principles (150)
 
 --GAMES--
 	1.) |66%|	Godot - 3D FPS tutorial {GDScript}
 
 --MATH--
-	1.) |00%|	Strang - Calculus I
-				Assignments (total: 0)
-	2.) |10%|	Rosen - Discrete Mathematics and Its Applications (110)
+	1.) |10%|	Rosen - Discrete Mathematics and Its Applications (120)
 				Chap. 1 Assignments (total: 41)
-	3.) |15%|	Downey - Think Stats (34)
+	2.) |15%|	Downey - Think Stats (34)
 				Chap. 1 Assigments (total: 1)
-	4.) |COMPLETE|	Byers - How Mathematicians Think
+	3.) |COMPLETE|	Byers - How Mathematicians Think
+	4.) |15%|	Wallis - A Beginner's Guide to Discrete Math (74)
 
 --PROGRAMMING CHALLENGES--
 	1.) CodeForces Ladders {C++}
@@ -113,7 +113,7 @@ BOOKS
 	2.) |COMPLETE|	Hunt - The Pragmatic Programmer
 	3.) |COMPLETE|	Spraul - Think Like a Programmer {C++}
 	4.) |COMPLETE|	Steinhart - The Secret Life of Programs
-	5.) |15%|	Martin - Clean Code (132)
+	5.) |25%|	Martin - Clean Code (190)
 _________________________________________________________
 
 _________________________________________________________
