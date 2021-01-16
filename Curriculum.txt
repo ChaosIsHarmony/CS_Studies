@@ -75,11 +75,11 @@ BOOKS
 --LANG/FRAMEWORK--
 	1.) |15%|	{C++} Lospinoso - C++ Crash Course (150)
 				Chap. 1-3 Assignments (total: 10)
-	2.) |40%|	{Python} Shaw - Learn Python the Hard Way (197)
-				Assignments (total: 25)
+	2.) |45%|	{Python} Shaw - Learn Python the Hard Way (219)
+				Assignments (total: 35)
 	3.) |70%|	{SQL} Beaulieu - Learning SQL (250)
 	4.) |30%|	{XAML} Hermes - Building Xamarin.Forms Mobile Apps (150)
-	5.) |05%|	{C#} Troelsen - Pro C# 7 (95)
+	5.) |05%|	{C#} Troelsen - Pro C# 7 (104)
 	6.) |10%|	{Java} Walls - Spring in Action (64)
 
 --AI/ML--
@@ -114,7 +114,7 @@ BOOKS
 	2.) |COMPLETE|	Hunt - The Pragmatic Programmer
 	3.) |COMPLETE|	{C++} Spraul - Think Like a Programmer
 	4.) |COMPLETE|	Steinhart - The Secret Life of Programs
-	5.) |25%|	Martin - Clean Code (190)
+	5.) |30%|	Martin - Clean Code (206)
 _________________________________________________________
 
 _________________________________________________________
