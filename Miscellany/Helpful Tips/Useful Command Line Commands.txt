@@ -41,6 +41,11 @@ $ prog < file		// prog will take file as input
 $ prog > file		// prog will save output to file [overwrites file contents if file already exists]
 $ prog >> file		// prog will append output to file
 $ prog1 | prog2		// prog2 will take prog1's output as input
+$ prog &			// prog will run in background
+$ prog1 & prog2 &	// both run in the background
+$ prog1 && prog2	// prog1 runs first and prog2 runs only if prog1 finishes successfully
+$ prog1 || prog2	// prog2 executes only if prog1 fails
+$ rm -r !(*.java)	// delete all files in a folder that are not
 
 $ sudo chmod 744 file 	// gives file permission to run
 			// Explanation of 744

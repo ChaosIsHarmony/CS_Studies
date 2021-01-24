@@ -75,12 +75,12 @@ BOOKS
 --LANG/FRAMEWORK--
 	1.) |15%|	{C++} Lospinoso - C++ Crash Course (150)
 				Chap. 1-3 Assignments (total: 10)
-	2.) |45%|	{Python} Shaw - Learn Python the Hard Way (219)
+	2.) |50%|	{Python} Shaw - Learn Python the Hard Way (242)
 				Assignments (total: 35)
 	3.) |70%|	{SQL} Beaulieu - Learning SQL (250)
 	4.) |30%|	{XAML} Hermes - Building Xamarin.Forms Mobile Apps (150)
-	5.) |05%|	{C#} Troelsen - Pro C# 7 (104)
-	6.) |10%|	{Java} Walls - Spring in Action (64)
+	5.) |10%|	{C#} Troelsen - Pro C# 7 (120)
+	6.) |20%|	{Java} Walls - Spring in Action (122)
 
 --AI/ML--
 	1.) |00%|	Abu-Mostafa - Learning From Data
@@ -88,18 +88,18 @@ BOOKS
 	3.) |60%|	{Python} Kinsely - Neural Networks from Scratch (406)
 	4.) |05%|	{Python} Gugger - Deep Learning for Coders
 				Chap. 1 Assignments (total: 30)
-	5.) |40%|	{Python} Grus - Data Science from Scratch First Principles (150)
+	5.) |40%|	{Python} Grus - Data Science from Scratch First Principles (154)
 
 --GAMES--
 	1.) |66%|	{GDScript} Godot - 3D FPS tutorial
 
 --MATH--
-	1.) |10%|	Rosen - Discrete Mathematics and Its Applications (120)
+	1.) |10%|	Rosen - Discrete Mathematics and Its Applications (126)
 				Chap. 1 Assignments (total: 41)
 	2.) |15%|	Downey - Think Stats (34)
 				Chap. 1 Assigments (total: 1)
 	3.) |COMPLETE|	Byers - How Mathematicians Think
-	4.) |15%|	Wallis - A Beginner's Guide to Discrete Math (76)
+	4.) |15%|	Wallis - A Beginner's Guide to Discrete Math (77)
 
 --PROGRAMMING CHALLENGES--
 	1.) {C++} CodeForces Ladders
@@ -114,7 +114,7 @@ BOOKS
 	2.) |COMPLETE|	Hunt - The Pragmatic Programmer
 	3.) |COMPLETE|	{C++} Spraul - Think Like a Programmer
 	4.) |COMPLETE|	Steinhart - The Secret Life of Programs
-	5.) |30%|	Martin - Clean Code (206)
+	5.) |40%|	Martin - Clean Code (303)
 _________________________________________________________
 
 _________________________________________________________
