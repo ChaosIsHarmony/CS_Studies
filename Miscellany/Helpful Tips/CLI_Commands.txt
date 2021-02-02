@@ -5,6 +5,9 @@ $ ip route | grep default	// find ip address for router
 
 $ systeminfo	// gets computer info
 
+$ cd ~				// change to home directory
+$ cd ..				// change to parent directory
+$ cd ../..			// change to grandparent directory
 $ mkdir dirName 	// makes a directory
 $ rmdir dirName 	// deletes a directory (must be empty before removing)
 $ rm -r dirName 	// deletes a directory and all sub directories (even if not empty)
@@ -14,6 +17,11 @@ $ cp file dir 		// copies file from current directory into destination directory
 $ cp * dir 		// copies all files from current dir into destination dir
 $ cp *.txt dir 		// copies all files of given extension from curr dir into dest dir
 $ mv file dir 		// moves file into dir
+
+$ pushd	dir			// save path to current dir and then go to specified dir
+$ pushd				// w/ no args allows you to switch between two directories
+$ popd				// go to previously pushed dir
+
 $ df 				// shows how much free disk space there is
 $ du 				// shows how much used disk space there is
 $ du -sh dirName 	// see disk usage of given directory (how much space it takes up on disk)
