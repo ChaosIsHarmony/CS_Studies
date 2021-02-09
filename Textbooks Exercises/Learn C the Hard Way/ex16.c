@@ -41,10 +41,33 @@ void Person_print(struct Person *who)
 	printf("\tWeight: %d\n", who->weight);
 }
 
+struct Person makeStruct(char *name, int age, int height, int weight)
+{
+	struct Person p;
+	p.name = strdup(name);
+	p.age = age;
+	p.height = height;
+	p.weight = weight;
+
+	return p;
+}
+
+void withoutPointers()
+{
+	char *name = "Bobo";
+	int age = 10;
+	int height = 11;
+	int weight = 12;
+	struct Person bobo = makeStruct(name, age, height, weight);
+	
+	printf("%s\n", bobo.name);
+}
+
 int main(int argc, char *argv[])
 {
 	struct Person *bobo = Person_create("Bobo Bosephus", 35, 183, 75);
 
+	withoutPointers();
 	Person_print(bobo);
 	Person_destroy(bobo);	
 

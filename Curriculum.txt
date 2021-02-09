@@ -79,15 +79,15 @@ BOOKS
 					Assignments (total: 45)
 	3.) |70%|	{SQL} Beaulieu - Learning SQL (250)
 	4.) |30%|	{XAML} Hermes - Building Xamarin.Forms Mobile Apps (150)
-	5.) |10%|	{C#} Troelsen - Pro C# 7 (144)
-	6.) |20%|	{Java} Walls - Spring in Action (125)
-	7.) |15%|	{C} Shaw - Learn C the Hard Way (87)
-				Assignments (total: 3)
+	5.) |15%|	{C#} Troelsen - Pro C# 7 (218)
+	6.) |20%|	{Java} Walls - Spring in Action (181)
+	7.) |15%|	{C} Shaw - Learn C the Hard Way (110)
+				Assignments (total: 9)
 
 --AI/ML--
 	1.) |00%|	Abu-Mostafa - Learning From Data
 	2.) |20%|	Russell - Artificial Intelligence A Modern Approach
-	3.) |65%|	{Python} Kinsely - Neural Networks from Scratch (433)
+	3.) |75%|	{Python} Kinsely - Neural Networks from Scratch (512)
 	4.) |05%|	{Python} Gugger - Deep Learning for Coders
 				Chap. 1 Assignments (total: 30)
 	5.) |40%|	{Python} Grus - Data Science from Scratch First Principles (154)
@@ -101,11 +101,10 @@ BOOKS
 	2.) |15%|	Downey - Think Stats (34)
 				Chap. 1 Assigments (total: 1)
 	3.) |COMPLETE|	Byers - How Mathematicians Think
-	4.) |15%|	Wallis - A Beginner's Guide to Discrete Math (77)
 
 --PROGRAMMING CHALLENGES--
 	1.) {C++} CodeForces Ladders
-		Lv. 600-1300 (total: 73)
+		Lv. 600-1300 (total: 74)
 	2.) {Java/C++} Hackerrank
 		Easy-Medium (total: 32)
 	3.) {Python/C++} Project Euler
@@ -116,7 +115,7 @@ BOOKS
 	2.) |COMPLETE|	Hunt - The Pragmatic Programmer
 	3.) |COMPLETE|	{C++} Spraul - Think Like a Programmer
 	4.) |COMPLETE|	Steinhart - The Secret Life of Programs
-	5.) |40%|	Martin - Clean Code (303)
+	5.) |45%|	Martin - Clean Code (343)
 _________________________________________________________
 
 _________________________________________________________
