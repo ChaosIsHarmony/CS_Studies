@@ -79,9 +79,9 @@ BOOKS
 					Assignments (total: 45)
 	3.) |75%|	{SQL} Beaulieu - Learning SQL (278)
 	4.) |30%|	{XAML} Hermes - Building Xamarin.Forms Mobile Apps (182)
-	5.) |15%|	{C#} Troelsen - Pro C# 7 (260)
-	6.) |40%|	{Java} Walls - Spring in Action (210)
-	7.) |15%|	{C} Shaw - Learn C the Hard Way (120)
+	5.) |15%|	{C#} Troelsen - Pro C# 7 (270)
+	6.) |40%|	{Java} Walls - Spring in Action (216)
+	7.) |15%|	{C} Shaw - Learn C the Hard Way (123)
 				Assignments (total: 10)
 
 --AI/ML--
@@ -116,7 +116,7 @@ BOOKS
 	3.) |COMPLETE|	{C++} Spraul - Think Like a Programmer
 	4.) |COMPLETE|	Steinhart - The Secret Life of Programs
 	5.) |COMPLETE|	Martin - Clean Code
-	6.) |05%|	Gamma, et al. - Design Patterns (25)
+	6.) |10%|	Gamma, et al. - Design Patterns (55)
 	7.) |00%|	Martin - The Clean Coder (600)
 _________________________________________________________
 
