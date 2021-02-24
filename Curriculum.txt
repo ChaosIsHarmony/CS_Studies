@@ -77,12 +77,12 @@ BOOKS
 				Chap. 1-3 Assignments (total: 10)
 	2.) |COMPLETE|	{Python} Shaw - Learn Python the Hard Way
 					Assignments (total: 45)
-	3.) |75%|	{SQL} Beaulieu - Learning SQL (278)
-	4.) |30%|	{XAML} Hermes - Building Xamarin.Forms Mobile Apps (182)
-	5.) |15%|	{C#} Troelsen - Pro C# 7 (285)
-	6.) |40%|	{Java} Walls - Spring in Action (224)
-	7.) |35%|	{C} Shaw - Learn C the Hard Way (139)
-				Assignments (total: 12)
+	3.) |90%|	{SQL} Beaulieu - Learning SQL (301)
+	4.) |50%|	{XAML} Hermes - Building Xamarin.Forms Mobile Apps (219)
+	5.) |25%|	{C#} Troelsen - Pro C# 7 (297)
+	6.) |45%|	{Java} Walls - Spring in Action (235)
+	7.) |40%|	{C} Shaw - Learn C the Hard Way (145)
+				Assignments (total: 14)
 
 --AI/ML--
 	1.) |00%|	Abu-Mostafa - Learning From Data
@@ -90,13 +90,13 @@ BOOKS
 	3.) |75%|	{Python} Kinsely - Neural Networks from Scratch (512)
 	4.) |05%|	{Python} Gugger - Deep Learning for Coders
 				Chap. 1 Assignments (total: 30)
-	5.) |50%|	{Python} Grus - Data Science from Scratch First Principles (190)
+	5.) |55%|	{Python} Grus - Data Science from Scratch First Principles (206)
 
 --GAMES--
 	1.) |66%|	{GDScript} Godot - 3D FPS tutorial
 
 --MATH--
-	1.) |10%|	Rosen - Discrete Mathematics and Its Applications (148)
+	1.) |10%|	Rosen - Discrete Mathematics and Its Applications (164)
 				Chap. 1 Assignments (total: 41)
 	2.) |15%|	Downey - Think Stats (34)
 				Chap. 1 Assigments (total: 1)
@@ -116,7 +116,7 @@ BOOKS
 	3.) |COMPLETE|	{C++} Spraul - Think Like a Programmer
 	4.) |COMPLETE|	Steinhart - The Secret Life of Programs
 	5.) |COMPLETE|	Martin - Clean Code
-	6.) |10%|	Gamma, et al. - Design Patterns (71)
+	6.) |20%|	Gamma, et al. - Design Patterns (90)
 	7.) |00%|	Martin - The Clean Coder (600)
 _________________________________________________________
 
